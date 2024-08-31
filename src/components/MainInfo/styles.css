@@ -1,0 +1,55 @@
+.mainInfo {
+    position: relative;
+    top: 5dvh;
+    z-index: 1;
+    width: 54%;
+    padding-left: 3rem;
+}
+
+.mainInfo__title h1 {
+    margin-bottom: 0;
+    font-weight: 600;
+}
+
+.mainInfo__title h2 {
+    margin-top: .5rem;
+    margin-bottom: 0;
+    font-weight: 400;
+}
+
+.mainInfo h3 {
+    margin-top: 2.4rem;
+    margin-bottom: 1rem;
+    font-weight: 400;
+}
+
+h1, h2, h3 {
+    font-family: Montserrat, sans-serif;
+    color: #E0E0E0;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.3rem;
+}
+
+p {
+    font-family: Roboto Mono, monospace;
+    color: #c0c0c0;
+    margin: 0;
+}
+
+.text-highlightB, .text-highlightA {
+    font-weight: 475;
+}
+
+.text-highlightA {
+    color: #df56ff;
+}
+
+.text-highlightB {
+    color: #0fc1d8;
+}

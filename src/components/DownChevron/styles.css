@@ -1,0 +1,32 @@
+@keyframes upDownBounce {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+    
+}
+
+.downChevron__container {
+    opacity: 0;
+    animation: fadeIn 1150ms ease-in 1250ms forwards;
+}
+
+.downChevron {
+    position: absolute;
+    animation: upDownBounce 3000ms ease-in-out 500ms infinite;
+    bottom: 0;
+    opacity: .8;
+    transition: 0.5s ease-out;
+    right: 1rem;
+    width: 80px;
+}
+
+.chevron--hidden {
+    opacity: 1;
+    animation: fadeOut 1150ms ease-out forwards;
+}

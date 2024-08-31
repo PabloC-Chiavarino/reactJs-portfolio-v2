@@ -1,0 +1,65 @@
+@keyframes goToTimeline {
+    from {
+        transform: translate(0, 0);
+    }
+    to {
+        transform: translate(-13rem, 25rem);
+    }
+}
+
+@keyframes returnFromTimeline {
+    from {
+        transform: translate(-13rem, 25rem);
+    }
+    to {
+        transform: translate(0, 0);
+    }
+}
+
+/* @keyframes goSectionB {
+    from {
+        transform: translate(-13rem, 27rem);
+    }
+    to {
+        transform: translate(26rem, -54rem);
+    }
+}
+
+
+@keyframes returnSectionB {
+    from {
+        transform: translate(26rem, -54rem);
+    }
+    to {
+        transform: translate(-13rem, 27rem);
+    }
+} */
+
+.wgrobot__container {
+    animation: fadeIn 1500ms ease-in;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 1rem;
+    right: 2.75rem;
+    width: 40.3%;
+    height: 89%;
+    background: radial-gradient(circle at center, rgba(128,0,128,1) -30%, rgba(5,7,36,0) 67.5%);
+    z-index: 1;
+}
+
+.wgrobot {
+    width: 70%;
+    position: relative;
+    right: 10px;
+    z-index: 2;
+}
+
+.wgrobot--goToTimeline {
+    animation: goToTimeline 700ms ease-in-out forwards;
+}
+
+.wgrobot--returnFromTimeline {
+    animation: returnFromTimeline 700ms ease-in-out forwards;
+}
