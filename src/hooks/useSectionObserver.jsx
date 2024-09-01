@@ -31,8 +31,8 @@ const useSectionObserver = (sectionsRef, initialLoad) => {
 
         }, {
             root: null,
-            rootMargin: "-10% 0px -10% 0px",
-            threshold: [0.7]
+            rootMargin: "-15% 0px -15% 0px",
+            threshold: [0.8]
         })
 
         sections.forEach(section => {
