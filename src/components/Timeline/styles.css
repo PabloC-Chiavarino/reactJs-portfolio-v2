@@ -2,10 +2,6 @@ h2, h3, h4 {
     font-family: Montserrat, sans-serif;
 }
 
-.timeline__container {
-    width: 50dvw;
-}
-
 .timeline {
     position: relative;
     margin: 16dvh auto auto auto;
@@ -13,4 +9,29 @@ h2, h3, h4 {
     z-index: 1;
     width: 54%;
     padding-left: 3rem;
+}
+
+.timeline__container {
+    width: 50dvw;
+}
+
+.timeline__dot {
+    width: 20px;
+    height: 20px;
+    transform: rotate(45deg);
+    background-color: #0fc1d8;
+    position: relative;
+    right: 65px;
+    top: 5px;
+    z-index: 2;
+}
+
+.timeline__item::before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    background-color: #E0E0E0;
+    left: -7.7px;
+    z-index: 1;
 }
