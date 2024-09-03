@@ -1,6 +1,6 @@
 import { useRef } from 'react';
 import { useWgrObserver, useSectionObserver } from './hooks';
-import { Background, WebGuideRobot, MainInfo, Timeline } from './components';
+import { Background, WebGuideRobot, MainInfo, Timeline, CallToAction } from './components';
 import './App.css';
 
 function App() {
@@ -19,6 +19,7 @@ function App() {
             <Background id="tsparticles" />
             <MainInfo ref={mainInfoRef} />
             <Timeline ref={timelineRef} />
+            <CallToAction />
             <WebGuideRobot location={location} ref={wgrRef} />
         </div>
     )

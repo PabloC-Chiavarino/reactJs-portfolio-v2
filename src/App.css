@@ -19,3 +19,15 @@
 .App {
     animation: fadeIn 800ms;
 }
+
+.text-highlightB, .text-highlightA {
+  font-weight: 475;
+}
+
+.text-highlightA {
+  color: #df56ff;
+}
+
+.text-highlightB {
+  color: #0fc1d8;
+}
