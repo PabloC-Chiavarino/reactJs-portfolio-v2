@@ -1,0 +1,25 @@
+.dataWidget {
+    position: fixed;
+    top: 5dvh;
+    right: 0;
+    width: fit-content;
+    height: fit-content;
+    padding-right: 3rem;
+    z-index: 3;
+}
+
+.dataWidget__container {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.dataWidget__button {
+    cursor: pointer;
+}
+
+.dataWidget__button img {
+    width: 3rem;
+    height: 3rem;
+    opacity: .8;
+}
