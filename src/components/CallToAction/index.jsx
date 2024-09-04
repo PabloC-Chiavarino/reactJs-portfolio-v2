@@ -1,8 +1,10 @@
+import React from 'react'
 import './styles.css'
 
-const CallToAction = () => {
+const CallToAction = React.forwardRef((props, ref) => {
+  
     return (
-        <div className="callToAction">
+        <div id='cta' className="callToAction" ref={ref}>
             <h2>¿Tienes un proyecto en mente?</h2>
             <p>
                 Estoy listo para <span className='text-highlightA'>llevar tu proyecto al siguiente nivel.</span> Ya sea que tengas una idea en mente o necesites discutir oportunidades de colaboración, me pondré a trabajar para <span className='text-highlightB'>ofrecerte la mejor solución.</span>
@@ -20,6 +22,6 @@ const CallToAction = () => {
             </div>
         </div>
     )
-}
+})
 
 export default CallToAction

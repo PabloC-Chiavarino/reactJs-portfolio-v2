@@ -16,24 +16,24 @@
     }
 }
 
-/* @keyframes goSectionB {
+@keyframes goToCTA {
     from {
-        transform: translate(-13rem, 27rem);
+        transform: translate(-13rem, 29rem);
     }
     to {
-        transform: translate(26rem, -54rem);
+        transform: translate(2.5rem, 65rem);
     }
 }
 
-
-@keyframes returnSectionB {
+@keyframes returnFromCTA {
     from {
-        transform: translate(26rem, -54rem);
+        transform: translate(2.5rem, 65rem);
     }
     to {
-        transform: translate(-13rem, 27rem);
+        transform: translate(-13rem, 29rem);
     }
-} */
+}
+
 
 .wgrobot__container {
     animation: fadeIn 1500ms ease-in;
@@ -62,4 +62,8 @@
 
 .wgrobot--returnFromTimeline {
     animation: returnFromTimeline 700ms ease-in-out forwards;
+}
+
+.wgrobot--goToCTA {
+    animation: goToCTA 700ms ease-in-out forwards;
 }

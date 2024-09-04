@@ -13,6 +13,8 @@ const WebGuideRobot = React.forwardRef(({location}, ref) => {
             className={`wgrobot__container 
                 ${location === 'timeline' ? "wgrobot--goToTimeline" : ''}
                 ${location === 'mainInfo' ? "wgrobot--returnFromTimeline" : ''}
+                ${location === 'cta' ? "wgrobot--goToCTA" : ''}
+                
             `}
             ref={ref}
         >

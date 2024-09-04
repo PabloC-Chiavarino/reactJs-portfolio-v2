@@ -1,13 +1,13 @@
 import { useState, useEffect } from 'react'
 
-const useSectionObserver = (sectionsRef, initialLoad) => {
+const useSectionObserver = (sectionsRefs, initialLoad) => {
 
     const [predominantSection, setPredominantSection] = useState(null)
 
     useEffect(() => {
 
-        const sections = sectionsRef.map(section => section.current)
-
+        const sections = sectionsRefs.map(section => section.current)
+        
         if (sections.some(section => !section)) return
 
         const sectionObserver = new IntersectionObserver(entries => {

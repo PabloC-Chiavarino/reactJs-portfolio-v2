@@ -7,11 +7,14 @@ function App() {
 
     const initialLoad = useRef(true)
 
-    const timelineRef = useRef()
     const mainInfoRef = useRef()
+    const timelineRef = useRef()
+    const callToActionRef = useRef()
     const wgrRef = useRef()
 
-    const predominantSection = useSectionObserver([mainInfoRef, timelineRef], initialLoad)
+    const sections = [mainInfoRef, timelineRef, callToActionRef]
+
+    const predominantSection = useSectionObserver(sections, initialLoad)
     const location = useWgrObserver(predominantSection, wgrRef)
 
     return (
@@ -20,7 +23,7 @@ function App() {
             <DataWidget />
             <MainInfo ref={mainInfoRef} />
             <Timeline ref={timelineRef} />
-            <CallToAction />
+            <CallToAction ref={callToActionRef} />
             <WebGuideRobot location={location} ref={wgrRef} />
         </div>
     )
