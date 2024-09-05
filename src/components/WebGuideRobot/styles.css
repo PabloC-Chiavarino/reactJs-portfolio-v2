@@ -1,3 +1,13 @@
+@keyframes fadeInitialPos {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+    
+}
+
 @keyframes goToTimeline {
     from {
         transform: translate(0, 0);
@@ -34,15 +44,12 @@
     }
 }
 
-
 .wgrobot__container {
-    animation: fadeIn 1500ms ease-in;
     display: flex;
     align-items: center;
     justify-content: center;
     position: absolute;
-    top: 1rem;
-    right: 2.75rem;
+    right: 40px;
     width: 40.3%;
     height: 89%;
     background: radial-gradient(circle at center, rgba(128,0,128,1) -30%, rgba(5,7,36,0) 67.5%);
@@ -51,9 +58,12 @@
 
 .wgrobot {
     width: 70%;
-    position: relative;
     right: 10px;
     z-index: 2;
+}
+
+.wgrobot--initialPos {
+    animation: fadeInitialPos 1500ms ease-in forwards;
 }
 
 .wgrobot--goToTimeline {
@@ -66,4 +76,16 @@
 
 .wgrobot--goToCTA {
     animation: goToCTA 700ms ease-in-out forwards;
+}
+
+.wgrobot--returnFromCTA {
+    animation: returnFromCTA 700ms ease-in-out forwards;
+}
+
+.wgrobot--stayEnd {
+    transform: translate(2.5rem, 65rem);
+}
+
+.wgrobot--stayStart {
+    transform: translate(0, 0);
 }

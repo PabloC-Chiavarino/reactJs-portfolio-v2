@@ -6,16 +6,33 @@ import './styles.css';
 
 const WebGuideRobot = React.forwardRef(({location}, ref) => {
 
-    console.log("Wgr location:", location)
+    const { wgrLocation, scrollDirection } = location
+
+    console.log("wgrLocation:", wgrLocation)
+    console.log("scrollDirection:", scrollDirection)
+
+        let animationState = "wgrobot--initialPos"
+            
+        if (wgrLocation === 'cta') {
+            animationState = (scrollDirection === 'down') 
+                ? "wgrobot--goToCTA" 
+                : "wgrobot--stayEnd";
+
+        } else if (wgrLocation === 'timeline') {
+            animationState = (scrollDirection === 'down') 
+                ? "wgrobot--goToTimeline" 
+                : "wgrobot--returnFromCTA";
+
+        } else if (wgrLocation === 'mainInfo') {
+            animationState = (scrollDirection === 'down')
+                ? "wgrobot--goToTimeline"
+                : "wgrobot--returnFromTimeline";
+        }
+        
 
     return (
         <div
-            className={`wgrobot__container 
-                ${location === 'timeline' ? "wgrobot--goToTimeline" : ''}
-                ${location === 'mainInfo' ? "wgrobot--returnFromTimeline" : ''}
-                ${location === 'cta' ? "wgrobot--goToCTA" : ''}
-                
-            `}
+            className={`wgrobot__container ${animationState}`}
             ref={ref}
         >
             <Lottie className="wgrobot" animationData={animationData} />
@@ -24,7 +41,7 @@ const WebGuideRobot = React.forwardRef(({location}, ref) => {
 })
 
 WebGuideRobot.propTypes = {
-    location: PropTypes.string
+    location: PropTypes.object
 }
 
-export default WebGuideRobot;
+export default WebGuideRobot
