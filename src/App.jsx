@@ -1,5 +1,5 @@
 import { useRef } from 'react';
-import { useWgrObserver, useSectionObserver } from './hooks';
+import { useWgrObserver, useSectionObserver, useScrollDirection } from './hooks';
 import { Background, WebGuideRobot, MainInfo, Timeline, CallToAction, DataWidget } from './components';
 import './App.css';
 
@@ -15,16 +15,17 @@ function App() {
     const sections = [mainInfoRef, timelineRef, callToActionRef]
 
     const predominantSection = useSectionObserver(sections, initialLoad)
-    const location = useWgrObserver(predominantSection, wgrRef)
+    const scrollDirection = useScrollDirection()
+    const location = useWgrObserver(predominantSection, scrollDirection, wgrRef)
 
     return (
         <div className="App">
             <Background id="tsparticles" />
             <DataWidget />
+            <WebGuideRobot location={location} ref={wgrRef} />
             <MainInfo ref={mainInfoRef} />
             <Timeline ref={timelineRef} />
             <CallToAction ref={callToActionRef} />
-            <WebGuideRobot location={location} ref={wgrRef} />
         </div>
     )
 }
