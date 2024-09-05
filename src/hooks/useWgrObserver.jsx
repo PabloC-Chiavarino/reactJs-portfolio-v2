@@ -1,15 +1,17 @@
 import { useEffect, useState } from 'react';
 
-const useWgrObserver = (predominantSection, wgrRef) => {
+const useWgrObserver = (predominantSection, scrollDirection, wgrRef) => {
 
     const [wgrLocation, setWgrLocation] = useState('initial')
 
     useEffect(() => {
 
+        if (!predominantSection || predominantSection === null) return;
+        
         const wgr = wgrRef.current
 
         //console.log("wgr ref:", wgr) // debugging
-
+        //console.log("scrollDirection:", scrollDirection) // debugging
         if (!wgr) return;
 
         const wgrObserver = new IntersectionObserver(entries => {
@@ -18,7 +20,7 @@ const useWgrObserver = (predominantSection, wgrRef) => {
 
                 if (newLocation !== wgrLocation) {
                 setWgrLocation(newLocation);
-                console.log("New wgr location:", newLocation); // debugging
+                //console.log("New wgr location:", newLocation); // debugging
             }
         }, {
             root: null,
@@ -34,7 +36,7 @@ const useWgrObserver = (predominantSection, wgrRef) => {
 
     }, [predominantSection])
 
-    return wgrLocation
+    return { wgrLocation, scrollDirection}
 }
 
 export default useWgrObserver
