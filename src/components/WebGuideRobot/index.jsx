@@ -6,7 +6,7 @@ import './styles.css';
 
 const WebGuideRobot = React.forwardRef(({location}, ref) => {
 
-    const { wgrLocation, scrollDirection } = location
+    const { wgrLocation, scrollDirection, predominantSection } = location
 
     console.log("wgrLocation:", wgrLocation)
     console.log("scrollDirection:", scrollDirection)
@@ -23,7 +23,7 @@ const WebGuideRobot = React.forwardRef(({location}, ref) => {
                 ? "wgrobot--goToTimeline" 
                 : "wgrobot--returnFromCTA";
 
-        } else if (wgrLocation === 'mainInfo') {
+        } else if (wgrLocation === 'mainInfo' && predominantSection === 'mainInfo') {
             animationState = (scrollDirection === 'down')
                 ? "wgrobot--goToTimeline"
                 : "wgrobot--returnFromTimeline";

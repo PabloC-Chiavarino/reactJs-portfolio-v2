@@ -13,13 +13,13 @@
         transform: translate(0, 0);
     }
     to {
-        transform: translate(-13rem, 29rem);
+        transform: translate(-13rem, 27rem);
     }
 }
 
 @keyframes returnFromTimeline {
     from {
-        transform: translate(-13rem, 29rem);
+        transform: translate(-13rem, 27rem);
     }
     to {
         transform: translate(0, 0);
@@ -28,7 +28,7 @@
 
 @keyframes goToCTA {
     from {
-        transform: translate(-13rem, 29rem);
+        transform: translate(-13rem, 27rem);
     }
     to {
         transform: translate(2.5rem, 65rem);
@@ -40,7 +40,7 @@
         transform: translate(2.5rem, 65rem);
     }
     to {
-        transform: translate(-13rem, 29rem);
+        transform: translate(-13rem, 27rem);
     }
 }
 
