@@ -5,7 +5,7 @@ import animationData from '../../assets/hiRobot.json';
 import './styles.css';
 
 const WebGuideRobot = React.forwardRef(({location}, ref) => {
-
+   
     const { wgrLocation, scrollDirection, predominantSection } = location
 
     console.log("wgrLocation:", wgrLocation)
@@ -31,12 +31,28 @@ const WebGuideRobot = React.forwardRef(({location}, ref) => {
         
 
     return (
-        <div
-            className={`wgrobot__container ${animationState}`}
-            ref={ref}
-        >
-            <Lottie className="wgrobot" animationData={animationData} />
-        </div>
+        <>
+            <div
+                className={`wgrobot__container ${animationState}`}
+                ref={ref}
+            >
+                <Lottie className="wgrobot" animationData={animationData} />
+
+            </div>
+            <div 
+                className="chat__container"
+                ref={ref}
+                >
+                <p>Respuesta: {'answer'}</p>
+                <input
+                    type="text"
+                    value={'question'}
+                    onChange={(e) => setQuestion(e.target.value)}
+                    placeholder="Hazme una pregunta..."
+                    />
+                <button>Preguntar</button>
+            </div>
+        </>
     )
 })
 
