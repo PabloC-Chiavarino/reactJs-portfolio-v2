@@ -1,102 +1,116 @@
 @keyframes fadeInitialPos {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-    
+   from {
+      opacity: 0;
+   }
+   to {
+      opacity: 1;
+   }
 }
 
 @keyframes goToTimeline {
-    from {
-        transform: translate(0, 0);
-    }
-    to {
-        transform: translate(-13rem, 27rem);
-    }
+   from {
+      transform: translate(0, 0);
+   }
+   to {
+      transform: translate(-13rem, 27rem);
+   }
 }
 
 @keyframes returnFromTimeline {
-    from {
-        transform: translate(-13rem, 27rem);
-    }
-    to {
-        transform: translate(0, 0);
-    }
+   from {
+      transform: translate(-13rem, 27rem);
+   }
+   to {
+      transform: translate(0, 0);
+   }
 }
 
 @keyframes goToCTA {
-    from {
-        transform: translate(-13rem, 27rem);
-    }
-    to {
-        transform: translate(2.5rem, 65rem);
-    }
+   from {
+      transform: translate(-13rem, 27rem);
+   }
+   to {
+      transform: translate(2.5rem, 65rem);
+   }
 }
 
 @keyframes returnFromCTA {
-    from {
-        transform: translate(2.5rem, 65rem);
-    }
-    to {
-        transform: translate(-13rem, 27rem);
-    }
+   from {
+      transform: translate(2.5rem, 65rem);
+   }
+   to {
+      transform: translate(-13rem, 27rem);
+   }
 }
 
 .wgrobot__container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    right: 40px;
-    width: 40.3%;
-    height: 89%;
-    background: radial-gradient(circle at center, rgba(128,0,128,1) -30%, rgba(5,7,36,0) 67.5%);
-    z-index: 1;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   position: absolute;
+   right: 40px;
+   width: 40.3%;
+   height: 89%;
+   background: radial-gradient(
+      circle at center,
+      rgba(128, 0, 128, 1) -30%,
+      rgba(5, 7, 36, 0) 67.5%
+   );
+   z-index: 1;
 }
 
 .chat__container {
+   font-size: 14.5px;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   position: absolute;
+   right: 14rem;
+   top: 1rem;
+   z-index: 1;
+   width: 62%;
+   height: 100%;
+}
+
+.input__container {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    right: 40px;
-    bottom: 5rem;
-    z-index: 1;
+    gap: 1rem;
+    bottom: 4rem;
+    position: relative;
+    width: 75%;
 }
 
 .wgrobot {
-    width: 70%;
-    right: 10px;
-    z-index: 2;
+   width: 70%;
+   right: 10px;
+   z-index: 2;
 }
 
 .wgrobot--initialPos {
-    animation: fadeInitialPos 1500ms ease-in forwards;
+   animation: fadeInitialPos 1500ms ease-in forwards;
 }
 
 .wgrobot--goToTimeline {
-    animation: goToTimeline 700ms ease-in-out forwards;
+   animation: goToTimeline 700ms ease-in-out forwards;
 }
 
 .wgrobot--returnFromTimeline {
-    animation: returnFromTimeline 700ms ease-in-out forwards;
+   animation: returnFromTimeline 700ms ease-in-out forwards;
 }
 
 .wgrobot--goToCTA {
-    animation: goToCTA 700ms ease-in-out forwards;
+   animation: goToCTA 700ms ease-in-out forwards;
 }
 
 .wgrobot--returnFromCTA {
-    animation: returnFromCTA 700ms ease-in-out forwards;
+   animation: returnFromCTA 700ms ease-in-out forwards;
 }
 
 .wgrobot--stayEnd {
-    transform: translate(2.5rem, 65rem);
+   transform: translate(2.5rem, 65rem);
 }
 
 .wgrobot--stayStart {
-    transform: translate(0, 0);
+   transform: translate(0, 0);
 }
