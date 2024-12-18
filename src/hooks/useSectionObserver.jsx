@@ -18,7 +18,7 @@ const useSectionObserver = (sectionsRefs, initialLoad) => {
                 //console.log("IntersectionObserver Entry:", entry) // debugging
                 if (entry.isIntersecting) {
                     newPredominantSection = entry.target.id
-                    console.log("Intersecting section:", entry.target.id);// debugging
+                    //console.log("Intersecting section:", entry.target.id);// debugging
                 }
             })
                 
@@ -31,8 +31,8 @@ const useSectionObserver = (sectionsRefs, initialLoad) => {
 
         }, {
             root: null,
-            rootMargin: "-15% 0px -15% 0px",
-            threshold: [0.65]
+            rootMargin: "-50% 0px -50% 0px",
+            threshold: [0]
         })
 
         sections.forEach(section => {

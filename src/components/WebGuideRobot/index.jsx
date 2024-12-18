@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import { config, messageResponses } from "../../config/ChatBotCfg";
 import Lottie from "lottie-react";
@@ -8,13 +8,15 @@ import "./styles.css";
 const WebGuideRobot = React.forwardRef(({ location }, ref) => {
    const [question, setQuestion] = useState("");
    const [answer, setAnswer] = useState(config.initialMessage);
+   const [animationState, setAnimationState] = useState("wgrobot--initialPos");
 
    const { wgrLocation, scrollDirection, predominantSection } = location;
 
    console.log("wgrLocation:", wgrLocation);
    console.log("scrollDirection:", scrollDirection);
+   console.log(predominantSection);
+   console.log(animationState);
 
-   let animationState = "wgrobot--initialPos";
 
    const handleAnswer = (question) => {
       
@@ -50,21 +52,37 @@ const WebGuideRobot = React.forwardRef(({ location }, ref) => {
       }
    }
 
+   useEffect(() => {
+      
+      if (wgrLocation === 'mainInfo' && predominantSection === 'timeline') {
+         setAnimationState(
+            scrollDirection === 'down'
+            ? 'wgrobot--goToTimeline'
+            : 'wgrobot--initialPos')
+            
+      } else if (wgrLocation === 'timeline' && predominantSection === 'cta') {
+         setAnimationState(
+            scrollDirection === 'down'
+            ? 'wgrobot--goToCTA'
+            : null
+         )
+            
+      } else if (wgrLocation === 'timeline' && predominantSection === 'mainInfo') {
+         setAnimationState (
+            scrollDirection === 'down'
+            ? null
+            : 'wgrobot--returnFromTimeline'
+         )
+            
+      } else if (wgrLocation === 'cta' && predominantSection === 'timeline') {
+         setAnimationState (
+            scrollDirection === 'down'
+            ? 'wgrobot--stayEnd'
+            : 'wgrobot--returnFromCTA'
+         )
+      }
+   }, [predominantSection, wgrLocation, scrollDirection])
 
-   if (wgrLocation === "cta") {
-      animationState =
-         scrollDirection === "down" ? "wgrobot--goToCTA" : "wgrobot--stayEnd";
-   } else if (wgrLocation === "timeline") {
-      animationState =
-         scrollDirection === "down"
-            ? "wgrobot--goToTimeline"
-            : "wgrobot--returnFromCTA";
-   } else if (wgrLocation === "mainInfo" && predominantSection === "mainInfo") {
-      animationState =
-         scrollDirection === "down"
-            ? "wgrobot--goToTimeline"
-            : "wgrobot--returnFromTimeline";
-   }
 
    return (
       <div className={`wgrobot__container ${animationState}`} ref={ref}>

@@ -63,12 +63,12 @@
    font-size: 14.5px;
    display: flex;
    flex-direction: column;
-   justify-content: space-between;
+   gap: 12rem;
    position: absolute;
    right: 14rem;
-   top: 1rem;
+   top: -.5rem;
    z-index: 1;
-   width: 62%;
+   width: 58%;
    height: 100%;
 }
 
@@ -80,6 +80,20 @@
     position: relative;
     width: 75%;
 }
+
+.input__container input {
+   height: 4rem;
+  border-radius: 1rem;
+  border-color: transparent;
+}
+
+.input__container button {
+   width: 50%;
+   align-self: center;
+   top: 1rem;
+   position: relative;
+}
+
 
 .wgrobot {
    width: 70%;

@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 
 const useWgrObserver = (predominantSection, scrollDirection, wgrRef) => {
 
-    const [wgrLocation, setWgrLocation] = useState('initial')
+    const [wgrLocation, setWgrLocation] = useState('mainInfo')
 
     useEffect(() => {
 
@@ -36,7 +36,7 @@ const useWgrObserver = (predominantSection, scrollDirection, wgrRef) => {
 
     }, [predominantSection])
 
-    return { wgrLocation, scrollDirection}
+    return { wgrLocation, scrollDirection, predominantSection }
 }
 
 export default useWgrObserver
