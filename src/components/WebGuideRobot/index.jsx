@@ -48,6 +48,7 @@ const WebGuideRobot = React.forwardRef(({ location }, ref) => {
 
    const handleKeyDown = (e) => {
       if (e.key === "Enter") {
+         e.preventDefault();
          handleAnswer(question);
       }
    }
@@ -81,6 +82,7 @@ const WebGuideRobot = React.forwardRef(({ location }, ref) => {
             : 'wgrobot--returnFromCTA'
          )
       }
+      
    }, [predominantSection, wgrLocation, scrollDirection])
 
 
@@ -89,13 +91,20 @@ const WebGuideRobot = React.forwardRef(({ location }, ref) => {
          <Lottie className="wgrobot" animationData={animationData} />
 
          <div className="chat__container" ref={ref}>
-            <p>Respuesta: {answer}</p>
-
-            <div className="input__container">
-               <input
+            
+            {answer && 
+               <div className="answer__container">
+                  <h4 style={{ fontSize: "1rem", fontWeight: "600", paddingLeft: "3.25rem", margin: "0", letterSpacing: ".5px", marginTop: "1rem"}}>Bottie: </h4>
+                  <p style={{ maxHeight: "200px", fontSize: ".9rem", fontWeight: "400", paddingLeft: "3.25rem", marginTop: ".5rem", letterSpacing: ".35px", overflowY: "scroll"}}>{answer}</p>
+               </div>
+            }
+            <div className="textarea__container">
+               <div className="textarea__line"
+                  contentEditable = {true}
+                  rows= "1"
                   type="text"
                   value={question}
-                  onChange={(e) => setQuestion(e.target.value)}
+                  onInput={(e) => setQuestion(e.target.innerText)}
                   onKeyDown={handleKeyDown}
                   placeholder="Hazme una pregunta..."
                />
