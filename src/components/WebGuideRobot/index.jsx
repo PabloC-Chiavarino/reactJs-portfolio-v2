@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import PropTypes from "prop-types";
+import { ClickRipple } from "../../components";
 import { config, messageResponses } from "../../config/ChatBotCfg";
 import Lottie from "lottie-react";
 import animationData from "../../assets/hiRobot.json";
@@ -9,15 +10,18 @@ const WebGuideRobot = React.forwardRef(({ location }, ref) => {
    const [question, setQuestion] = useState("");
    const [answer, setAnswer] = useState(config.initialMessage);
    const [animationState, setAnimationState] = useState("wgrobot--initialPos");
+   const [chatShow, setChatShow] = useState(false);
 
    const { wgrLocation, scrollDirection, predominantSection } = location;
 
-   console.log("wgrLocation:", wgrLocation);
-   console.log("scrollDirection:", scrollDirection);
-   console.log(predominantSection);
-   console.log(animationState);
+   //console.log("wgrLocation:", wgrLocation); //debugging
+   //console.log("scrollDirection:", scrollDirection); //debugging
+   //console.log(predominantSection); //debugging
+   //console.log(animationState); //debugging
 
-
+   const handleChatShow = () => {
+      setChatShow(!chatShow);  
+   }
    const handleAnswer = (question) => {
       
       const lowerCaseQuestion = question.toLowerCase();
@@ -87,10 +91,12 @@ const WebGuideRobot = React.forwardRef(({ location }, ref) => {
 
 
    return (
-      <div className={`wgrobot__container ${animationState}`} ref={ref}>
-         <Lottie className="wgrobot" animationData={animationData} />
 
-         <div className="chat__container" ref={ref}>
+      <div className={`wgrobot__container ${animationState}`} ref={ref}>
+         <Lottie className="wgrobot" onClick={handleChatShow} animationData={animationData} />
+         <ClickRipple chatShowed={chatShow}/>
+
+         {chatShow && <div className="chat__container" ref={ref}>
             
             {answer && 
                <div className="answer__container">
@@ -115,6 +121,7 @@ const WebGuideRobot = React.forwardRef(({ location }, ref) => {
                >Preguntar</button>
             </div>
          </div>
+         }
       </div>
    );
 });
