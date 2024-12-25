@@ -7,26 +7,33 @@ const ClickRipple = ({chatShowed}) => {
     const intervalRef = useRef(null);
 
     useEffect(() => {
-        intervalRef.current = setInterval(() => {
-          const firstRipple = firstRippleRef.current;
-          const secondRipple = secondRippleRef.current;
-    
-          if (firstRipple && secondRipple) {
-            firstRipple.classList.add('ripple__first');
-            secondRipple.classList.add('ripple__second');
-    
-            setTimeout(() => {
-              firstRipple.classList.remove('ripple__first');
-              secondRipple.classList.remove('ripple__second');
-            }, 2500);
-          }
-        }, 5000);
-    
-        if (chatShowed) {
-            clearInterval(intervalRef.current);
-        }
         
-        return () => clearInterval(intervalRef.current);
+        if (chatShowed) {
+            return
+        
+        } else {
+            
+            intervalRef.current = setInterval(() => {
+              const firstRipple = firstRippleRef.current;
+              const secondRipple = secondRippleRef.current;
+        
+              if (firstRipple && secondRipple) {
+                firstRipple.classList.add('ripple__first');
+                secondRipple.classList.add('ripple__second');
+        
+                setTimeout(() => {
+                  firstRipple.classList.remove('ripple__first');
+                  secondRipple.classList.remove('ripple__second');
+                }, 2500);
+              }
+            }, 5000);
+        
+            if (chatShowed) {
+                clearInterval(intervalRef.current);
+            }
+            
+            return () => clearInterval(intervalRef.current);
+        }
         
     }, [chatShowed]);
 

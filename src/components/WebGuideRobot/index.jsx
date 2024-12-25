@@ -11,6 +11,7 @@ const WebGuideRobot = React.forwardRef(({ location }, ref) => {
    const [answer, setAnswer] = useState(config.initialMessage);
    const [animationState, setAnimationState] = useState("wgrobot--initialPos");
    const [chatShow, setChatShow] = useState(false);
+   const [chatShowed, setChatShowed] = useState(false);
 
    const { wgrLocation, scrollDirection, predominantSection } = location;
 
@@ -20,7 +21,8 @@ const WebGuideRobot = React.forwardRef(({ location }, ref) => {
    //console.log(animationState); //debugging
 
    const handleChatShow = () => {
-      setChatShow(!chatShow);  
+      setChatShow(!chatShow);
+      if (!chatShowed) setChatShowed(true);
    }
    const handleAnswer = (question) => {
       
@@ -94,7 +96,7 @@ const WebGuideRobot = React.forwardRef(({ location }, ref) => {
 
       <div className={`wgrobot__container ${animationState}`} ref={ref}>
          <Lottie className="wgrobot" onClick={handleChatShow} animationData={animationData} />
-         <ClickRipple chatShowed={chatShow}/>
+         <ClickRipple chatShowed={chatShowed}/>
 
          {chatShow && <div className="chat__container" ref={ref}>
             
