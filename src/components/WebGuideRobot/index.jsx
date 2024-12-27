@@ -98,7 +98,16 @@ const WebGuideRobot = React.forwardRef(({ location }, ref) => {
          <Lottie className="wgrobot" onClick={handleChatShow} animationData={animationData} />
          <ClickRipple chatShowed={chatShowed}/>
 
-         {chatShow && <div className="chat__container" ref={ref}>
+         <div 
+            ref={ref}
+            className={`chat__container ${chatShow ? "fadeIn" : "fadeOut"}`}
+            style={{ display: chatShow ? "flex" : "hidden" }}
+            onAnimationEnd={(e) => {
+              if (!chatShow) {
+                e.target.style.display = "none";
+              }
+            }}
+            >
             
             {answer && 
                <div className="answer__container">
@@ -123,7 +132,6 @@ const WebGuideRobot = React.forwardRef(({ location }, ref) => {
                >Preguntar</button>
             </div>
          </div>
-         }
       </div>
    );
 });

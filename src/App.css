@@ -31,3 +31,12 @@
 .text-highlightB {
   color: #0fc1d8;
 }
+
+.fadeIn {
+  animation: fadeIn 500ms ease;
+}
+
+
+.fadeOut {
+  animation: fadeOut 500ms ease;
+}
