@@ -111,11 +111,11 @@ const WebGuideRobot = React.forwardRef(({ location }, ref) => {
             
             {answer && 
                <div className="answer__container">
-                  <h4 style={{ fontSize: "1rem", fontWeight: "600", paddingLeft: "3.25rem", margin: "0", letterSpacing: ".5px", marginTop: "1rem"}}>Bottie: </h4>
-                  <p style={{ maxHeight: "200px", fontSize: ".9rem", fontWeight: "400", paddingLeft: "3.25rem", marginTop: ".5rem", letterSpacing: ".35px", overflowY: "scroll"}}>{answer}</p>
+                  <h4 className="answer__header">Bottie: </h4>
+                  <p className="answer__text">{answer}</p>
                </div>
             }
-            <div className="textarea__container">
+            <div className="textarea__container">  
                <div className="textarea__line"
                   contentEditable = {true}
                   rows= "1"
