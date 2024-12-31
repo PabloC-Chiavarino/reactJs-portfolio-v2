@@ -107,7 +107,7 @@ const WebGuideRobot = React.forwardRef(({ location }, ref) => {
                 e.target.style.display = "none";
               }
             }}
-            >
+         >
             
             {answer && 
                <div className="answer__container">
