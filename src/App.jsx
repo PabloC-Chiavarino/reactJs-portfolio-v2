@@ -1,9 +1,12 @@
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import { useWgrObserver, useSectionObserver, useScrollDirection } from './hooks';
 import { Background, BackgroundOverlay, WebGuideRobot, MainInfo, Timeline, CallToAction, DataWidget } from './components';
 import './App.css';
 
 function App() {
+    
+    const [chatShow, setChatShow] = useState(false);
+    const [chatShowed, setChatShowed] = useState(false);
 
     const initialLoad = useRef(true)
 
@@ -18,12 +21,23 @@ function App() {
     const scrollDirection = useScrollDirection()
     const location = useWgrObserver(predominantSection, scrollDirection, wgrRef)
 
+    const handleChatShow = () => {
+        setChatShow(!chatShow);
+        if (!chatShowed) setChatShowed(true);
+     }
+
     return (
         <div className="App">
             <Background id="tsparticles" />
             <BackgroundOverlay />
             <DataWidget />
-            <WebGuideRobot location={location} ref={wgrRef} />
+            <WebGuideRobot
+                location={location}
+                ref={wgrRef}
+                handleChatShow={handleChatShow}
+                chatShow={chatShow}
+                chatShowed={chatShowed}
+            />
             <MainInfo ref={mainInfoRef} />
             <Timeline ref={timelineRef} />
             <CallToAction ref={callToActionRef} />

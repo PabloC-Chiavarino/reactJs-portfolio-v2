@@ -6,12 +6,10 @@ import Lottie from "lottie-react";
 import animationData from "../../assets/hiRobot.json";
 import "./styles.css";
 
-const WebGuideRobot = React.forwardRef(({ location }, ref) => {
+const WebGuideRobot = React.forwardRef(({ location, handleChatShow, chatShow, chatShowed }, ref) => {
    const [question, setQuestion] = useState("");
    const [answer, setAnswer] = useState(config.initialMessage);
    const [animationState, setAnimationState] = useState("wgrobot--initialPos");
-   const [chatShow, setChatShow] = useState(false);
-   const [chatShowed, setChatShowed] = useState(false);
 
    const { wgrLocation, scrollDirection, predominantSection } = location;
 
@@ -20,10 +18,6 @@ const WebGuideRobot = React.forwardRef(({ location }, ref) => {
    //console.log(predominantSection); //debugging
    //console.log(animationState); //debugging
 
-   const handleChatShow = () => {
-      setChatShow(!chatShow);
-      if (!chatShowed) setChatShowed(true);
-   }
    const handleAnswer = (question) => {
       
       const lowerCaseQuestion = question.toLowerCase();
