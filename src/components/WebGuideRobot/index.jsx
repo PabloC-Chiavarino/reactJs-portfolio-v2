@@ -56,6 +56,7 @@ const WebGuideRobot = React.forwardRef(({ location }, ref) => {
       if (e.key === "Enter") {
          e.preventDefault();
          handleAnswer(question);
+         e.target.innerText = "";
       }
    }
 
@@ -110,7 +111,7 @@ const WebGuideRobot = React.forwardRef(({ location }, ref) => {
          >
             
             {answer && 
-               <div className="answer__container">
+               <div key={answer} className="answer__container">
                   <h4 className="answer__header">Bottie: </h4>
                   <p className="answer__text">{answer}</p>
                </div>
@@ -126,8 +127,10 @@ const WebGuideRobot = React.forwardRef(({ location }, ref) => {
                   placeholder="Hazme una pregunta..."
                />
                <button
-                  onClick={() => {
+                  onClick={(e) => {
+                     const contentDiv = e.target.previousElementSibling;
                      handleAnswer(question);
+                     contentDiv.innerText = "";
                   }}
                >Preguntar</button>
             </div>
