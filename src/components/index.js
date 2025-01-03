@@ -6,3 +6,4 @@ export { default as CallToAction } from './CallToAction';
 export { default as DownChevron } from './DownChevron';
 export { default as DataWidget } from './DataWidget';
 export { default as ClickRipple } from './ClickRipple';
+export { default as BackgroundOverlay } from './BackgroundOverlay';
