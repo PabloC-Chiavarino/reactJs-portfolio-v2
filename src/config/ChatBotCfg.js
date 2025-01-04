@@ -20,7 +20,7 @@ const messageResponses = {
 
 const config = {
   botName: botName,
-  initialMessage: messageResponses.welcome 
+  initialMessage: messageResponses.bienvenido 
 }
 
 
