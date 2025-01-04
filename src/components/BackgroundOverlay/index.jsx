@@ -8,11 +8,10 @@ const BackgroundOverlay = ({overlay}) => {
   
   return (
         <div className={`backgroundOverlay__container ${overlay ? "fadeIn" : "fadeOut"}`}
-          style={{ display: overlay ? "flex" : null }}
           onAnimationEnd={(e) => {
             if (!overlay) {
-             e.target.style.display = "none";
-             document.body.style.overflow = "auto";
+              e.target.classList.add('hidden');
+              document.body.style.overflow = "auto";
             }
           }}
         />

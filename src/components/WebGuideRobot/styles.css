@@ -83,6 +83,8 @@
 }
 
 .answer__container {
+   display: flex !important;
+   justify-content: start;
    position: relative;
    height: 187px;
    width: 255px;
@@ -94,11 +96,7 @@
    line-height: 1.5;
    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
    flex-direction: column;
-   display: flex;
-   justify-content: end;
    background: radial-gradient(ellipse at center, rgba(26, 26, 26, 0.52) 67%, rgb(119, 204, 158) 68%, rgb(64, 4, 80) 100%);
-   display: flex;
-   justify-content: start;
    animation: reverseLooneyTunes 300ms ease forwards;
 }
 

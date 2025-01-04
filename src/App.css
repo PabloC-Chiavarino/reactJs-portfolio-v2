@@ -40,3 +40,7 @@
 .fadeOut {
   animation: fadeOut 300ms ease;
 }
+
+.hidden {
+  display: none;
+}
