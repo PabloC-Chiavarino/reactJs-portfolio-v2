@@ -8,4 +8,5 @@
     z-index: 2;
     background-color: rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(3px) saturate(0.6);
+    transition: opacity 1s ease-in-out;
 }

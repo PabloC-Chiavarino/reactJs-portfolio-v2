@@ -96,7 +96,7 @@ const WebGuideRobot = React.forwardRef(({ location, handleChatShow, chatShow, ch
          <div 
             ref={ref}
             className={`chat__container ${chatShow ? "fadeIn" : "fadeOut"}`}
-            style={{ display: chatShow ? "flex" : "hidden" }}
+            style={{ display: chatShow ? "flex" : null }}
             onAnimationEnd={(e) => {
               if (!chatShow) {
                 e.target.style.display = "none";
