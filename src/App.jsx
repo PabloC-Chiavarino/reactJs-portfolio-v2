@@ -29,7 +29,7 @@ function App() {
     return (
         <div className="App">
             <Background id="tsparticles" />
-            <BackgroundOverlay overlay={chatShow} />
+            <BackgroundOverlay overlay={chatShow} handleChatShow={handleChatShow} />
             <DataWidget />
             <WebGuideRobot
                 location={location}

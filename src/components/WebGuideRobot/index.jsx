@@ -97,12 +97,14 @@ const WebGuideRobot = React.forwardRef(({ location, handleChatShow, chatShow, ch
             ref={ref}
             className={`chat__container ${chatShow ? "fadeIn" : "fadeOut"}`}
             onAnimationEnd={(e) => {
-              if (!chatShow) {
-                e.target.classList.add('hidden');
-              }
+               if (!chatShow) {
+                  e.target.classList.add('hidden');
+               }
             }}
          >
-            
+            <div className="chat__container--close" onClick={handleChatShow}>
+               &times;   
+            </div>            
             {answer && 
                <div key={answer} className="answer__container">
                   <h4 className="answer__header">Bottie: </h4>
