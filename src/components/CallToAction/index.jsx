@@ -7,7 +7,7 @@ const CallToAction = React.forwardRef((props, ref) => {
         <div id='cta' className="callToAction" ref={ref}>
             <h2>¿Tienes un proyecto en mente?</h2>
             <p>
-                Estoy listo para <span className='text-highlightA'>llevar tu proyecto al siguiente nivel.</span> Ya sea que tengas una idea en mente o necesites discutir oportunidades de colaboración, me pondré a trabajar para <span className='text-highlightB'>ofrecerte la mejor solución.</span>
+                Estoy listo para <span className='text-highlightA'>contribuir a tu equipo o proyecto.</span> Ya sea colaborando con un equipo para alcanzar objetivos comunes, o trabajando de manera independiente en un   desafío específico, me enfoco en <span className='text-highlightB'>aportar soluciones prácticas y efectivas."</span>
             </p>
                 <br/>
                 <p> Elige una opción de contacto que prefieras y te responderé a la brevedad posible para comenzar a trabajar juntos.    
