@@ -8,7 +8,7 @@
 }
 
 .proyects__container h2 {
-    margin-bottom: 7%;
+    margin-bottom: 5%;
 }
 
 .proyects__row {
@@ -16,29 +16,64 @@
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    margin-top: 3.5rem;
+    margin-top: 5rem;
+    transition: all 0.3s ease;
     &:hover {
+        text-shadow: 0 0 1.15px rgba(224, 224, 224, 0.6);
+        font-weight: 400;
+        
+        .proyects__image::after {
+            transform: translateY(1.8rem);
+            opacity: 1;
+        }
+
         .proyects__img {
             transform: rotateY(0deg) translateZ(0);
-            box-shadow: 6px 6px 0px rgba(255, 255, 255, 0.2); 
-            filter: saturate(1);
+            box-shadow: 4.5px 4.5px 0px rgba(255, 255, 255, 0.2); 
+            filter: saturate(1);   
+            
         }
     }
 }
 
-.proyects__description {
-    width: 80%;
-}
-
 .proyects__image {
     perspective: 1000px;
+    position: absolute;
+    display: flex;
+    justify-content: end;
+    &::after {
+        transition: transform .3s ease-in-out, opacity 0.15s ease;
+        content: 'Click para visitar';
+        position: absolute;
+        width: fit-content;
+        bottom: -3px;
+        color: #e0e0e0;
+        font-size: 14px;
+        opacity: 0;
+        z-index: 0;
+    }
 }
 
 .proyects__img {
-    width: 94%;
+    width: 30%;
     filter: saturate(0.1);
-    box-shadow: 8px 8px 2px rgba(255, 255, 255, 0.1); 
+    box-shadow: 6.5px 6.5px 2px rgba(255, 255, 255, 0.19); 
     border-radius: 3px;
     transform: rotateY(-33deg) translateZ(20px);
     transition: all 0.3s ease, box-shadow 0.2s ease;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.proyects__title {
+    margin: 0
+}
+
+.proyects__subtitle {
+    font-weight: 600;
+    margin: 16px auto 16px auto;
+}
+
+.proyects__description {
+    width: 60%;
 }
