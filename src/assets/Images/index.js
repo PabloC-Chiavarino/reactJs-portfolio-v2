@@ -1,0 +1,1 @@
+export { default as ProyectImg1 } from './screely-blstrategies.png';

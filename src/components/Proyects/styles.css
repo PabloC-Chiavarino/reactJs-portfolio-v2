@@ -1,0 +1,44 @@
+.proyects__container {
+    position: relative;
+    margin: 20dvh auto auto auto;
+    top: 24dvh;
+    z-index: 1;
+    width: 54%;
+    padding-left: 3rem;
+}
+
+.proyects__container h2 {
+    margin-bottom: 7%;
+}
+
+.proyects__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 3.5rem;
+    &:hover {
+        .proyects__img {
+            transform: rotateY(0deg) translateZ(0);
+            box-shadow: 6px 6px 0px rgba(255, 255, 255, 0.2); 
+            filter: saturate(1);
+        }
+    }
+}
+
+.proyects__description {
+    width: 80%;
+}
+
+.proyects__image {
+    perspective: 1000px;
+}
+
+.proyects__img {
+    width: 94%;
+    filter: saturate(0.1);
+    box-shadow: 8px 8px 2px rgba(255, 255, 255, 0.1); 
+    border-radius: 3px;
+    transform: rotateY(-33deg) translateZ(20px);
+    transition: all 0.3s ease, box-shadow 0.2s ease;
+}
