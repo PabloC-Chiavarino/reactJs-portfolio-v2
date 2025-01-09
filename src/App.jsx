@@ -1,6 +1,6 @@
 import { useRef, useState } from 'react';
 import { useWgrObserver, useSectionObserver, useScrollDirection } from './hooks';
-import { Background, BackgroundOverlay, WebGuideRobot, MainInfo, Timeline, CallToAction, DataWidget, Proyects } from './components';
+import { Background, BackgroundOverlay, WebGuideRobot, MainInfo, Timeline, CallToAction, DataWidget, Projects } from './components';
 import './App.css';
 
 function App() {
@@ -13,9 +13,10 @@ function App() {
     const mainInfoRef = useRef()
     const timelineRef = useRef()
     const callToActionRef = useRef()
+    const projectsRef = useRef()
     const wgrRef = useRef()
 
-    const sections = [mainInfoRef, timelineRef, callToActionRef]
+    const sections = [ mainInfoRef, timelineRef, callToActionRef, projectsRef ]
 
     const predominantSection = useSectionObserver(sections, initialLoad)
     const scrollDirection = useScrollDirection()
@@ -41,7 +42,7 @@ function App() {
             <MainInfo ref={mainInfoRef} />
             <Timeline ref={timelineRef} />
             <CallToAction ref={callToActionRef} />
-            <Proyects />
+            <Projects ref={projectsRef} />
         </div>
     )
 }

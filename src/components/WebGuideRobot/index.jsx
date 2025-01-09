@@ -15,7 +15,7 @@ const WebGuideRobot = React.forwardRef(({ location, handleChatShow, chatShow, ch
 
    //console.log("wgrLocation:", wgrLocation); //debugging
    //console.log("scrollDirection:", scrollDirection); //debugging
-   //console.log(predominantSection); //debugging
+   console.log(predominantSection); //debugging
    //console.log(animationState); //debugging
 
    const handleAnswer = (question) => {
@@ -79,8 +79,21 @@ const WebGuideRobot = React.forwardRef(({ location, handleChatShow, chatShow, ch
       } else if (wgrLocation === 'cta' && predominantSection === 'timeline') {
          setAnimationState (
             scrollDirection === 'down'
-            ? 'wgrobot--stayEnd'
+            ? null
             : 'wgrobot--returnFromCTA'
+         )
+
+      } else if (wgrLocation === 'cta' && predominantSection === 'projects') {
+         setAnimationState (
+            scrollDirection === 'down'
+            ? 'wgrobot--goToProjects'
+            : null
+         )
+      } else if (wgrLocation === 'projects' && predominantSection === 'cta') {
+         setAnimationState (
+            scrollDirection === 'down'
+            ? null
+            : 'wgrobot--returnFromProjects'
          )
       }
       

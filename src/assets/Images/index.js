@@ -1,1 +1,1 @@
-export { default as ProyectImg1 } from './screely-blstrategies.png';
+export { default as ProjectImg1 } from './screely-blstrategies.png';

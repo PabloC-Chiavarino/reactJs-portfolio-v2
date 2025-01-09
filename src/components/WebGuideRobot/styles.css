@@ -12,13 +12,13 @@
       transform: translate(0, 0);
    }
    to {
-      transform: translate(-5rem, 42rem);
+      transform: translate(-10rem, 42rem);
    }
 }
 
 @keyframes returnFromTimeline {
    from {
-      transform: translate(-5rem, 42rem);
+      transform: translate(-10rem, 42rem);
    }
    to {
       transform: translate(0, 0);
@@ -27,19 +27,37 @@
 
 @keyframes goToCTA {
    from {
-      transform: translate(-5rem, 42rem);
+      transform: translate(-10rem, 42rem);
    }
    to {
-      transform: translate(4rem, 92rem);
+      transform: translate(6rem, 85rem);
    }
 }
 
 @keyframes returnFromCTA {
    from {
-      transform: translate(4rem, 82rem);
+      transform: translate(6rem, 85rem);
    }
    to {
       transform: translate(-10rem, 42rem);
+   }
+}
+
+@keyframes goToProjects {
+   from {
+      transform: translate(6rem, 85rem);
+   }
+   to {
+      transform: translate(6rem, 125rem);
+   }
+}
+
+@keyframes returnFromProjects {
+   from {
+      transform: translate(4rem, 125rem);
+   }
+   to {
+      transform: translate(4rem, 85rem);
    }
 }
 
@@ -223,10 +241,10 @@
    animation: returnFromCTA 700ms ease-in-out forwards;
 }
 
-.wgrobot--stayEnd {
-   transform: translate(2.5rem, 65rem);
+.wgrobot--goToProjects {
+   animation: goToProjects 700ms ease-in-out forwards;
 }
 
-.wgrobot--stayStart {
-   transform: translate(0, 0);
+.wgrobot--returnFromProjects {
+   animation: returnFromProjects 700ms ease-in-out forwards;
 }
