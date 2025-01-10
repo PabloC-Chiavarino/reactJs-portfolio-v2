@@ -1,0 +1,15 @@
+export { default as html5Logo } from './html5-logo.svg';
+export { default as css3Logo } from './css3-logo.svg';
+export { default as jsLogo } from './js-logo.svg';
+export { default as reactjsLogo } from './reactjs-logo.svg';
+export { default as javaLogo } from './java-logo.svg';
+export { default as sbLogo } from './sb-logo.svg';
+export { default as intellijLogo } from './intellij-logo.svg';
+export { default as gitLogo } from './git-logo.svg';
+export { default as springLogo } from './sb-logo.svg';
+export { default as vscLogo } from './vsc-logo.svg';
+export { default as mysqlLogo } from './mysql-logo.svg';
+export { default as swaggerLogo } from './swagger-logo.svg';
+export { default as postmanLogo } from './postman-logo.svg';
+export { default as jpaHibLogo } from './jpahib-logo.svg';
+export { default as firebaseLogo } from './firebase-logo.svg';

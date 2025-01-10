@@ -1,0 +1,28 @@
+.skills__container {
+    position: relative;
+    margin: 20dvh 60dvh auto auto;
+    top: 24dvh;
+    z-index: 1;
+    width: 54%;
+}
+
+.skills__grid--container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    margin-top: 5rem;
+    position: relative;
+    right: 2.75rem;
+    row-gap: 1.5rem;
+}
+
+.skills__grid--item {
+    text-align: center;
+}
+
+.skills__grid--title {
+    font-weight: 600;
+}
+
+.skills__grid--icon {
+    width: 64px;
+}

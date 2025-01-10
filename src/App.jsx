@@ -1,6 +1,6 @@
 import { useRef, useState } from 'react';
 import { useWgrObserver, useSectionObserver, useScrollDirection } from './hooks';
-import { Background, BackgroundOverlay, WebGuideRobot, MainInfo, Timeline, CallToAction, DataWidget, Projects } from './components';
+import { Background, BackgroundOverlay, WebGuideRobot, MainInfo, Timeline, CallToAction, DataWidget, Projects, Skills } from './components';
 import './App.css';
 
 function App() {
@@ -43,6 +43,7 @@ function App() {
             <Timeline ref={timelineRef} />
             <CallToAction ref={callToActionRef} />
             <Projects ref={projectsRef} />
+            <Skills />
         </div>
     )
 }

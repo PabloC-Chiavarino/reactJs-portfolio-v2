@@ -15,7 +15,7 @@ const WebGuideRobot = React.forwardRef(({ location, handleChatShow, chatShow, ch
 
    //console.log("wgrLocation:", wgrLocation); //debugging
    //console.log("scrollDirection:", scrollDirection); //debugging
-   console.log(predominantSection); //debugging
+   //console.log(predominantSection); //debugging
    //console.log(animationState); //debugging
 
    const handleAnswer = (question) => {
