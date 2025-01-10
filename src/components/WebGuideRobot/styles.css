@@ -12,13 +12,13 @@
       transform: translate(0, 0);
    }
    to {
-      transform: translate(-10rem, 42rem);
+      transform: translate(-7rem, 42rem);
    }
 }
 
 @keyframes returnFromTimeline {
    from {
-      transform: translate(-10rem, 42rem);
+      transform: translate(-7rem, 42rem);
    }
    to {
       transform: translate(0, 0);
@@ -27,28 +27,28 @@
 
 @keyframes goToCTA {
    from {
-      transform: translate(-10rem, 42rem);
+      transform: translate(-7rem, 42rem);
    }
    to {
-      transform: translate(6rem, 85rem);
+      transform: translate(3rem, 88rem);
    }
 }
 
 @keyframes returnFromCTA {
    from {
-      transform: translate(6rem, 85rem);
+      transform: translate(3rem, 88rem);
    }
    to {
-      transform: translate(-10rem, 42rem);
+      transform: translate(-7rem, 42rem);
    }
 }
 
 @keyframes goToProjects {
    from {
-      transform: translate(6rem, 85rem);
+      transform: translate(3rem, 88rem);
    }
    to {
-      transform: translate(6rem, 125rem);
+      transform: translate(3rem, 125rem);
    }
 }
 

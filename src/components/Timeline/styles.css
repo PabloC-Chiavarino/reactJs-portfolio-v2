@@ -4,7 +4,7 @@ h2, h3, h4 {
 
 .timeline {
     position: relative;
-    margin: 16dvh auto auto auto;
+    margin: 20dvh 60dvh auto auto;
     top: 10dvh;
     z-index: 1;
     width: 54%;

@@ -1,10 +1,9 @@
 .projects__container {
     position: relative;
-    margin: 20dvh auto auto auto;
+    margin: 20dvh 60dvh auto auto;
     top: 24dvh;
     z-index: 1;
     width: 54%;
-    padding-left: 3rem;
 }
 
 .projects__container h2 {
@@ -23,7 +22,6 @@
         font-weight: 400;
         
         .projects__image::after {
-            transform: translateY(1.8rem);
             opacity: 1;
         }
 
@@ -37,21 +35,26 @@
 }
 
 .projects__image {
-    perspective: 1000px;
     position: absolute;
     display: flex;
     justify-content: end;
     &::after {
-        transition: transform .3s ease-in-out, opacity 0.15s ease;
+        transition: opacity .25s ease-in-out;
         content: 'Click para visitar';
         position: absolute;
         width: fit-content;
-        bottom: -3px;
+        bottom: -2rem;
         color: #e0e0e0;
         font-size: 14px;
         opacity: 0;
         z-index: 0;
     }
+}
+
+.projects__link {
+    perspective: 1000px;
+    display: flex;
+    justify-content: end;
 }
 
 .projects__img {
