@@ -3,23 +3,24 @@ import { skillsData } from '../../config/skillsData'
 
 const Skills = () => {
     return (
-        <div id='skills' className='skills__container'>
+        <div id='skills' className='skills__circles--container'>
             <h2>Skills</h2>
-            <p>Estas son las tecnologías y herramientas que utilizo en mis proyectos.</p>
-            <div className="skills__grid--container">
-                {
-                    skillsData.map((item) => {
-                        return (
-                            <div key={item.id} className="skills__grid--item">
-                                <h4 className='skills__grid--title'>
-                                {item.name}
-                                </h4>
-                                <img className='skills__grid--icon' src={item.logo} alt="HTML" />
+            <p>
+                Estas son las tecnologías y herramientas que utilizo para desarrollar mis proyectos, organizarlos y documentarlos en el día a día.
+            </p>
+
+                <div className="skills__circles--subcontainer">
+                    {skillsData.map(categoryData => (
+                        <div key={categoryData.category} className={`skills__circles--${categoryData.category}`}>
+                            <div className={`skills__circles--logos${categoryData.category}`}>
+                                <h3>{categoryData.category}</h3>
+                                {categoryData.items.map(item => (
+                                    <img key={item.id} src={item.logo} alt={item.name} />
+                                ))}
                             </div>
-                        )
-                    })
-                }
-            </div>
+                        </div>
+                    ))}
+                </div>
         </div>
     )
 }

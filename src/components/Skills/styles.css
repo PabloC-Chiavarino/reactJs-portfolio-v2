@@ -1,28 +1,86 @@
-.skills__container {
+.skills__circles--container {
     position: relative;
+    gap: 20px;
     margin: 20dvh 60dvh auto auto;
     top: 24dvh;
     z-index: 1;
     width: 54%;
 }
 
-.skills__grid--container {
+.skills__circles--subcontainer {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    margin-top: 5rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        "Frontend Backend"
+        "Tools Tools";
+    gap: 5rem;
+    margin-top: 8rem;
     position: relative;
-    right: 2.75rem;
-    row-gap: 1.5rem;
+    right: .5rem;
 }
 
-.skills__grid--item {
-    text-align: center;
-}
-
-.skills__grid--title {
+.skills__circles--container h2 {
     font-weight: 600;
 }
 
-.skills__grid--icon {
-    width: 64px;
+.skills__circles--Frontend {
+    grid-area: Frontend;
+    margin: auto;
+    width: fit-content;
 }
+
+.skills__circles--Backend {
+    grid-area: Backend;
+    margin: auto;
+    width: fit-content;
+}
+
+.skills__circles--Tools {
+    grid-area: Tools;
+    margin: auto;
+    width: fit-content;
+}
+
+.skills__circles--logosFrontend,
+.skills__circles--logosBackend,
+.skills__circles--logosTools {
+        position: relative;
+        width: 250px;
+        height: 250px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: filter 0.3s ease;
+        &:hover img {
+            filter: saturate(1);
+        }
+    }
+
+
+.skills__circles--logosFrontend img,
+.skills__circles--logosBackend img,
+.skills__circles--logosTools img {
+    position: absolute;
+    width: 3rem;
+    height: 3rem;
+    filter: saturate(0.45);
+    transition: ease-in-out 300ms;
+}
+
+.skills__circles--logosFrontend img:nth-child(2) { transform: rotate(0deg) translateY(-125px); }
+.skills__circles--logosFrontend img:nth-child(3) { transform: rotate(90deg) translateY(-125px) rotate(-90deg); }
+.skills__circles--logosFrontend img:nth-child(4) { transform: rotate(180deg) translateY(-125px) rotate(-180deg); }
+.skills__circles--logosFrontend img:nth-child(5) { transform: rotate(270deg) translateY(-125px) rotate(-270deg); }
+    
+.skills__circles--logosBackend img:nth-child(2) { transform: rotate(0deg) translateY(-125px); }
+.skills__circles--logosBackend img:nth-child(3) { transform: rotate(60deg) translateY(-125px) rotate(-60deg); }
+.skills__circles--logosBackend img:nth-child(4) { transform: rotate(120deg) translateY(-125px) rotate(-120deg); }
+.skills__circles--logosBackend img:nth-child(5) { transform: rotate(180deg) translateY(-125px) rotate(-180deg); }
+.skills__circles--logosBackend img:nth-child(6) { transform: rotate(240deg) translateY(-125px) rotate(-240deg); }
+.skills__circles--logosBackend img:nth-child(7) { transform: rotate(300deg) translateY(-125px) rotate(-300deg); }
+    
+.skills__circles--logosTools img:nth-child(2) { transform: rotate(0deg) translateY(-125px); }
+.skills__circles--logosTools img:nth-child(3) { transform: rotate(90deg) translateY(-125px) rotate(-90deg); }
+.skills__circles--logosTools img:nth-child(4) { transform: rotate(180deg) translateY(-125px) rotate(-180deg); }
+.skills__circles--logosTools img:nth-child(5) { transform: rotate(270deg) translateY(-125px) rotate(-270deg); }
