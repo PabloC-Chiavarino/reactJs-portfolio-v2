@@ -54,10 +54,28 @@
 
 @keyframes returnFromProjects {
    from {
-      transform: translate(4rem, 125rem);
+      transform: translate(3rem, 125rem);
    }
    to {
-      transform: translate(4rem, 85rem);
+      transform: translate(3rem, 88rem);
+   }
+}
+
+@keyframes goToSkills {
+   from {
+      transform: translate(3rem, 125rem);
+   }
+   to {
+      transform: translate(3.5rem, 205rem);
+   }
+}
+
+@keyframes returnFromSkills {
+   from {
+      transform: translate(3.5rem, 205rem);
+   }
+   to {
+      transform: translate(3rem, 125rem);
    }
 }
 
@@ -247,4 +265,12 @@
 
 .wgrobot--returnFromProjects {
    animation: returnFromProjects 700ms ease-in-out forwards;
+}
+
+.wgrobot--goToSkills {
+   animation: goToSkills 700ms ease-in-out forwards;
+}
+
+.wgrobot--returnFromSkills {
+   animation: returnFromSkills 700ms ease-in-out forwards;
 }

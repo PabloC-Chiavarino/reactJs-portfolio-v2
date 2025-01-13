@@ -14,9 +14,10 @@ function App() {
     const timelineRef = useRef()
     const callToActionRef = useRef()
     const projectsRef = useRef()
+    const skillsRef = useRef()
     const wgrRef = useRef()
 
-    const sections = [ mainInfoRef, timelineRef, callToActionRef, projectsRef ]
+    const sections = [ mainInfoRef, timelineRef, callToActionRef, projectsRef, skillsRef ]
 
     const predominantSection = useSectionObserver(sections, initialLoad)
     const scrollDirection = useScrollDirection()
@@ -43,7 +44,7 @@ function App() {
             <Timeline ref={timelineRef} />
             <CallToAction ref={callToActionRef} />
             <Projects ref={projectsRef} />
-            <Skills />
+            <Skills ref={skillsRef} />
         </div>
     )
 }

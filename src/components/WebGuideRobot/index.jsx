@@ -89,11 +89,26 @@ const WebGuideRobot = React.forwardRef(({ location, handleChatShow, chatShow, ch
             ? 'wgrobot--goToProjects'
             : null
          )
+
       } else if (wgrLocation === 'projects' && predominantSection === 'cta') {
          setAnimationState (
             scrollDirection === 'down'
             ? null
             : 'wgrobot--returnFromProjects'
+         )
+
+      } else if (wgrLocation === 'projects' && predominantSection === 'skills') {
+         setAnimationState(
+            scrollDirection === 'down'
+            ? 'wgrobot--goToSkills'
+            : null
+         )
+
+      } else if (wgrLocation === 'skills' && predominantSection === 'projects') {
+         setAnimationState(
+            scrollDirection === 'down'
+            ? null
+            : 'wgrobot--returnFromSkills'
          )
       }
       
