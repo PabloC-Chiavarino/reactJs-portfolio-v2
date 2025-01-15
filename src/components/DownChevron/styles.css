@@ -13,7 +13,7 @@
 
 .downChevron__container {
     opacity: 0;
-    animation: fadeIn 1150ms ease-in 1250ms forwards;
+    animation: fadeIn 1150ms ease 1250ms forwards !important;
 }
 
 .downChevron {
@@ -26,7 +26,6 @@
     width: 80px;
 }
 
-.chevron--hidden {
-    opacity: 1;
-    animation: fadeOut 1150ms ease-out forwards;
+.fadeOut {
+    animation: fadeOut 900ms ease forwards !important;
 }

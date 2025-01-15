@@ -1,6 +1,6 @@
 import { useRef, useState } from 'react';
 import { useWgrObserver, useSectionObserver, useScrollDirection } from './hooks';
-import { Background, BackgroundOverlay, WebGuideRobot, MainInfo, Timeline, CallToAction, DataWidget, Projects, Skills } from './components';
+import { Background, ResDownBtn, BackgroundOverlay, WebGuideRobot, MainInfo, Timeline, CallToAction, DataWidget, Projects, Skills } from './components';
 import './App.css';
 
 function App() {
@@ -31,6 +31,7 @@ function App() {
     return (
         <div className="App">
             <Background id="tsparticles" />
+            <ResDownBtn />
             <BackgroundOverlay overlay={chatShow} handleChatShow={handleChatShow} />
             <DataWidget />
             <WebGuideRobot
