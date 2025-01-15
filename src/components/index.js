@@ -6,6 +6,7 @@ export { default as CallToAction } from './CallToAction';
 export { default as Projects } from './Projects';
 export { default as Skills } from './Skills';
 export { default as DownChevron } from './DownChevron';
+export { default as ResDownBtn } from './ResDownBtn';
 export { default as DataWidget } from './DataWidget';
 export { default as ClickRipple } from './ClickRipple';
 export { default as BackgroundOverlay } from './BackgroundOverlay';
