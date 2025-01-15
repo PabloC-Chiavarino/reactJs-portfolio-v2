@@ -1,8 +1,7 @@
 .dataWidget {
     position: fixed;
     top: 5dvh;
-    right: 0;
-    padding-right: 3rem;
+    right: 3rem;
     z-index: 3;
 }
 

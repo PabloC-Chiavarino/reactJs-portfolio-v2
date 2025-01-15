@@ -1,11 +1,12 @@
 .ResDownBtn__container {
     position: fixed;
     bottom: 3px;
-    right: 9rem;
+    right: 11rem;
     z-index: 3;
     cursor: pointer;
     opacity: 0;
-    animation: fadeIn 1150ms ease-in 0ms forwards;
+    animation: fadeIn 1150ms ease-in forwards;
+    transition: 350ms ease;
 
     &::before {
         content: "Descargar CV";
@@ -25,4 +26,8 @@
 
 .ResDownBtn__img {
     width: 64px;
+}
+
+.toCorner {
+    transform: translateX(8rem);
 }

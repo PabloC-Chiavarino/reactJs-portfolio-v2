@@ -10,11 +10,11 @@ const DownChevron = () => {
 
     useEffect(() => {
 
-        if (scrollDirection === 'down') {
+        if (scrollDirection === 'down' && display) {
             setDisplay(false)
         }
         
-    }, [scrollDirection])
+    }, [scrollDirection, display])
 
     return (
         <div 

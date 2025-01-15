@@ -1,43 +1,23 @@
 import './styles.css'
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect} from 'react'
+import { useScrollDirection } from '../../hooks'
 import { downBtn } from '../../assets/Icons'
 
 const ResDownBtn = () => {
 
-    const [toRight, setToRight] = useState(false)
-    const downBtnRef = useRef()
+    const [toCorner, setToCorner] = useState(false)
+
+    const scrollDirection = useScrollDirection()
 
     useEffect(() => {
-        
-        const element = downBtnRef.current
 
-        const observer = new IntersectionObserver(entries => {
-            const entry = entries[0]
-            
-            if (entry.isIntersecting) {
-                setToRight(true)
-            }
-            console.log("isIntersecting", entry.isIntersecting) //debugging
-        }, {
-            root: null,
-            threshold: 0,
-            rootMargin: "0px 0px -45% 0px"
-        }
-    )
-
-        if (element) {
-            observer.observe(element)
-        }
-
-        return () => observer.disconnect()
-
-    }, [])
+        if (scrollDirection === 'down') {
+            setToCorner(true)
+        }    
+    }, [scrollDirection, toCorner])
 
     return (
-        <div 
-            className="ResDownBtn__container" 
-            ref={downBtnRef}
-            style={{transform: toRight ? 'translateX(100%)' : 'translateX(0)'}}>
+        <div className={toCorner ? 'ResDownBtn__container toCorner' : 'ResDownBtn__container'}>
             <a 
                 href='./Chiavarino CV.pdf'
                 download='Chiavarino CV.pdf'
