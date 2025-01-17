@@ -102,6 +102,7 @@
       rgba(5, 7, 36, 0) 67.5%
    );
    z-index: 2;
+   pointer-events: none;
 }
 
 .chat__container {
@@ -237,6 +238,7 @@
    z-index: 2;
    cursor: pointer;
    clip-path: ellipse(90px 131px at 208px 203px);
+   pointer-events: all;
 }
 
 .wgrobot--initialPos {

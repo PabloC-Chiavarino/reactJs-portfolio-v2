@@ -14,3 +14,4 @@ export { default as postmanLogo } from './postman-logo.svg';
 export { default as jpaHibLogo } from './jpahib-logo.svg';
 export { default as firebaseLogo } from './firebase-logo.svg';
 export { default as downBtn } from './download-minimalistic.svg';
+export { default as prevNextArrow } from './prevNext-arrow.svg';
