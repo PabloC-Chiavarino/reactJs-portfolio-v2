@@ -1,7 +1,7 @@
 const botName = "Botie";
 
 const messageResponses = {
-    bienvenido: `Hola, soy ${botName}. Fui creado por Pablo y estoy programado para contestar sobre algunos aspectos personales y profesionales sobre él. ¿Qué deseas saber?`,
+    bienvenido: `Hola, soy ${botName}. Fui creado para responder a preguntas sobre algunos aspectos profesionales y personales sobre Pablo. ¿Qué deseas saber?`,
     hola: "¡Hola! ¿Puedo ayudarte?",
     adios: "¡Hasta la próxima!",
     adiós: "¡Hasta la próxima!",

@@ -117,6 +117,7 @@
    width: 60%;
    height: 70%;
    transition: opacity 0.5s ease;
+   pointer-events: all;
 }
 
 .chat__container--close {
@@ -143,6 +144,7 @@
    flex-direction: column;
    background: radial-gradient(ellipse at center, rgba(26, 26, 26, 0.52) 67%, rgb(119, 204, 158) 68%, rgb(64, 4, 80) 100%);
    animation: reverseLooneyTunes 400ms ease forwards;
+   pointer-events: all;
 }
 
 .answer__container::after {
@@ -191,6 +193,7 @@
    position: absolute;
    width: 100%;
    border-radius: 5px;
+   pointer-events: all;
 }
 
 .textarea__line {
