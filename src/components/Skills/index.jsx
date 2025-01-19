@@ -1,10 +1,10 @@
+import React from 'react'
 import { useRef } from 'react'
-import { forwardRef } from 'react'
 import { skillsData } from '../../config/skillsData'
 import { prevNextArrow } from '../../assets/Icons'
 import './styles.css'
 
-const Skills = forwardRef((props, ref) => {
+const Skills = React.forwardRef((props, ref) => {
 
     const currentIndex = useRef(0);
     const circlesRef = useRef();

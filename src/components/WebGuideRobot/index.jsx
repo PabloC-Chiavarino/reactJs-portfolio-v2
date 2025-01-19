@@ -110,6 +110,20 @@ const WebGuideRobot = React.forwardRef(({ location, handleChatShow, chatShow, ch
             ? null
             : 'wgrobot--returnFromSkills'
          )
+
+      } else if (wgrLocation === 'skills' && predominantSection === 'references') {
+         setAnimationState(
+            scrollDirection === 'down'
+            ? 'wgrobot--goToReferences'
+            : null
+         )
+         
+      } else if (wgrLocation === 'references' && predominantSection === 'skills') {
+         setAnimationState(
+            scrollDirection === 'down'
+            ? null
+            : 'wgrobot--returnFromReferences'
+         )
       }
       
    }, [predominantSection, wgrLocation, scrollDirection])

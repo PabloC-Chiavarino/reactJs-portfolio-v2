@@ -66,16 +66,34 @@
       transform: translate(3rem, 125rem);
    }
    to {
-      transform: translate(3.5rem, 205rem);
+      transform: translate(3rem, 266rem);
    }
 }
 
 @keyframes returnFromSkills {
    from {
-      transform: translate(3.5rem, 205rem);
+      transform: translate(3rem, 266rem);
    }
    to {
       transform: translate(3rem, 125rem);
+   }
+}
+
+@keyframes goToReferences {
+   from {
+      transform: translate(3rem, 266rem);
+   }
+   to {
+      transform: translate(3rem, 313rem);
+   }
+}
+
+@keyframes returnFromReferences {
+   from {
+      transform: translate(3rem, 313rem);
+   }
+   to {
+      transform: translate(3rem, 266rem);
    }
 }
 
@@ -278,4 +296,12 @@
 
 .wgrobot--returnFromSkills {
    animation: returnFromSkills 700ms ease-in-out forwards;
+}
+
+.wgrobot--goToReferences {
+   animation: goToReferences 700ms ease-in-out forwards;
+}
+
+.wgrobot--returnFromReferences {
+   animation: returnFromReferences 700ms ease-in-out forwards;
 }
