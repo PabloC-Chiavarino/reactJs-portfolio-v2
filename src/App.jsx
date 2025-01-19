@@ -1,6 +1,6 @@
 import { useRef, useState } from 'react';
 import { useWgrObserver, useSectionObserver, useScrollDirection } from './hooks';
-import { Background, ResDownBtn, BackgroundOverlay, WebGuideRobot, MainInfo, Timeline, CallToAction, DataWidget, Projects, Skills, References } from './components';
+import { Background, ResDownBtn, BackgroundOverlay, WebGuideRobot, MainInfo, Timeline, CallToAction, DataWidget, Projects, Skills, References, Footer } from './components';
 import './App.css';
 
 function App() {
@@ -47,6 +47,7 @@ function App() {
             <Projects ref={projectsRef} />
             <Skills ref={skillsRef} />
             <References />
+            <Footer />
         </div>
     )
 }

@@ -11,3 +11,4 @@ export { default as ResDownBtn } from './ResDownBtn';
 export { default as DataWidget } from './DataWidget';
 export { default as ClickRipple } from './ClickRipple';
 export { default as BackgroundOverlay } from './BackgroundOverlay';
+export { default as Footer } from './Footer';
