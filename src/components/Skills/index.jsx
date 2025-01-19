@@ -33,7 +33,9 @@ const Skills = forwardRef((props, ref) => {
                                 <div className={`skills__circles--logos${categoryData.category}`}>
                                     <h3>{categoryData.category}</h3>
                                     {categoryData.items.map(item => (
-                                        <img key={item.id} src={item.logo} alt={item.name} />
+                                        <div data-name={item.name} key={item.id} className="skills__circles--logo">
+                                            <img src={item.logo} alt={item.name} />
+                                        </div>
                                     ))}
                                 </div>
                             </div>

@@ -24,7 +24,7 @@
 .skills__circles--wrapper {
     display: flex;
     gap: 0;
-    margin-top: 5rem;
+    margin-top: 4rem;
     transition: transform 750ms ease;
 }
 
@@ -48,7 +48,7 @@
         margin-left: -5rem;
         margin-right: -5rem;
         width: 350px;
-        height: 350px;
+        height: 410px;
         border-radius: 50%;
         display: flex;
         justify-content: center;
@@ -57,11 +57,30 @@
         &:hover img {
             filter: saturate(1);
         }
+        &:hover .skills__circles--logo::after {
+            opacity: 1;
+        }
     }
 
-.skills__circles--logosFrontend img,
-.skills__circles--logosBackend img,
-.skills__circles--logosTools img {
+.skills__circles--logo {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &::after {
+        content: attr(data-name);
+        position: relative;
+        top: 45px;
+        font-size: 15px;
+        letter-spacing: .5px;
+        font-family: Montserrat, sans-sediv;
+        font-weight: 500;
+        opacity: 0;
+        transition: opacity 0.2s 0.3s ease-out;
+    }
+}
+
+.skills__circles--logo img {
     position: absolute;
     width: 52px;
     height: 52px;
@@ -69,22 +88,22 @@
     transition: ease-in-out 300ms;
 }
 
-.skills__circles--logosFrontend img:nth-child(2) { transform: rotate(0deg) translateY(-150px); }
-.skills__circles--logosFrontend img:nth-child(3) { transform: rotate(90deg) translateY(-150px) rotate(-90deg); }
-.skills__circles--logosFrontend img:nth-child(4) { transform: rotate(180deg) translateY(-150px) rotate(-180deg); }
-.skills__circles--logosFrontend img:nth-child(5) { transform: rotate(270deg) translateY(-150px) rotate(-270deg); }
+.skills__circles--logosFrontend div:nth-child(2) { transform: rotate(0deg) translateY(-150px); }
+.skills__circles--logosFrontend div:nth-child(3) { transform: rotate(90deg) translateY(-150px) rotate(-90deg); }
+.skills__circles--logosFrontend div:nth-child(4) { transform: rotate(180deg) translateY(-150px) rotate(-180deg); }
+.skills__circles--logosFrontend div:nth-child(5) { transform: rotate(270deg) translateY(-150px) rotate(-270deg); }
     
-.skills__circles--logosBackend img:nth-child(2) { transform: rotate(0deg) translateY(-150px); }
-.skills__circles--logosBackend img:nth-child(3) { transform: rotate(60deg) translateY(-150px) rotate(-60deg); }
-.skills__circles--logosBackend img:nth-child(4) { transform: rotate(120deg) translateY(-150px) rotate(-120deg); }
-.skills__circles--logosBackend img:nth-child(5) { transform: rotate(180deg) translateY(-150px) rotate(-180deg); }
-.skills__circles--logosBackend img:nth-child(6) { transform: rotate(240deg) translateY(-150px) rotate(-240deg); }
-.skills__circles--logosBackend img:nth-child(7) { transform: rotate(300deg) translateY(-150px) rotate(-300deg); }
+.skills__circles--logosBackend div:nth-child(2) { transform: rotate(0deg) translateY(-150px); }
+.skills__circles--logosBackend div:nth-child(3) { transform: rotate(60deg) translateY(-150px) rotate(-60deg); }
+.skills__circles--logosBackend div:nth-child(4) { transform: rotate(120deg) translateY(-150px) rotate(-120deg); }
+.skills__circles--logosBackend div:nth-child(5) { transform: rotate(180deg) translateY(-150px) rotate(-180deg); }
+.skills__circles--logosBackend div:nth-child(6) { transform: rotate(240deg) translateY(-150px) rotate(-240deg); }
+.skills__circles--logosBackend div:nth-child(7) { transform: rotate(300deg) translateY(-150px) rotate(-300deg); }
     
-.skills__circles--logosTools img:nth-child(2) { transform: rotate(0deg) translateY(-150px); }
-.skills__circles--logosTools img:nth-child(3) { transform: rotate(90deg) translateY(-150px) rotate(-90deg); }
-.skills__circles--logosTools img:nth-child(4) { transform: rotate(180deg) translateY(-150px) rotate(-180deg); }
-.skills__circles--logosTools img:nth-child(5) { transform: rotate(270deg) translateY(-150px) rotate(-270deg); }
+.skills__circles--logosTools div:nth-child(2) { transform: rotate(0deg) translateY(-150px); }
+.skills__circles--logosTools div:nth-child(3) { transform: rotate(90deg) translateY(-150px) rotate(-90deg); }
+.skills__circles--logosTools div:nth-child(4) { transform: rotate(180deg) translateY(-150px) rotate(-180deg); }
+.skills__circles--logosTools div:nth-child(5) { transform: rotate(270deg) translateY(-150px) rotate(-270deg); }
 
 .skills__circles--buttons { 
     position: absolute;

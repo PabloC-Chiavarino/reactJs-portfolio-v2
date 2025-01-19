@@ -26,7 +26,13 @@
 
 .ResDownBtn__img {
     width: 64px;
+    opacity: .7;
+    transition: opacity 0.5s ease;
+    &:hover {
+        opacity: 1;
+    }
 }
+
 
 .toCorner {
     transform: translateX(8rem);
