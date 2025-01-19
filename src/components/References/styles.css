@@ -6,3 +6,20 @@
     z-index: 1;
     width: 54%;
 }
+
+.references__container h2 {
+    margin-bottom: 5%;
+}
+
+.references__row {
+    margin-top: 5rem;
+}
+
+.references__name {
+    margin-bottom: 5px;
+}
+
+.references__position {
+    font-weight: 600;
+    margin-top: 0;
+}

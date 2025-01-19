@@ -7,12 +7,18 @@ const References = () => {
     return (
         <div className="references__container">
             <h2>Referencias</h2>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit eius quis ad, harum quibusdam sequi accusantium saepe tempora id velit ullam soluta deleniti voluptatum aliquid ipsa porro natus cum at?</p>
+            <p>Aquí podrás ver algunas referencias de personas que <span className='text-highlightA'>confiaron en mi trabajo</span> y compartieron su <span className='text-highlightB'>experiencia de colaboración.</span></p>
             {references.map(reference => (
-                <div className="references__row">
+                <div className="references__row" key={reference.company}>
                     <h3 className='references__company'>{reference.company}</h3>
-                    <h4 className='references__position'>{reference.position}</h4>
-                    <p className='references__content'>{reference.content}</p>
+                    {reference.content.map((content, index) => (
+                        <>
+                            <h4 key={index} className='references__name'>{content.name}</h4>
+                            <h5 key={index} className='references__position'>{content.position}</h5>
+                            <p className='references__content'>{content.reference}</p>
+                            <hr />
+                        </>
+                    ))}
                 </div>
             ))}
         </div>

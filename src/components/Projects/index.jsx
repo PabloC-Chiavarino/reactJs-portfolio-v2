@@ -14,6 +14,7 @@ const Projects = React.forwardRef((props, ref) => {
                         <h3 className="projects__title">{project.title}</h3>
                         <h4 className="projects__subtitle">{project.subtitle}</h4>
                         <p className='projects__description'>{project.description}</p>
+                        <hr />
                     </div>
                     <div className="projects__image">
                         <a href={project.url} target="_blank" className='projects__link'>

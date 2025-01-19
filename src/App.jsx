@@ -15,7 +15,6 @@ function App() {
     const callToActionRef = useRef()
     const projectsRef = useRef()
     const skillsRef = useRef()
-    const referencesRef = useRef()
     const wgrRef = useRef()
 
     const sections = [ mainInfoRef, timelineRef, callToActionRef, projectsRef, skillsRef ]
@@ -47,7 +46,7 @@ function App() {
             <CallToAction ref={callToActionRef} />
             <Projects ref={projectsRef} />
             <Skills ref={skillsRef} />
-            <References ref={referencesRef} />
+            <References />
         </div>
     )
 }
