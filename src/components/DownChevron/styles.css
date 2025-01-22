@@ -14,13 +14,13 @@
 .downChevron__container {
     opacity: 0;
     animation: fadeIn 1150ms ease 1150ms forwards !important;
+    position: absolute;
+    right: 3%;
+    bottom: 0;
 }
 
 .downChevron {
-    position: absolute;
     width: 80px;
-    bottom: 0;
-    right: 3rem;
     opacity: .8;
     animation: upDownBounce 3000ms ease-in-out 500ms infinite;
 }

@@ -3,7 +3,7 @@
     top: 5dvh;
     z-index: 1;
     width: 54%;
-    padding-left: 8rem;
+    padding-left: 10%;
 }
 
 .mainInfo__title h1 {
@@ -23,21 +23,16 @@
     font-weight: 400;
 }
 
-h1, h2, h3 {
-    font-family: Montserrat, sans-serif;
-    color: #E0E0E0;
+/* @media (1024px <= width <= 1199px) {
+    .mainInfo {
+        padding-left: 6rem;
+        width: 48%;
+    }
 }
 
-h2 {
-    font-size: 2rem;
-}
-
-h3 {
-    font-size: 1.3rem;
-}
-
-p {
-    font-family: Roboto Mono, monospace;
-    color: #c0c0c0;
-    margin: 0;
-}
+@media (1200px <= width <= 1279px) {
+    .mainInfo {
+        padding-left: 7rem;
+        width: 48%;
+    }
+} */

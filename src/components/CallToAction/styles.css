@@ -1,10 +1,9 @@
 .callToAction {
    position: relative;
-   margin: 16dvh 60dvh auto auto;
+   margin: 16dvh 60dvh auto 14dvw;
    top: 24dvh;
    z-index: 1;
    width: 54%;
-   padding-left: 3rem;
 }
 
 .callToAction h2 {
@@ -53,3 +52,17 @@
         }
     }
 }
+
+/* @media (1024px <= width <= 1199px) {
+   .callToAction {
+      padding-left: 10rem;
+      margin-left: 0;
+   }
+}
+
+@media (1200px <= width <= 1279px) {
+   .callToAction {
+      padding-left: 12rem;
+      margin-left: 0;
+   }
+} */

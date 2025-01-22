@@ -305,3 +305,105 @@
 .wgrobot--returnFromReferences {
    animation: returnFromReferences 700ms ease-in-out forwards;
 }
+
+/* @media (1024px <= width <= 1200px) {
+   
+   .wgrobot__container {
+      width: 52%;
+      height: 52%;
+      right: -4rem;
+   }
+   .wgrobot {
+      width: 70%;
+   }
+
+   @keyframes goToTimeline {
+      from {
+         transform: translate(0, 0);
+      }
+      to {
+         transform: translate(-7rem, 45rem);
+      }
+   }
+   
+   @keyframes returnFromTimeline {
+      from {
+         transform: translate(-7rem, 45rem);
+      }
+      to {
+         transform: translate(0, 0);
+      }
+   }
+   
+   @keyframes goToCTA {
+      from {
+         transform: translate(-7rem, 45rem);
+      }
+      to {
+         transform: translate(15rem, 102rem);
+      }
+   }
+   
+   @keyframes returnFromCTA {
+      from {
+         transform: translate(15rem, 102rem);
+      }
+      to {
+         transform: translate(-7rem, 45rem);
+      }
+   }
+   
+   @keyframes goToProjects {
+      from {
+         transform: translate(15rem, 102rem);
+      }
+      to {
+         transform: translate(15rem, 140rem);
+      }
+   }
+   
+   @keyframes returnFromProjects {
+      from {
+         transform: translate(15rem, 140rem);
+      }
+      to {
+         transform: translate(15rem, 102rem);
+      }
+   }
+   
+   @keyframes goToSkills {
+      from {
+         transform: translate(15rem, 140rem);
+      }
+      to {
+         transform: translate(15rem, 280rem);
+      }
+   }
+   
+   @keyframes returnFromSkills {
+      from {
+         transform: translate(15rem, 280rem);
+      }
+      to {
+         transform: translate(15rem, 140rem);
+      }
+   }
+   
+   @keyframes goToReferences {
+      from {
+         transform: translate(15rem, 280rem);
+      }
+      to {
+         transform: translate(15rem, 327rem);
+      }
+   }
+   
+   @keyframes returnFromReferences {
+      from {
+         transform: translate(15rem, 327rem);
+      }
+      to {
+         transform: translate(15rem, 280rem);
+      }
+   }
+} */

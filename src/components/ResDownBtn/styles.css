@@ -37,3 +37,9 @@
 .toCorner {
     transform: translateX(8rem);
 }
+
+@media (1024px <= width <= 1199px) {
+    .ResDownBtn__container {
+        bottom: 1.2rem;
+    }
+}

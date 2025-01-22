@@ -4,11 +4,10 @@ h2, h3, h4 {
 
 .timeline {
     position: relative;
-    margin: 20dvh 60dvh auto auto;
+    margin: 20dvh 60dvh auto 14dvw;
     top: 10dvh;
     z-index: 1;
     width: 54%;
-    padding-left: 3rem;
 }
 
 .timeline__container {
@@ -21,7 +20,7 @@ h2, h3, h4 {
     transform: rotate(45deg);
     background-color: #0fc1d8;
     position: relative;
-    right: 65px;
+    right: 42px;
     top: 5px;
     z-index: 2;
 }
@@ -32,6 +31,29 @@ h2, h3, h4 {
     width: 2px;
     height: 85%;
     background-color: #E0E0E0;
-    left: -7.7px;
+    left: -33px;
     z-index: 1;
 }
+
+/* @media (1024px <= width <= 1199px) {
+    .timeline {
+        padding-left: 10rem;
+        margin-left: 0;
+
+    }
+
+    .timeline__item::before {
+        left: 6.5rem;
+    }
+}
+
+@media (1200px <= width <= 1279px) {
+    .timeline {
+        padding-left: 12rem;
+        margin-left: 0;
+    }
+
+    .timeline__item::before {
+        left: 8.5rem;
+    }
+} */
