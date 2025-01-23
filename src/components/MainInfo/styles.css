@@ -23,16 +23,23 @@
     font-weight: 400;
 }
 
-/* @media (1024px <= width <= 1199px) {
+@media (1024px <= width <= 1280px) {
     .mainInfo {
-        padding-left: 6rem;
-        width: 48%;
+        padding-left: 8%;
     }
 }
 
 @media (1200px <= width <= 1279px) {
-    .mainInfo {
-        padding-left: 7rem;
-        width: 48%;
+    .mainInfo__info {
+        overflow-y: scroll;
+        height: 25rem;
     }
-} */
+}
+
+@media (1024px <= width <= 1199px) {
+    
+    .mainInfo__info {
+        overflow-y: scroll;
+        height: 19.5rem;
+    }
+}

@@ -40,3 +40,10 @@
 .ripple__second {
     animation: rippleEffect 3s ease forwards;
 }
+
+@media (min-width: 1920px) {
+  .ripple__first,
+  .ripple__second {
+    height: 60%;
+  }
+}

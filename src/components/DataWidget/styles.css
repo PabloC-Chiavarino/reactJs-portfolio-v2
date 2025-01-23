@@ -29,6 +29,6 @@
 
  @media (1024px <= width <= 1199px) {
     .dataWidget {
-        right: 4rem;
+        right: 2rem;
     }
 }
