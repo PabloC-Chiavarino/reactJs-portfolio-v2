@@ -27,7 +27,7 @@ export const projects = [
         title: 'E-commerce API REST',
         subtitle: 'Proyecto Back-End',
         description: 'Desarrollada en Java con Spring Boot y JPA, esta API RESTful gestiona Productos, Órdenes, Facturas y Clientes, implementando operaciones CRUD y funciones avanzadas como la creación de facturas asociadas a clientes y la búsqueda de productos por código o marca, promoviendo un enfoque flexible y eficiente. Utiliza DTOs y mappers para evitar ciclos infinitos en relaciones bidireccionales, controladores genéricos que siguen el principio DRY, y está documentada con Swagger, lo que facilita las pruebas y mejora la experiencia de desarrollo.',
-        url: 'https://gadget-alley.vercel.app',
+        url: 'https://java-jpa-sb-ecommerceapirest-demo.onrender.com/swagger-ui/index.html',
         image: ProjectImg4
     }
 ]
