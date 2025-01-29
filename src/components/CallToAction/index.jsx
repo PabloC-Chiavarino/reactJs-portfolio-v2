@@ -13,9 +13,16 @@ const CallToAction = React.forwardRef((props, ref) => {
                 <p> Elige una opción de contacto que prefieras y te responderé a la brevedad posible para comenzar a trabajar juntos.    
             </p>
             <div className="callToAction__options">
-                <button className="callToAction__button">
+                <a 
+                    className="callToAction__button"
+                    href="mailto=pchiavarino89@gmail.com" 
+                    target="_blank"
+                    onClick={(e) => {
+                        e.preventDefault();
+                        window.open("mailto:pchiavarino89@gmail.com", "_blank");
+                    }}>
                         Email
-                </button>
+                </a>
                 <a className="callToAction__button" href="https://wa.me/5492216545052" target="_blank">
                         Whatsapp
                 </a>

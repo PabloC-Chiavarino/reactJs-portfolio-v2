@@ -24,6 +24,7 @@
     align-items: center;
     overflow: hidden;
     width: 10rem;
+    height:3rem;
     text-align: center;
     color: #e0e0e0cc;
     border: 1px solid #0fc1d8;
@@ -31,6 +32,7 @@
     border-radius: .1rem 1rem;
     transition: 350ms ease-in-out;
     font-family: Roboto Mono, sans-serif;
+    cursor: pointer;
 
     &::before {
       content: '';
