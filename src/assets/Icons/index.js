@@ -15,3 +15,6 @@ export { default as jpaHibLogo } from './jpahib-logo.svg';
 export { default as firebaseLogo } from './firebase-logo.svg';
 export { default as downBtn } from './download-minimalistic.svg';
 export { default as prevNextArrow } from './prevNext-arrow.svg';
+export { default as globeLang } from './globe-lang.svg';
+export { default as spainFlag } from './spain.png';
+export { default as englishFlag } from './united-kingdom.png';

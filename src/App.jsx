@@ -1,6 +1,6 @@
 import { useRef, useState } from 'react';
 import { useWgrObserver, useSectionObserver, useScrollDirection } from './hooks';
-import { Background, ResDownBtn, BackgroundOverlay, WebGuideRobot, MainInfo, Timeline, CallToAction, DataWidget, Projects, Skills, References, Footer } from './components';
+import { Background, ResDownBtn, BackgroundOverlay, LangSwitch, WebGuideRobot, MainInfo, Timeline, CallToAction, DataWidget, Projects, Skills, References, Footer } from './components';
 import './App.css';
 
 function App() {
@@ -42,6 +42,7 @@ function App() {
                 chatShow={chatShow}
                 chatShowed={chatShowed}
             />
+            <LangSwitch />
             <MainInfo ref={mainInfoRef} />
             <Timeline ref={timelineRef} />
             <CallToAction ref={callToActionRef} />
