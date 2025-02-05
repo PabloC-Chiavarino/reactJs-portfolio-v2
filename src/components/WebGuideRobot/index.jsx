@@ -1,14 +1,16 @@
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
-import { ClickRipple } from '../../components'
+import { useLangContext } from '../../hooks'
 import { config, messageResponses } from '../../config/ChatBotCfg'
+import { ClickRipple } from '../../components'
 import Lottie from 'lottie-react'
 import animationData from '../../assets/hiRobot.json'
 import './styles.css'
 
 const WebGuideRobot = React.forwardRef(({ location, handleChatShow, chatShow, chatShowed }, ref) => {
+  const { lang } = useLangContext()
   const [question, setQuestion] = useState('')
-  const [answer, setAnswer] = useState(config.initialMessage)
+  const [answer, setAnswer] = useState(config[lang].initialMessage)
   const [animationState, setAnimationState] = useState('wgrobot--initialPos')
 
   const { wgrLocation, scrollDirection, predominantSection } = location
@@ -24,7 +26,7 @@ const WebGuideRobot = React.forwardRef(({ location, handleChatShow, chatShow, ch
     let maxScore = 0
     let bestMatchKey = null
 
-    Object.keys(messageResponses).forEach((key) => {
+    Object.keys(messageResponses[lang]).forEach((key) => {
       const words = key.split(' ')
 
       const score = words.reduce((acc, word) => {
@@ -39,7 +41,7 @@ const WebGuideRobot = React.forwardRef(({ location, handleChatShow, chatShow, ch
       }
     })
 
-    setAnswer(messageResponses[bestMatchKey] || messageResponses.default)
+    setAnswer(messageResponses[lang][bestMatchKey] || messageResponses[lang].default)
   }
 
   const handleKeyDown = (e) => {
@@ -49,6 +51,10 @@ const WebGuideRobot = React.forwardRef(({ location, handleChatShow, chatShow, ch
       e.target.innerText = ''
     }
   }
+
+  useEffect(() => {
+    setAnswer(config[lang].initialMessage)
+  }, [lang])
 
   useEffect(() => {
     if (wgrLocation === 'mainInfo' && predominantSection === 'timeline') {
