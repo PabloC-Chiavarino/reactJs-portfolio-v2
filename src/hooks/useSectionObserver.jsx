@@ -1,49 +1,43 @@
 import { useState, useEffect } from 'react'
 
 const useSectionObserver = (sectionsRefs, initialLoad) => {
+  const [predominantSection, setPredominantSection] = useState(null)
 
-    const [predominantSection, setPredominantSection] = useState(null)
+  useEffect(() => {
+    const sections = sectionsRefs.map(section => section.current)
 
-    useEffect(() => {
+    if (sections.some(section => !section)) return
 
-        const sections = sectionsRefs.map(section => section.current)
-        
-        if (sections.some(section => !section)) return
+    const sectionObserver = new IntersectionObserver(entries => {
+      let newPredominantSection = predominantSection
 
-        const sectionObserver = new IntersectionObserver(entries => {
-            
-            let newPredominantSection = predominantSection
+      entries.forEach(entry => {
+        // console.log("IntersectionObserver Entry:", entry) // debugging
+        if (entry.isIntersecting) {
+          newPredominantSection = entry.target.id
+          // console.log("Intersecting section:", entry.target.id);// debugging
+        }
+      })
 
-            entries.forEach(entry => {
-                //console.log("IntersectionObserver Entry:", entry) // debugging
-                if (entry.isIntersecting) {
-                    newPredominantSection = entry.target.id
-                    //console.log("Intersecting section:", entry.target.id);// debugging
-                }
-            })
-                
-            if (initialLoad.current) {
-                
-                initialLoad.current = false
-            } else {
-                setPredominantSection(newPredominantSection)
-            }
+      if (initialLoad.current) {
+        initialLoad.current = false
+      } else {
+        setPredominantSection(newPredominantSection)
+      }
+    }, {
+      root: null,
+      rootMargin: '-50% 0px -50% 0px',
+      threshold: [0]
+    })
 
-        }, {
-            root: null,
-            rootMargin: "-50% 0px -50% 0px",
-            threshold: [0]
-        })
+    sections.forEach(section => {
+      sectionObserver.observe(section)
+    })
 
-        sections.forEach(section => {
-            sectionObserver.observe(section)
-        })
+    return () => sectionObserver.disconnect()
+  }, [predominantSection])
 
-        return () => sectionObserver.disconnect()
-
-    }, [predominantSection])
-
-    return predominantSection
+  return predominantSection
 }
 
 export default useSectionObserver

@@ -1,18 +1,16 @@
-import React, { useEffect, useMemo, useState } from "react";
-import Particles, { initParticlesEngine } from "@tsparticles/react";
-import { loadSlim } from "@tsparticles/slim";
-import { DownChevron } from "../../components";
+import React, { useEffect, useMemo, useState } from 'react'
+import Particles, { initParticlesEngine } from '@tsparticles/react'
+import { loadSlim } from '@tsparticles/slim'
+import { DownChevron } from '../../components'
 
 const Background = React.memo((props) => {
-
-  const [init, setInit] = useState(false);
+  const [init, setInit] = useState(false)
 
   useEffect(() => {
-  
     initParticlesEngine(async (engine) => {
       await loadSlim(engine)
     }).then(() => {
-      setInit(true);
+      setInit(true)
     })
   }, [])
 
@@ -24,82 +22,82 @@ const Background = React.memo((props) => {
     () => ({
       background: {
         color: {
-          value: "#050724",
-        },
+          value: '#050724'
+        }
       },
       fpsLimit: 120,
       interactivity: {
         events: {
           onClick: {
             enable: true,
-            mode: "repulse",
+            mode: 'repulse'
           },
           onHover: {
             enable: true,
-            mode: 'grab',
-          },
+            mode: 'grab'
+          }
         },
         modes: {
           push: {
             distance: 200,
-            duration: 15,
+            duration: 15
           },
           grab: {
-            distance: 150,
-          },
-        },
+            distance: 150
+          }
+        }
       },
       particles: {
         color: {
-          value: "#FFFFFF",
+          value: '#FFFFFF'
         },
         links: {
-          color: "#FFFFFF",
+          color: '#FFFFFF',
           distance: 150,
           enable: true,
           opacity: 0.3,
-          width: 1,
+          width: 1
         },
         move: {
-          direction: "none",
+          direction: 'none',
           enable: true,
           outModes: {
-            default: "bounce",
+            default: 'bounce'
           },
           random: true,
           speed: 1,
-          straight: false,
+          straight: false
         },
         number: {
           density: {
-            enable: true,
+            enable: true
           },
-          value: 150,
+          value: 150
         },
         opacity: {
-          value: 1.0,
+          value: 1.0
         },
         shape: {
-          type: "circle",
+          type: 'circle'
         },
         size: {
-          value: { min: 1, max: 3 },
+          value: { min: 1, max: 3 }
         },
         zIndex: {
-          value: 1,
-        },
+          value: 1
+        }
       },
-      detectRetina: true,
+      detectRetina: true
     }),
-  [],  
-)
+    []
+  )
 
   return (
     <>
-      {init ? <Particles id={props} init={particlesLoaded} options={options} /> : null} 
+      {init ? <Particles id={props} init={particlesLoaded} options={options} /> : null}
       <DownChevron />
     </>
   )
 })
 
-export default Background;
+export default Background

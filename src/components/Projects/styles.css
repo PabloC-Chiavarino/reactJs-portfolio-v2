@@ -42,7 +42,7 @@
     width: 32%;
     &::after {
         transition: opacity .25s ease-in-out;
-        content: 'Click para visitar';
+        content: attr(data-name);
         position: absolute;
         width: fit-content;
         bottom: -2rem;

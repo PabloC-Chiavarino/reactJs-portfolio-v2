@@ -9,7 +9,7 @@
     transition: 350ms ease;
 
     &::before {
-        content: "Descargar CV";
+        content: attr(data-tooltip);
         position: relative;
         bottom: 15px;
         right: 12px;
