@@ -16,7 +16,9 @@ const Timeline = React.forwardRef((props, ref) => {
             <h3>{item.date}</h3>
             <h4>{item.title}</h4>
             <h5>{item.company}</h5>
-            {item.description}
+            <div className='timeline__description'>
+              {item.description}
+            </div>
           </div>
         ))}
       </div>

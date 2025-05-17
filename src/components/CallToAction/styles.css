@@ -1,41 +1,151 @@
 .callToAction {
-   position: relative;
-   margin: 16dvh 60dvh auto 14dvw;
-   top: 24dvh;
-   z-index: 1;
-   width: 54%;
+  position: relative;
+  margin: 15% 0 0 15%;
+  z-index: 1;
+  width: 71%;
+  max-height: 450px;
 }
 
 .callToAction h2 {
-  margin-bottom: 5%;
+  font-size: 1.3rem;
+  margin: 0 0 10px 0;
+}
+
+.callToAction p {
+  font-size: 13px;
 }
 
 .callToAction__options {
-   margin-top: 11%;
-   display: flex;
-   justify-content: start;
-   gap: 3rem;
+  margin-top: 15%;
+  margin-right: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
 }
 
 .callToAction__button {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  align-items: center;
+  overflow: hidden;
+  width: 4.8rem;
+  height: 2rem;
+  font-size: 13px;
+  text-align: center;
+  color: #e0e0e0cc;
+  border: 1px solid #0fc1d8;
+  background-color: #e0e0e042;
+  border-radius: 0.1rem 1rem;
+  transition: 350ms ease-in-out;
+  font-family: Roboto Mono, sans-serif;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: -10dvh;
+    width: 0;
+    height: 50px;
+    background-color: #c0c0c0;
+    transition: 400ms ease-in-out;
+    z-index: -1;
+  }
+
+  &:hover {
+    color: #242424;
+    border: 1px solid transparent;
+
+    &::before {
+      width: 200%;
+    }
+  }
+}
+
+@media (min-width: 360px) {
+  .callToAction {
+    margin: 17% 0 0 15%;
+  }
+
+  .callToAction h2 {
+    font-size: 1.4rem;
+  }
+
+  .callToAction p {
+    font-size: 13.5px;
+  }
+
+  .callToAction__options {
+    margin-top: 11%;
+  }
+
+  .callToAction__button {
+    width: 5.2rem;
+    height: 2.2rem;
+    font-size: 13.5px;
+  }
+}
+
+@media (min-width: 400px) {
+
+  .callToAction h2 {
+    font-size: 1.55rem;
+  }
+
+  .callToAction p {
+    font-size: 14.5px;
+  }
+
+  .callToAction__options {
+    margin-top: 11%;
+  }
+
+  .callToAction__button {
+    width: 5.5rem;
+    height: 2.3rem;
+    font-size: 14.5px;
+  }
+}
+
+@media (min-width: 1366px) {
+  .callToAction {
+    position: relative;
+    margin: 16dvh 60dvh auto 14dvw;
+    top: 24dvh;
+    z-index: 1;
+    width: 54%;
+  }
+
+  .callToAction h2 {
+    margin-bottom: 5%;
+  }
+
+  .callToAction__options {
+    margin-top: 11%;
+    display: flex;
+    justify-content: start;
+    gap: 3rem;
+  }
+
+  .callToAction__button {
     display: flex;
     justify-content: center;
     position: relative;
     align-items: center;
     overflow: hidden;
     width: 10rem;
-    height:3rem;
+    height: 3rem;
     text-align: center;
     color: #e0e0e0cc;
     border: 1px solid #0fc1d8;
     background-color: #e0e0e042;
-    border-radius: .1rem 1rem;
+    border-radius: 0.1rem 1rem;
     transition: 350ms ease-in-out;
     font-family: Roboto Mono, sans-serif;
     cursor: pointer;
 
     &::before {
-      content: '';
+      content: "";
       position: absolute;
       left: -10dvh;
       width: 0;
@@ -43,14 +153,15 @@
       background-color: #c0c0c0;
       transition: 400ms ease-in-out;
       z-index: -1;
-  }
+    }
 
     &:hover {
-        color: #242424;
-        border: 1px solid transparent;
+      color: #242424;
+      border: 1px solid transparent;
 
-        &::before {
-            width: 200%;
-        }
+      &::before {
+        width: 200%;
+      }
     }
+  }
 }

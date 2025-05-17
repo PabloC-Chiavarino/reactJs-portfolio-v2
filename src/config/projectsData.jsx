@@ -1,4 +1,4 @@
-import { ProjectImg1, ProjectImg2, ProjectImg3, ProjectImg4 } from '../assets/Images'
+import { ProjectImg1, ProjectImg2, ProjectImg3, ProjectImg4, ProjectImg5 } from '../assets/Images'
 
 export const projectsData = {
   es: {
@@ -27,11 +27,18 @@ export const projectsData = {
         image: ProjectImg3
       },
       {
+        title: 'Beyond Time',
+        subtitle: 'Proyecto Front-End',
+        description: 'Beyond Time es una aplicación web interactiva que transforma tu fecha de nacimiento en una serie de datos curiosos y visuales sobre tu vida. A partir de tu edad, calcula estimaciones como la cantidad total de latidos de tu corazón, los kilovatios generados por tu cuerpo, cuántos amaneceres has vivido y cuántos minutos han pasado desde tu nacimiento, entre otros. El recorrido culmina con un “reloj de la vida”, una representación analógica de tu edad en una vida promedio de 80 años, mostrando simbólicamente en qué momento vital te encontrás, como si fuera la hora del día.',
+        url: 'https://btimeproject.vercel.app',
+        image: ProjectImg4
+      },
+      {
         title: 'E-commerce API REST',
         subtitle: 'Proyecto Back-End',
         description: 'Desarrollada en Java con Spring Boot y JPA, esta API RESTful gestiona Productos, Órdenes, Facturas y Clientes, implementando operaciones CRUD y funciones avanzadas como la creación de facturas asociadas a clientes y la búsqueda de productos por código o marca, promoviendo un enfoque flexible y eficiente. Utiliza DTOs y mappers para evitar ciclos infinitos en relaciones bidireccionales, controladores genéricos que siguen el principio DRY, y está documentada con Swagger, lo que facilita las pruebas y mejora la experiencia de desarrollo.',
         url: 'https://java-jpa-sb-ecommerceapirest-demo.onrender.com/swagger-ui/index.html',
-        image: ProjectImg4
+        image: ProjectImg5
       }
     ]
   },
@@ -70,6 +77,13 @@ export const projectsData = {
         image: ProjectImg3
       },
       {
+        title: 'Beyond Time',
+        subtitle: 'Front-End Project',
+        description: 'Beyond Time is an interactive web application that transforms your birth date into a series of curious and visual insights about your life. Based on your age, it estimates things like the total number of heartbeats, the kilowatts your body has generated, how many sunrises you’ve experienced, and how many minutes have passed since you were born, among others. The experience concludes with a “life clock” — an analog representation of your age within an average 80-year lifespan, symbolically showing what stage of life you’re in, as if it were a time of day.',
+        url: 'https://btimeproject.vercel.app',
+        image: ProjectImg4
+      },
+      {
         title: 'E-commerce API REST',
         subtitle: 'Back-End Project',
         description: [
@@ -77,7 +91,7 @@ export const projectsData = {
           'It uses DTOs and mappers to avoid infinite loops in bidirectional relationships, generic controllers following the DRY principle, and is documented with Swagger, making testing easier and improving the development experience.'
         ],
         url: 'https://java-jpa-sb-ecommerceapirest-demo.onrender.com/swagger-ui/index.html',
-        image: ProjectImg4
+        image: ProjectImg5
       }
     ]
   }

@@ -1,25 +1,143 @@
 .references__container {
+  position: relative;
+  gap: 20px;
+  margin: 0 0 0 15%;
+  z-index: 1;
+  width: 71%;
+}
+
+.references__container h2 {
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+}
+
+.references__container h3 {
+  font-size: 1rem;
+}
+
+.references__container h4 {
+  font-size: 0.8rem;
+  margin: 5px 0 5px 0;
+}
+
+.references__container h5 {
+  margin: 5px 0 15px 0;
+}
+
+.references__container p {
+  font-size: 13px;
+}
+
+.references__row {
+  margin-top: 30px;
+}
+
+.references__row hr {
+  margin-bottom: 23px;
+}
+
+.references__name {
+  margin-bottom: 5px;
+}
+
+.references__position {
+  font-weight: 600;
+  margin-top: 0;
+}
+
+.references__content {
+  max-height: 220px;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+@media (min-width: 360px) {
+  .references__container {
+    margin: 17% 0 0 15%;
+  }
+
+  .references__container h2 {
+    font-size: 1.4rem;
+  }
+
+  .references__container h3 {
+    font-size: 1.2rem;
+    width: fit-content;
+  }
+
+  .references__container h4 {
+    font-size: 1rem;
+  }
+
+  .references__container h5 {
+    font-size: 0.8rem;
+  }
+
+  .references__container p {
+    font-size: 13.5px;
+  }
+
+  .references__content {
+    max-height: 250px;
+  }
+}
+
+@media (min-width: 400px) {
+  .references__container {
+    margin: 20% 0 0 15%;
+  }
+
+  .references__container h2 {
+    font-size: 1.55rem;
+  }
+
+  .references__container h3 {
+    font-size: 1.3rem;
+    width: fit-content;
+  }
+
+  .references__container h4 {
+    font-size: 1.1rem;
+  }
+
+  .references__container h5 {
+    font-size: 0.9rem;
+  }
+
+  .references__container p {
+    font-size: 14.5px;
+  }
+
+  .references__content {
+    max-height: 300px;
+  }
+}
+
+@media (min-width: 1366px) {
+  .references__container {
     position: relative;
     gap: 20px;
     margin: 20dvh 60dvh auto 14dvw;
     top: 24dvh;
     z-index: 1;
     width: 54%;
-}
+  }
 
-.references__container h2 {
+  .references__container h2 {
     margin-bottom: 5%;
-}
+  }
 
-.references__row {
+  .references__row {
     margin-top: 5rem;
-}
+  }
 
-.references__name {
+  .references__name {
     margin-bottom: 5px;
-}
+  }
 
-.references__position {
+  .references__position {
     font-weight: 600;
     margin-top: 0;
+  }
 }

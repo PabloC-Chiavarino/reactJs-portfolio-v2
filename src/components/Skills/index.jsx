@@ -21,7 +21,7 @@ const Skills = React.forwardRef((props, ref) => {
   }
 
   return (
-    <div id='skills' className='skills__circles--container' ref={ref}>
+    <section id='skills' className='skills__circles--container' ref={ref}>
       <h2>Skills</h2>
       {skillsData[lang].introduction}
 
@@ -45,7 +45,7 @@ const Skills = React.forwardRef((props, ref) => {
           <img src={prevNextArrow} onClick={handleNext} />
         </div>
       </div>
-    </div>
+    </section>
   )
 })
 

@@ -1,45 +1,140 @@
-.mainInfo {
+  .mainInfo {
+    position: relative;
+    top: 0dvh;
+    z-index: 1;
+    width: 80%;
+    margin-left: 7%;
+    font-size: 13px;
+  }
+
+  .mainInfo__info {
+    max-height: 145px;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .mainInfo__info::-webkit-scrollbar {
+    display: none;
+  }
+
+  .mainInfo__info p {
+    font-size: 13.5px;
+  }
+
+  .mainInfo__title h1 {
+    font-weight: 600;
+    font-size: 1.5rem;
+    width: 50%;
+  }
+
+  .mainInfo__title h2 {
+    font-weight: 400;
+    font-size: 1.1rem;
+    margin: -12px 0 10px 0;
+    line-height: 22px;
+  }
+
+  .mainInfo h3 {
+    width: fit-content;
+    font-weight: 400;
+    font-size: 1rem;
+    margin: 35px 0 8px 0;
+  }
+
+@media (min-width: 360px) {
+
+  .mainInfo__info {
+    max-height: 250px;
+  }
+
+  .mainInfo__title h1 {
+    font-size: 1.8rem;
+  }
+
+  .mainInfo__title h2 {
+    font-size: 1.4rem;
+    width: 50%;
+  }
+
+  .mainInfo h3 {
+    font-size: 1.2rem;
+  }
+
+  .mainInfo__info p {
+    font-size: 13.5px;
+  }
+}
+
+@media (min-width: 400px) {
+
+  .mainInfo__info {
+    max-height: 300px;
+  }
+
+  .mainInfo__title h1 {
+    font-size: 2.3rem;
+  }
+
+  .mainInfo__title h2 {
+    font-size: 1.55rem;
+    width: 50%;
+    margin: -20px 0 10px 0;
+    line-height: 1.7rem;
+  }
+
+  .mainInfo h3 {
+    font-size: 1.30rem;
+  }
+
+  .mainInfo__info p {
+    font-size: 14.5px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .mainInfo__info {
+    overflow-y: scroll;
+    height: 19.5rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .mainInfo__info {
+    overflow-y: scroll;
+    height: 25rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .mainInfo {
+    margin-left: 8%;
+  }
+}
+
+@media (min-width: 1366px) {
+  .mainInfo {
     position: relative;
     top: 5dvh;
     z-index: 1;
     width: 54%;
-    padding-left: 10%;
-}
+    margin-left: 10%;
+  }
 
-.mainInfo__title h1 {
+  .mainInfo__title h1 {
     margin-bottom: 0;
     font-weight: 600;
-}
+  }
 
-.mainInfo__title h2 {
-    margin-top: .5rem;
+  .mainInfo__title h2 {
+    margin-top: 0.5rem;
     margin-bottom: 0;
     font-weight: 400;
-}
+  }
 
-.mainInfo h3 {
+  .mainInfo h3 {
     margin-top: 2.4rem;
     margin-bottom: 1rem;
     font-weight: 400;
-}
-
-@media (1024px <= width <= 1280px) {
-    .mainInfo {
-        padding-left: 8%;
-    }
-}
-
-@media (1200px <= width <= 1279px) {
-    .mainInfo__info {
-        overflow-y: scroll;
-        height: 25rem;
-    }
-}
-
-@media (1024px <= width <= 1199px) {
-    
-    .mainInfo__info {
-        overflow-y: scroll;
-        height: 19.5rem;
-    }
+  }
 }

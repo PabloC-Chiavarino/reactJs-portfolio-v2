@@ -7,7 +7,7 @@ const References = React.forwardRef((props, ref) => {
   const { lang } = useLangContext()
 
   return (
-    <div id='references' className='references__container' ref={ref}>
+    <section id='references' className='references__container' ref={ref}>
       <h2>{referencesData[lang].title}</h2>
       {referencesData[lang].introduction}
 
@@ -24,7 +24,7 @@ const References = React.forwardRef((props, ref) => {
           ))}
         </div>
       ))}
-    </div>
+    </section>
   )
 })
 

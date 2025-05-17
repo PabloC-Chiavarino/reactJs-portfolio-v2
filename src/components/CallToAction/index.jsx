@@ -7,7 +7,7 @@ const CallToAction = React.forwardRef((props, ref) => {
   const { lang } = useLangContext()
 
   return (
-    <div id='cta' className='callToAction' ref={ref}>
+    <section id='cta' className='callToAction' ref={ref}>
       <h2>{callToActionData[lang].title}</h2>
       {callToActionData[lang].introduction}
       <br />
@@ -28,7 +28,7 @@ const CallToAction = React.forwardRef((props, ref) => {
           Whatsapp
         </a>
       </div>
-    </div>
+    </section>
   )
 })
 

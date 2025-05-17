@@ -1,44 +1,72 @@
 @keyframes rippleEffect {
-    0% {
-      transform: scale(0);
-      opacity: 1;
-    }
-    50% {
-      transform: scale(1.5);
-      opacity: 0.3;
-    }
-    100% {
-      transform: scale(1.5);
-      opacity: 0;
-    }
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.5);
+    opacity: 0.3;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
 }
 
 .clickRipple__container {
-    width: 80%;
+  width: 80%;
+  height: 70%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.ripple__first,
+.ripple__second {
+  width: inherit;
+  height: inherit;
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.ripple__first {
+  animation: rippleEffect 1.5s ease forwards;
+}
+
+.ripple__second {
+  animation: rippleEffect 3s ease forwards;
+}
+
+@media (min-width: 1366px) {
+  .clickRipple__container {
+    width: 70%;
     height: 80%;
     position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 1;
-}
+  }
 
-.ripple__first,
-.ripple__second {
+  .ripple__first,
+  .ripple__second {
     width: inherit;
     height: inherit;
     position: absolute;
     border-radius: 50%;
-    background: rgba(0, 0, 0, 0.200);
-    margin-left: 1.5rem;
-}
+    background: rgba(0, 0, 0, 0.2);
+  }
 
-.ripple__first {
+  .ripple__first {
     animation: rippleEffect 1.5s ease forwards;
-}
+  }
 
-.ripple__second {
+  .ripple__second {
     animation: rippleEffect 3s ease forwards;
+  }
 }
 
 @media (min-width: 1920px) {
