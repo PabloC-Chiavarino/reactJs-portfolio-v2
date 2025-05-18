@@ -21,20 +21,6 @@
   width: 100%;
   margin-top: 30px;
   transition: all 0.3s ease;
-  &:hover {
-    text-shadow: 0 0 1.15px rgba(224, 224, 224, 0.6);
-    font-weight: 400;
-
-    .projects__image::after {
-      opacity: 1;
-    }
-
-    .projects__img {
-      transform: rotateY(0deg) translateZ(0);
-      box-shadow: 4.5px 4.5px 0px rgba(255, 255, 255, 0.2);
-      filter: saturate(1);
-    }
-  }
 }
 
 .projects__image {
@@ -42,7 +28,7 @@
   right: 0;
   display: flex;
   align-items: center;
-  width: 100%;
+  width: fit-content;
   &::after {
     transition: opacity 0.25s ease-in-out;
     content: attr(data-name);
@@ -53,6 +39,18 @@
     font-size: 12px;
     opacity: 0;
     z-index: 0;
+  }
+  &:hover {
+    text-shadow: 0 0 1.15px rgba(224, 224, 224, 0.6);
+    font-weight: 400;
+    .projects__img {
+      transform: rotateY(0deg) translateZ(0);
+      box-shadow: 4.5px 4.5px 0px rgba(255, 255, 255, 0.2);
+      filter: saturate(1);
+    }
+    &::after {
+      opacity: 1;
+    }
   }
 }
 
