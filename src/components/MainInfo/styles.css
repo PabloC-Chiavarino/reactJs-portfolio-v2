@@ -1,49 +1,48 @@
-  .mainInfo {
-    position: relative;
-    top: 0dvh;
-    z-index: 1;
-    width: 80%;
-    margin-left: 7%;
-    font-size: 13px;
-  }
+.mainInfo {
+  position: relative;
+  top: 0dvh;
+  z-index: 1;
+  width: 80%;
+  margin-left: 7%;
+  font-size: 13px;
+}
 
-  .mainInfo__info {
-    max-height: 145px;
-    overflow-y: scroll;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-  }
+.mainInfo__info {
+  max-height: 145px;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
 
-  .mainInfo__info::-webkit-scrollbar {
-    display: none;
-  }
+.mainInfo__info::-webkit-scrollbar {
+  display: none;
+}
 
-  .mainInfo__info p {
-    font-size: 13.5px;
-  }
+.mainInfo__info p {
+  font-size: 13.5px;
+}
 
-  .mainInfo__title h1 {
-    font-weight: 600;
-    font-size: 1.5rem;
-    width: 50%;
-  }
+.mainInfo__title h1 {
+  font-weight: 600;
+  font-size: 1.5rem;
+  width: 50%;
+}
 
-  .mainInfo__title h2 {
-    font-weight: 400;
-    font-size: 1.1rem;
-    margin: -12px 0 10px 0;
-    line-height: 22px;
-  }
+.mainInfo__title h2 {
+  font-weight: 400;
+  font-size: 1.1rem;
+  margin: -12px 0 10px 0;
+  line-height: 22px;
+}
 
-  .mainInfo h3 {
-    width: fit-content;
-    font-weight: 400;
-    font-size: 1rem;
-    margin: 35px 0 8px 0;
-  }
+.mainInfo h3 {
+  width: fit-content;
+  font-weight: 400;
+  font-size: 1rem;
+  margin: 35px 0 8px 0;
+}
 
 @media (min-width: 360px) {
-
   .mainInfo__info {
     max-height: 250px;
   }
@@ -67,7 +66,6 @@
 }
 
 @media (min-width: 400px) {
-
   .mainInfo__info {
     max-height: 300px;
   }
@@ -84,7 +82,7 @@
   }
 
   .mainInfo h3 {
-    font-size: 1.30rem;
+    font-size: 1.3rem;
   }
 
   .mainInfo__info p {
@@ -92,23 +90,48 @@
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   .mainInfo__info {
-    overflow-y: scroll;
-    height: 19.5rem;
+    max-height: 400px;
+  }
+
+  .mainInfo__title h1 {
+    font-size: 3rem;
+  }
+
+  .mainInfo__title h2 {
+    font-size: 1.7rem;
+    width: 60%;
+    margin: -30px 0 10px 0;
+  }
+
+  .mainInfo h3 {
+    font-size: 1.4rem;
+  }
+
+  .mainInfo__info p {
+    font-size: 16px;
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1024px) {
+  .mainInfo {
+    width: 65%;
+  }
+
   .mainInfo__info {
     overflow-y: scroll;
-    height: 25rem;
+    max-height: 100%;
   }
 }
 
 @media (min-width: 1280px) {
   .mainInfo {
     margin-left: 8%;
+  }
+
+  .toCorner {
+    transform: translateX(10rem);
   }
 }
 

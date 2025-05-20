@@ -13,6 +13,7 @@
 
 .projects__container p {
   font-size: 13px;
+  margin-top: 6px;
 }
 
 .projects__row {
@@ -34,28 +35,16 @@
     content: attr(data-name);
     position: absolute;
     width: fit-content;
-    bottom: 1rem;
+    bottom: .75rem;
     color: #e0e0e0;
     font-size: 12px;
-    opacity: 0;
+    opacity: 1;
     z-index: 0;
-  }
-  &:hover {
-    text-shadow: 0 0 1.15px rgba(224, 224, 224, 0.6);
-    font-weight: 400;
-    .projects__img {
-      transform: rotateY(0deg) translateZ(0);
-      box-shadow: 4.5px 4.5px 0px rgba(255, 255, 255, 0.2);
-      filter: saturate(1);
-    }
-    &::after {
-      opacity: 1;
-    }
+    right: 0;
   }
 }
 
 .projects__link {
-  perspective: 200px;
   display: flex;
   justify-content: start;
 }
@@ -63,10 +52,8 @@
 .projects__img {
   width: 115px;
   height: 70px;
-  filter: saturate(0.1);
   box-shadow: 6.5px 6.5px 2px rgba(255, 255, 255, 0.19);
   border-radius: 3px;
-  transform: rotateY(-33deg) translateZ(20px);
   transition: all 0.3s ease, box-shadow 0.2s ease;
   z-index: 1;
   cursor: pointer;
@@ -98,7 +85,7 @@
 
 @media (min-width: 360px) {
   .projects__container {
-    margin: 17% 0 0 15%;
+    margin: 20% 0 0 15%;
   }
 
   .projects__container h2 {
@@ -107,6 +94,7 @@
 
   .projects__container p {
     font-size: 13.5px;
+    margin-top: 8px;
   }
 
   .projects__title {
@@ -125,7 +113,7 @@
 
 @media (min-width: 400px) {
   .projects__container {
-    margin: 27% 0 0 15%;
+    margin: 37% 0 0 15%;
   }
 
   .projects__container h2 {
@@ -134,6 +122,7 @@
 
   .projects__container p {
     font-size: 14.5px;
+    margin-top: 10px;
   }
 
   .projects__title {
@@ -150,25 +139,70 @@
   }
 
   .projects__img {
-    width: 130px;
-    height: 85px;
+    width: 150px;
+    height: 95px;
   }
 }
 
-@media (min-width: 1366px) {
+@media (min-width: 768px) {
   .projects__container {
-    position: relative;
-    margin: 20dvh 60dvh auto 14dvw;
-    top: 24dvh;
-    z-index: 1;
-    width: 54%;
+    margin: 15% 0 0 15%;
   }
 
   .projects__container h2 {
-    margin-bottom: 5%;
+    font-size: 1.7rem;
   }
 
-  .projects__row {
+  .projects__container p {
+    font-size: 16px;
+  }
+
+  .projects__title {
+    font-size: 1.4rem;
+  }
+
+  .projects__subtitle {
+    font-size: 1.2rem;
+  }
+
+  .projects__description {
+    font-size: 16px;
+    max-height: 400px;
+  }
+
+  .projects__image {
+    width: 100%;
+    justify-content: center;
+    &::after {
+      font-size: 14px;
+      right: initial
+    }
+  }
+
+  .projects__img {
+    width: 220px;
+    height: 135px;
+    margin: 55px 0 55px 0;
+    transform: rotateY(-20deg) translateZ(20px);
+  }
+}
+
+@media (min-width: 1024px) {
+
+  .projects__container {
+    margin: 11% 0 0 15%;
+  }
+
+  .projects__img {
+    width: 275px;
+    height: 155px;
+  }
+  
+   .projects__container p {
+    margin-top: 25px;
+  }
+
+   .projects__row {
     display: flex;
     align-items: center;
     width: 100%;
@@ -194,15 +228,14 @@
     position: absolute;
     right: 0;
     display: flex;
-    justify-content: center;
+    justify-content: end;
     align-items: center;
-    width: 32%;
     &::after {
       transition: opacity 0.25s ease-in-out;
       content: attr(data-name);
       position: absolute;
       width: fit-content;
-      bottom: -2rem;
+      bottom: 1rem;
       color: #e0e0e0;
       font-size: 14px;
       opacity: 0;
@@ -217,8 +250,8 @@
   }
 
   .projects__img {
-    width: 100%;
-    height: 9rem;
+    width: 15rem;
+    height: 9.5rem;
     filter: saturate(0.1);
     box-shadow: 6.5px 6.5px 2px rgba(255, 255, 255, 0.19);
     border-radius: 3px;
@@ -234,11 +267,24 @@
 
   .projects__subtitle {
     font-weight: 600;
-    margin: 16px auto 16px auto;
   }
 
   .projects__description {
     width: 60%;
+  }
+}
+
+@media (min-width: 1366px) {
+  .projects__container {
+    position: relative;
+    margin: 20dvh 60dvh auto 14dvw;
+    top: 24dvh;
+    z-index: 1;
+    width: 54%;
+  }
+
+  .projects__container h2 {
+    margin-bottom: 5%;
   }
 }
 
