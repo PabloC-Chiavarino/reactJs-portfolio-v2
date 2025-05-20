@@ -276,11 +276,7 @@
 
 @media (min-width: 1366px) {
   .projects__container {
-    position: relative;
-    margin: 20dvh 60dvh auto 14dvw;
-    top: 24dvh;
-    z-index: 1;
-    width: 54%;
+    width: 70%;
   }
 
   .projects__container h2 {

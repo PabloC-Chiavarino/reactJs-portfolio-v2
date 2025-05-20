@@ -40,3 +40,9 @@
         width: 50px;
     }
 }
+
+@media (min-width: 1366px) {
+    .downChevron {
+        width: 55px;
+    }
+}

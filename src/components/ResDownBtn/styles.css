@@ -136,3 +136,30 @@
     transform: translateX(19.1rem);
   }
 }
+
+@media (min-width: 1366px) {
+
+  .ResDownBtn__container {
+    width: 16%;
+    top: 90%;
+  }
+  
+  .ResDownBtn__img {
+    width: 55px;
+  }
+
+  .toCorner {
+    transform: translateX(4.25rem);
+  }
+}
+
+@media (min-width: 1440px) {
+
+  .ResDownBtn__container {
+    top: 92%;
+  }
+
+  .toCorner {
+    transform: translateX(5rem);
+  }
+}

@@ -128,6 +128,7 @@
 @media (min-width: 1280px) {
   .mainInfo {
     margin-left: 8%;
+    width: 65%;
   }
 
   .toCorner {
@@ -137,11 +138,8 @@
 
 @media (min-width: 1366px) {
   .mainInfo {
-    position: relative;
     top: 5dvh;
-    z-index: 1;
-    width: 54%;
-    margin-left: 10%;
+    width: 64%;
   }
 
   .mainInfo__title h1 {
@@ -159,5 +157,11 @@
     margin-top: 2.4rem;
     margin-bottom: 1rem;
     font-weight: 400;
+  }
+}
+
+@media (min-width: 1440px) {
+  .mainInfo {
+    width: 68%;
   }
 }

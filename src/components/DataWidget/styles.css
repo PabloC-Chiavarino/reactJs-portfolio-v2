@@ -88,8 +88,8 @@
 @media (min-width: 1366px) {
   .dataWidget {
     position: fixed;
-    top: 5dvh;
-    right: 3rem;
+top: 2dvh;
+    right: .5rem;
     z-index: 3;
   }
 

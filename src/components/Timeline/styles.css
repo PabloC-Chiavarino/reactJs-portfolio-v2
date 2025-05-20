@@ -207,10 +207,9 @@ h4 {
 
   .timeline {
     position: relative;
-    margin: 20dvh 60dvh auto 14dvw;
-    top: 10dvh;
+    margin-top: 14%;
     z-index: 1;
-    width: 54%;
+    width: 70%;
   }
 
   .timeline__dot {
@@ -219,7 +218,7 @@ h4 {
     transform: rotate(45deg);
     background-color: #0fc1d8;
     position: relative;
-    right: 42px;
+    right: 51px;
     top: 5px;
     z-index: 2;
   }
@@ -228,9 +227,9 @@ h4 {
     content: "";
     position: absolute;
     width: 2px;
-    height: 85%;
+    height: 65%;
     background-color: #e0e0e0;
-    left: -33px;
+    left: -42px;
     z-index: 1;
   }
 }
