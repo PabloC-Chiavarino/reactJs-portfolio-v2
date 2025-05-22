@@ -206,9 +206,7 @@ h4 {
   }
 
   .timeline {
-    position: relative;
     margin-top: 14%;
-    z-index: 1;
     width: 70%;
   }
 
@@ -231,5 +229,46 @@ h4 {
     background-color: #e0e0e0;
     left: -42px;
     z-index: 1;
+  }
+}
+
+@media (min-width: 1920px) {
+  .timeline {
+    margin-top: 14%;
+    width: 60%;
+  }
+
+  .timeline__container {
+    margin-top: 2rem;
+  }
+
+    .timeline h2 {
+    font-size: 2.1rem;
+  }
+
+  .timeline h3 {
+    font-size: 1.6rem;
+  }
+
+  .timeline h4 {
+    font-size: 1.3rem;
+  }
+
+  .timeline h5 {
+    font-size: 1.1rem;
+  }
+
+  .timeline__dot {
+    width: 26px;
+    height: 26px;
+    right: 3.35rem;
+  }
+
+  .timeline__item::before {
+    height: 67%;
+  }
+
+  .timeline__item p {
+    font-size: 18px;
   }
 }

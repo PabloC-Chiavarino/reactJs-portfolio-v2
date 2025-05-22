@@ -86,32 +86,35 @@
 }
 
 @media (min-width: 1366px) {
-  .dataWidget {
-    position: fixed;
-top: 2dvh;
-    right: .5rem;
-    z-index: 3;
-  }
-
-  .dataWidget__container {
-    display: flex;
-    gap: 1rem;
-    align-items: center;
-  }
-
-  .dataWidget__button {
-    cursor: pointer;
-  }
 
   .dataWidget__button img {
-    width: 3rem;
-    height: 3rem;
-    opacity: 0.8;
-    transition: ease-in-out 300ms;
-
+    width: 3.5rem;
+    height: 3.5rem;
     &:hover {
       opacity: 1;
       scale: 1.1;
     }
+  }
+
+  .dataWidget__container a:nth-child(2) img {
+    width: 2.6rem;
+    height: 2.6rem;
+  }
+}
+
+@media (min-width: 1920px) {
+
+  .dataWidget__button img {
+    width: 4rem;
+    height: 4rem;
+    &:hover {
+      opacity: 1;
+      scale: 1.1;
+    }
+  }
+
+  .dataWidget__container a:nth-child(2) img {
+    width: 2.9rem;
+    height: 2.9rem;
   }
 }

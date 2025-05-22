@@ -566,11 +566,8 @@
   }
 
   .skills__circles--logo img {
-    position: absolute;
     width: 52px;
     height: 52px;
-    filter: saturate(0.3);
-    transition: ease-in-out 300ms;
   }
 
   .skills__circles--logosFrontend div:nth-child(2) {
@@ -628,7 +625,37 @@
 }
 
 @media (min-width: 1920px) {
+  .skills__circles--container {
+    width: 60%;
+  }
+
   .skills__circles--subcontainer {
-    width: 65%;
+    margin-top: 4rem;
+  }
+
+  .skills__circles--container h2 {
+    font-size: 2.1rem;
+  }
+
+  .skills__circles--container p {
+    font-size: 18px;
+  }
+
+    .skills__circles--buttons {
+    margin-top: 4rem;
+  }
+
+  .skills__circles--buttons img {
+    width: 85px;
+  }
+
+    .skills__circles--logo img {
+    width: 60px;
+    height: 60px;
+  }
+
+    .skills__circles--logo img[alt="JavaScript"] {
+    width: 50px;
+    height: 50px;
   }
 }

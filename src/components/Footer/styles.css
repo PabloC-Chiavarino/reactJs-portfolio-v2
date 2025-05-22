@@ -67,3 +67,13 @@
         margin-top: 17rem;
     }
 }
+
+@media (min-width: 1920px) {
+    .footer__container {
+        margin-top: 20rem;
+    }
+
+    .footer__text {
+        font-size: 1rem;
+    }
+}

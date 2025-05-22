@@ -160,3 +160,27 @@
     height: 3rem;
   }
 }
+
+@media (min-width: 1920px) {
+  .callToAction {
+    width: 60%;
+    margin-top: 7rem;
+  }
+
+  .callToAction h2 {
+    font-size: 2.1rem;
+  }
+
+  .callToAction p {
+    font-size: 18px;
+  }
+
+  .callToAction__button {
+    width: 11rem;
+    height: 3.5rem;
+    font-size: 17px;
+    &::before {
+      height: 60px;
+    }
+  }
+}

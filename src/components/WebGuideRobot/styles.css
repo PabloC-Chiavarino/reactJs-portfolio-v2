@@ -247,8 +247,9 @@
   color: wheat;
   position: relative;
   left: 17px;
-  bottom: 12px;
+  bottom: 9px;
   width: 120px;
+  height: 48px;
   scrollbar-width: none;
   -ms-overflow-style: none;
 }
@@ -342,6 +343,19 @@
       transform: rotate(-60deg);
       bottom: 19px;
     }
+  }
+
+  .answer__header {
+    left: 57px;
+  }
+
+  .answer__text {
+    height: 60px;
+  }
+
+  .textarea__container {
+    top: 12.5rem;
+    left: 13.5rem;
   }
 
   .textarea__line {
@@ -476,13 +490,16 @@
 
   .answer__text {
     font-size: 13px;
-    left: 25px;
-    bottom: 14px;
-    width: 140px;
+    left: 14px;
+    bottom: 6px;
+    width: 149px;
+    height: 63px;
   }
 
   .textarea__container {
-    top: 17rem;
+    top: 15rem;
+    left: 12rem;
+    width: 100%;
   }
 
   .textarea__container button {
@@ -597,6 +614,19 @@
       bottom: 12px;
     }
   }
+
+  .textarea__container {
+    top: 16rem;
+    left: 13rem;
+  }
+}
+
+@media (min-width: 400px) and (min-height: 800px) {
+  .textarea__container {
+    top: 17rem;
+    left: 12.5rem;
+    width: 90%;
+  }
 }
 
 @media (min-width: 768px) {
@@ -607,8 +637,17 @@
     height: 45%;
   }
 
+  .chat__container {
+    top: 1rem;
+    right: 15rem;
+    width: 65%;
+    height: 70%;
+  }
+
   .textarea__container {
-    top: 22rem;
+    top: 21rem;
+    left: 1.5rem;
+    width: 90%;
   }
 
   .textarea__line {
@@ -625,12 +664,12 @@
   .answer__container {
     height: 9rem;
     width: 14rem;
-    left: 8rem;
-    top: 2rem;
+    left: 0rem;
+    top: 5.5rem;
     &::after {
-      right: -15px;
-      transform: rotate(-51deg);
-      bottom: 9px;
+      right: -30px;
+      transform: rotate(-70deg);
+      bottom: 30px;
       border-width: 1.2rem;
     }
   }
@@ -642,11 +681,15 @@
 
   .answer__text {
     font-size: 14px;
-    left: 12px;
-    bottom: 4px;
-    width: 205px;
-    border-radius: 0% 0% 50% 50%;
-    height: 110px;
+    left: 26px;
+    bottom: 10px;
+    width: 173spx;
+    height: 85px;
+  }
+
+  .chat__container--close {
+    right: -10.5rem;
+    top: 8.5rem;
   }
 
   @keyframes goToTimeline {
@@ -749,12 +792,14 @@
   }
 
   .chat__container {
-    right: 21rem;
+    right: 12rem;
     top: -2rem;
+    width: 100%;
+    height: 100%;
   }
   .chat__container--close {
     top: 3.5rem;
-    right: -16.5rem;
+    right: -7.5rem;
   }
   .answer__container {
     left: 5rem;
@@ -768,8 +813,9 @@
   }
 
   .textarea__container {
-    top: 18rem;
-    left: 6rem;
+    top: 17rem;
+    left: 6.5rem;
+    width: 60%;
   }
 
   @keyframes goToTimeline {
@@ -876,12 +922,12 @@
   }
 
   .chat__container {
-    right: 21rem;
+    right: 9rem;
     top: 2rem;
   }
   .chat__container--close {
     top: 2rem;
-    right: -13rem;
+    right: -1rem;
   }
   .answer__container {
     left: 4rem;
@@ -902,17 +948,16 @@
 
   .answer__text {
     font-size: 14px;
-    left: 20px;
-    bottom: 3px;
-    width: 205px;
-    border-radius: 0% 0% 50% 50%;
-    height: 115px;
+    left: 24px;
+    bottom: 6px;
+    width: 190px;
+    height: 80px;
   }
 
   .textarea__container {
     left: 6rem;
-    top: 15rem;
-    width: 80%;
+    top: 16rem;
+    width: 45%;
   }
 
   @keyframes goToTimeline {
@@ -1007,24 +1052,6 @@
 }
 
 @media (min-width: 1280px) {
-  .chat__container {
-    right: 25rem;
-    top: 2rem;
-  }
-  .chat__container--close {
-    top: 1rem;
-    right: -16em;
-  }
-
-  .answer__container {
-    left: 8rem;
-    top: -2.5rem;
-  }
-
-  .textarea__container {
-    left: 9rem;
-  }
-
   @keyframes goToTimeline {
     from {
       transform: translate(0, 0);
@@ -1124,15 +1151,15 @@
   }
 
   .chat__container {
-    top: 1rem;
-    right: 23rem;
+    top: -4rem;
+    right: 22rem;
     width: 60%;
-    height: 70%;
+    height: 100%;
   }
 
   .chat__container--close {
-    right: -11.5rem;
-    top: 8rem;
+    right: -12.5rem;
+    top: 10rem;
     scale: 1.4;
   }
 
@@ -1152,11 +1179,11 @@
 
   .answer__text {
     font-size: 0.9rem;
-    margin: 0.5rem 0.5rem 0 0.5rem;
-    top: -6px;
-    width: 220px;
-    height: 135px;
-    left: 9px;
+    top: 4px;
+    height: 92px;
+    left: 20px;
+    bottom: 6px;
+    width: 222px;
   }
 
   .answer__header {
@@ -1165,13 +1192,9 @@
   }
 
   .textarea__container {
-    top: 25rem;
-    left: 0;
-    width: 100%;
-  }
-
-  .textarea__line {
-    width: 60%;
+    top: 26rem;
+    left: 7rem;
+    width: 70%;
   }
 
   .textarea__container button {
@@ -1282,25 +1305,6 @@
     height: 55%;
   }
 
-  .chat__container {
-    top: -5rem;
-    right: 21.5rem;
-    width: 60%;
-    height: 70%;
-  }
-
-  .chat__container--close {
-    right: -11.5rem;
-    top: 12rem;
-    scale: 1.5;
-  }
-
-  .answer__container::after {
-    right: -16px;
-    bottom: 15px;
-    transform: rotate(-52deg);
-  }
-
   @keyframes goToTimeline {
     from {
       transform: translate(0, 0);
@@ -1392,24 +1396,87 @@
   }
 }
 
+@media (min-width: 1600px) {
+  .wgrobot {
+    width: 66%;
+  }
+
+  .textarea__container {
+    top: 28rem;
+    left: 7rem;
+    width: 60%;
+  }
+
+  .chat__container--close {
+    top: 11rem;
+    right: -10rem;
+  }
+
+  @keyframes goToSkills {
+    from {
+      transform: translate(-6rem, 106rem);
+    }
+    to {
+      transform: translate(-2rem, 302rem);
+    }
+  }
+
+  @keyframes returnFromSkills {
+    from {
+      transform: translate(-2rem, 302rem);
+    }
+    to {
+      transform: translate(-6rem, 106rem);
+    }
+  }
+
+  @keyframes goToReferences {
+    from {
+      transform: translate(-2rem, 302rem);
+    }
+    to {
+      transform: translate(-5rem, 331rem);
+    }
+  }
+
+  @keyframes returnFromReferences {
+    from {
+      transform: translate(-5rem, 331rem);
+    }
+    to {
+      transform: translate(-2rem, 302rem);
+    }
+  }
+}
+
 @media (min-width: 1920px) {
   .wgrobot__container {
-    top: -7rem;
+    top: 0rem;
     right: 4rem;
+    width: 33%;
+    height: 67%;
+  }
+
+  .wgrobot {
+    width: 75%;
   }
 
   .chat__container {
-    right: 32rem;
-    top: 18rem;
+    top: 1rem;
   }
 
   .answer__container {
-    left: 17.5rem;
+    left: 5rem;
     bottom: 5rem;
   }
 
   .chat__container--close {
-    right: -16rem;
-    bottom: 1rem;
+    right: -10rem;
+    top: 10rem;
+  }
+
+  .textarea__container {
+    left: 7.5rem;
+    width: 58%;
   }
 }
