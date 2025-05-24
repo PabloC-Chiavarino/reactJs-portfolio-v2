@@ -1754,13 +1754,13 @@
       transform: translate(-1rem, 98rem);
     }
     to {
-      transform: translate(0rem, 280rem);
+      transform: translate(0rem, 285rem);
     }
   }
 
   @keyframes returnFromSkills {
     from {
-      transform: translate(0rem, 280rem);
+      transform: translate(0rem, 285rem);
     }
     to {
       transform: translate(-1rem, 98rem);
@@ -1769,20 +1769,28 @@
 
   @keyframes goToReferences {
     from {
-      transform: translate(0rem, 280rem);
+      transform: translate(0rem, 285rem);
     }
     to {
-      transform: translate(0, 312rem);
+      transform: translate(0, 320rem);
     }
   }
 
   @keyframes returnFromReferences {
     from {
-      transform: translate(0, 312rem);
+      transform: translate(0, 320rem);
     }
     to {
-      transform: translate(0rem, 280rem);
+      transform: translate(0rem, 285rem);
     }
+  }
+}
+
+@media (min-width: 1024px) and (min-height: 1300px) {
+  .wgrobot__container {
+    top: 5%;
+    width: 40%;
+    height: 40%;
   }
 }
 
