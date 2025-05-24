@@ -1660,24 +1660,26 @@
 
 @media (min-width: 1024px) {
   .wgrobot__container {
-    top: 3rem;
-    right: 75px;
-    width: 35%;
-    height: 35%;
+    top: -10%;
+    right: 0;
+    width: 40%;
+    height: 80%;
   }
 
   .chat__container {
     right: 12rem;
-    top: -2rem;
+    top: 20%;
     width: 100%;
     height: 100%;
   }
   .chat__container--close {
-    top: 3.5rem;
-    right: -7.5rem;
+    top: 4rem;
+    right: -6.5rem;
+    scale: 1.4;
   }
+
   .answer__container {
-    left: 5rem;
+    left: 6rem;
     top: 0;
     &::after {
       right: -27px;
@@ -1698,13 +1700,13 @@
       transform: translate(0, 0);
     }
     to {
-      transform: translate(-3rem, 48rem);
+      transform: translate(-6rem, 38rem);
     }
   }
 
   @keyframes returnFromTimeline {
     from {
-      transform: translate(-3rem, 48rem);
+      transform: translate(-6rem, 38rem);
     }
     to {
       transform: translate(0, 0);
@@ -1713,73 +1715,73 @@
 
   @keyframes goToCTA {
     from {
-      transform: translate(-3rem, 48rem);
+      transform: translate(-6rem, 38rem);
     }
     to {
-      transform: translate(3rem, 85rem);
+      transform: translate(-3rem, 70rem);
     }
   }
 
   @keyframes returnFromCTA {
     from {
-      transform: translate(3rem, 85rem);
+      transform: translate(-3rem, 70rem);
     }
     to {
-      transform: translate(-3rem, 48rem);
+      transform: translate(-6rem, 38rem);
     }
   }
 
   @keyframes goToProjects {
     from {
-      transform: translate(3rem, 85rem);
+      transform: translate(-3rem, 70rem);
     }
     to {
-      transform: translate(-1rem, 114rem);
+      transform: translate(-1rem, 98rem);
     }
   }
 
   @keyframes returnFromProjects {
     from {
-      transform: translate(-1rem, 114rem);
+      transform: translate(-1rem, 98rem);
     }
     to {
-      transform: translate(3rem, 85rem);
+      transform: translate(-3rem, 70rem);
     }
   }
 
   @keyframes goToSkills {
     from {
-      transform: translate(-1rem, 114rem);
+      transform: translate(-1rem, 98rem);
     }
     to {
-      transform: translate(0rem, 301rem);
+      transform: translate(0rem, 280rem);
     }
   }
 
   @keyframes returnFromSkills {
     from {
-      transform: translate(0rem, 301rem);
+      transform: translate(0rem, 280rem);
     }
     to {
-      transform: translate(-1rem, 114rem);
+      transform: translate(-1rem, 98rem);
     }
   }
 
   @keyframes goToReferences {
     from {
-      transform: translate(0rem, 301rem);
+      transform: translate(0rem, 280rem);
     }
     to {
-      transform: translate(-3rem, 337rem);
+      transform: translate(0, 312rem);
     }
   }
 
   @keyframes returnFromReferences {
     from {
-      transform: translate(-3rem, 337rem);
+      transform: translate(0, 312rem);
     }
     to {
-      transform: translate(0rem, 301rem);
+      transform: translate(0rem, 280rem);
     }
   }
 }
@@ -1927,18 +1929,27 @@
 }
 
 @media (min-width: 1280px) {
+
+  .wgrobot__container {
+    height: 100%;
+  }
+
+  .chat__container {
+    top: 12rem;
+  }
+
   @keyframes goToTimeline {
     from {
       transform: translate(0, 0);
     }
     to {
-      transform: translate(-3rem, 43rem);
+      transform: translate(-3rem, 26rem);
     }
   }
 
   @keyframes returnFromTimeline {
     from {
-      transform: translate(-3rem, 43rem);
+      transform: translate(-3rem, 26rem);
     }
     to {
       transform: translate(0, 0);
@@ -1947,73 +1958,73 @@
 
   @keyframes goToCTA {
     from {
-      transform: translate(-3rem, 43rem);
+      transform: translate(-3rem, 26rem);
     }
     to {
-      transform: translate(-2rem, 80rem);
+      transform: translate(-2rem, 58rem);
     }
   }
 
   @keyframes returnFromCTA {
     from {
-      transform: translate(-2rem, 80rem);
+      transform: translate(-2rem, 58rem);
     }
     to {
-      transform: translate(-3rem, 43rem);
+      transform: translate(-3rem, 26rem);
     }
   }
 
   @keyframes goToProjects {
     from {
-      transform: translate(-2rem, 80rem);
+      transform: translate(-2rem, 58rem);
     }
     to {
-      transform: translate(-4rem, 111rem);
+      transform: translate(-6rem, 88rem);
     }
   }
 
   @keyframes returnFromProjects {
     from {
-      transform: translate(-4rem, 111rem);
+      transform: translate(-6rem, 88rem);
     }
     to {
-      transform: translate(-2rem, 80rem);
+      transform: translate(-2rem, 58rem);
     }
   }
 
   @keyframes goToSkills {
     from {
-      transform: translate(-4rem, 111rem);
+      transform: translate(-6rem, 88rem);
     }
     to {
-      transform: translate(0, 310rem);
+      transform: translate(0, 262rem);
     }
   }
 
   @keyframes returnFromSkills {
     from {
-      transform: translate(0, 310rem);
+      transform: translate(0, 262rem);
     }
     to {
-      transform: translate(-4rem, 111rem);
+      transform: translate(-6rem, 88rem);
     }
   }
 
   @keyframes goToReferences {
     from {
-      transform: translate(0, 310rem);
+      transform: translate(0, 262rem);
     }
     to {
-      transform: translate(0, 327rem);
+      transform: translate(0, 279rem);
     }
   }
 
   @keyframes returnFromReferences {
     from {
-      transform: translate(0, 327rem);
+      transform: translate(0, 279rem);
     }
     to {
-      transform: translate(0, 310rem);
+      transform: translate(0, 262rem);
     }
   }
 }
@@ -2087,13 +2098,13 @@
       transform: translate(0, 0);
     }
     to {
-      transform: translate(-5rem, 44rem);
+      transform: translate(-5rem, 33rem);
     }
   }
 
   @keyframes returnFromTimeline {
     from {
-      transform: translate(-5rem, 44rem);
+      transform: translate(-5rem, 33rem);
     }
     to {
       transform: translate(0, 0);
@@ -2102,73 +2113,73 @@
 
   @keyframes goToCTA {
     from {
-      transform: translate(-5rem, 44rem);
+      transform: translate(-5rem, 33rem);
     }
     to {
-      transform: translate(-4rem, 77rem);
+      transform: translate(-4rem, 66rem);
     }
   }
 
   @keyframes returnFromCTA {
     from {
-      transform: translate(-4rem, 77rem);
+      transform: translate(-4rem, 66rem);
     }
     to {
-      transform: translate(-35rem, 44rem);
+      transform: translate(-35rem, 33rem);
     }
   }
 
   @keyframes goToProjects {
     from {
-      transform: translate(-4rem, 77rem);
+      transform: translate(-4rem, 66rem);
     }
     to {
-      transform: translate(0, 111rem);
+      transform: translate(-3rem, 99rem);
     }
   }
 
   @keyframes returnFromProjects {
     from {
-      transform: translate(0, 111rem);
+      transform: translate(-3rem, 99rem);
     }
     to {
-      transform: translate(-4rem, 77rem);
+      transform: translate(-4rem, 66rem);
     }
   }
 
   @keyframes goToSkills {
     from {
-      transform: translate(0, 111rem);
+      transform: translate(-3rem, 99rem);
     }
     to {
-      transform: translate(-4rem, 302rem);
+      transform: translate(-4rem, 275rem);
     }
   }
 
   @keyframes returnFromSkills {
     from {
-      transform: translate(-4rem, 302rem);
+      transform: translate(-4rem, 275rem);
     }
     to {
-      transform: translate(0, 111rem);
+      transform: translate(-3rem, 99rem);
     }
   }
 
   @keyframes goToReferences {
     from {
-      transform: translate(-4rem, 302rem);
+      transform: translate(-4rem, 275rem);
     }
     to {
-      transform: translate(0rem, 346.5rem);
+      transform: translate(-6rem, 302rem);
     }
   }
 
   @keyframes returnFromReferences {
     from {
-      transform: translate(0rem, 346.5rem);
+      transform: translate(-6rem, 302rem);
     }
     to {
-      transform: translate(-4rem, 302rem);
+      transform: translate(-4rem, 275rem);
     }
   }
 }
@@ -2185,13 +2196,13 @@
       transform: translate(0, 0);
     }
     to {
-      transform: translate(-6rem, 37rem);
+      transform: translate(-6rem, 34rem);
     }
   }
 
   @keyframes returnFromTimeline {
     from {
-      transform: translate(-6rem, 37rem);
+      transform: translate(-6rem, 34rem);
     }
     to {
       transform: translate(0, 0);
@@ -2200,73 +2211,73 @@
 
   @keyframes goToCTA {
     from {
-      transform: translate(-6rem, 37rem);
+      transform: translate(-6rem, 34rem);
     }
     to {
-      transform: translate(-3rem, 71rem);
+      transform: translate(-4rem, 68rem);
     }
   }
 
   @keyframes returnFromCTA {
     from {
-      transform: translate(-3rem, 71rem);
+      transform: translate(-4rem, 68rem);
     }
     to {
-      transform: translate(-6rem, 37rem);
+      transform: translate(-6rem, 34rem);
     }
   }
 
   @keyframes goToProjects {
     from {
-      transform: translate(-3rem, 71rem);
+      transform: translate(-4rem, 68rem);
     }
     to {
-      transform: translate(-6rem, 106rem);
+      transform: translate(-6rem, 100rem);
     }
   }
 
   @keyframes returnFromProjects {
     from {
-      transform: translate(-6rem, 106rem);
+      transform: translate(-6rem, 100rem);
     }
     to {
-      transform: translate(-3rem, 71rem);
+      transform: translate(-4rem, 68rem);
     }
   }
 
   @keyframes goToSkills {
     from {
-      transform: translate(-6rem, 106rem);
+      transform: translate(-6rem, 100rem);
     }
     to {
-      transform: translate(-2rem, 297rem);
+      transform: translate(-2rem, 272rem);
     }
   }
 
   @keyframes returnFromSkills {
     from {
-      transform: translate(-2rem, 297rem);
+      transform: translate(-2rem, 272rem);
     }
     to {
-      transform: translate(-6rem, 106rem);
+      transform: translate(-6rem, 100rem);
     }
   }
 
   @keyframes goToReferences {
     from {
-      transform: translate(-2rem, 297rem);
+      transform: translate(-2rem, 272rem);
     }
     to {
-      transform: translate(-5rem, 324rem);
+      transform: translate(-5rem, 302rem);
     }
   }
 
   @keyframes returnFromReferences {
     from {
-      transform: translate(-5rem, 324rem);
+      transform: translate(-5rem, 302rem);
     }
     to {
-      transform: translate(-2rem, 297rem);
+      transform: translate(-2rem, 272rem);
     }
   }
 }
@@ -2333,7 +2344,7 @@
   }
 
   .wgrobot {
-    width: 75%;
+    width: 80%;
   }
 
   .chat__container {
@@ -2353,5 +2364,95 @@
   .textarea__container {
     left: 7.5rem;
     width: 58%;
+  }
+  
+    @keyframes goToTimeline {
+    from {
+      transform: translate(0, 0);
+    }
+    to {
+      transform: translate(-8rem, 45rem);
+    }
+  }
+
+  @keyframes returnFromTimeline {
+    from {
+      transform: translate(-8rem, 45rem);
+    }
+    to {
+      transform: translate(0, 0);
+    }
+  }
+
+  @keyframes goToCTA {
+    from {
+      transform: translate(-8rem, 45rem);
+    }
+    to {
+      transform: translate(-4rem, 87rem);
+    }
+  }
+
+  @keyframes returnFromCTA {
+    from {
+      transform: translate(-4rem, 87rem);
+    }
+    to {
+      transform: translate(-8rem, 45rem);
+    }
+  }
+
+  @keyframes goToProjects {
+    from {
+      transform: translate(-4rem, 87rem);
+    }
+    to {
+      transform: translate(-3rem, 127rem);
+    }
+  }
+
+  @keyframes returnFromProjects {
+    from {
+      transform: translate(-3rem, 127rem);
+    }
+    to {
+      transform: translate(-4rem, 87rem);
+    }
+  }
+
+  @keyframes goToSkills {
+    from {
+      transform: translate(-3rem, 127rem);
+    }
+    to {
+      transform: translate(-4rem, 350rem);
+    }
+  }
+
+  @keyframes returnFromSkills {
+    from {
+      transform: translate(-4rem, 350rem);
+    }
+    to {
+      transform: translate(-3rem, 127rem);
+    }
+  }
+
+  @keyframes goToReferences {
+    from {
+      transform: translate(-4rem, 350rem);
+    }
+    to {
+      transform: translate(-5rem, 380rem);
+    }
+  }
+
+  @keyframes returnFromReferences {
+    from {
+      transform: translate(-5rem, 380rem);
+    }
+    to {
+      transform: translate(-4rem, 350rem);
+    }
   }
 }

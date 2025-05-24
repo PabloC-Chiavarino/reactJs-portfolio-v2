@@ -166,7 +166,7 @@
 
 @media (min-width: 1024px) {
   .callToAction {
-    margin-top: 11%;
+    margin-top: 5%;
   }
 
   .callToAction__options {
@@ -192,6 +192,12 @@
   .callToAction__button {
     width: 8rem;
     height: 3rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .callToAction {
+    margin-top: 5%;
   }
 }
 

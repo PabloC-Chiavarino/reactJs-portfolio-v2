@@ -648,6 +648,12 @@
   }
 }
 
+@media (min-width: 1280px) {
+  .skills__circles--buttons {
+    margin-top: 1.5rem;
+  }
+}
+
 @media (min-width: 1366px) {
   .skills__circles--container {
     width: 70%;
@@ -720,6 +726,20 @@
 
   .skills__circles--buttons img {
     width: 65px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .skills__circles--subcontainer {
+    width: 55%;
+  }
+    .skills__circles--buttons {
+    margin-top: 1.5rem;
+  }
+
+  .skills__circles--logo img {
+    width: 55px;
+    height: 55px;
   }
 }
 

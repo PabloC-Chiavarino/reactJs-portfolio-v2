@@ -160,7 +160,7 @@
   .ResDownBtn__container {
     position: fixed;
     top: 91%;
-    width: 25%;
+    width: 21%;
     right: 0;
     z-index: 3;
     cursor: pointer;
@@ -194,7 +194,7 @@
   }
 
   .toCorner {
-    transform: translateX(7.2rem);
+    transform: translateX(4.5rem);
   }
 }
 
@@ -210,17 +210,16 @@
 
 @media (min-width: 1280px) {
   .ResDownBtn__container {
-    width: 35%;
+    width: 18%;
   }
 
   .toCorner {
-    transform: translateX(19.1rem);
+    transform: translateX(5.5rem);
   }
 }
 
 @media (min-width: 1366px) {
   .ResDownBtn__container {
-    width: 16%;
     top: 90%;
   }
 
@@ -229,17 +228,18 @@
   }
 
   .toCorner {
-    transform: translateX(4.25rem);
+    transform: translateX(6rem);
   }
 }
 
 @media (min-width: 1440px) {
   .ResDownBtn__container {
     top: 91%;
+    width: 17%;
   }
 
   .toCorner {
-    transform: translateX(6rem);
+    transform: translateX(5rem);
   }
 }
 

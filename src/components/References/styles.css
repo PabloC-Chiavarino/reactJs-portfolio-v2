@@ -207,6 +207,12 @@
   }
 }
 
+@media (min-width: 1280px) {
+  .references__container {
+    margin-top: 15%;
+  }
+}
+
 @media (min-width: 1366px) {
   .references__container {
     width: 70%;

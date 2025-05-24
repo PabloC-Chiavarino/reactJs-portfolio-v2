@@ -230,6 +230,10 @@ h4 {
     margin: 11% 0 0 15%;
   }
 
+  .timeline__item::before {
+    height: 75%;
+  }
+
     .timeline__dot {
     width: 23px;
     height: 23px;
@@ -244,7 +248,7 @@ h4 {
   }
 
   .timeline__item::before {
-    left: -5.6rem;
+    left: -4.9rem;
     height: 75%;
   }
 }
