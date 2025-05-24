@@ -56,6 +56,23 @@
   }
 }
 
+@media screen and (orientation: landscape) and (min-width: 400px) {
+  .dataWidget {
+    right: 0.5rem;
+    top: 40%;
+  }
+
+  .dataWidget__button img {
+    width: 38px;
+    height: 38px;
+  }
+
+  .dataWidget__container a:nth-child(2) img {
+    width: 25px;
+    height: 25px;
+  }
+}
+
 @media (min-width: 768px) {
   .dataWidget__button img {
     width: 50px;
@@ -66,6 +83,19 @@
     width: 36px;
     height: 36px;
   }
+}
+
+@media screen and (orientation: landscape) and (min-width: 768px) {
+  .dataWidget__button img {
+    width: 43px;
+    height: 43px;
+  }
+
+  .dataWidget__container a:nth-child(2) img {
+    width: 30px;
+    height: 30px;
+  }
+  
 }
 
 @media (min-width: 1024px) {

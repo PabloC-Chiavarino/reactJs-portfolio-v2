@@ -364,6 +364,46 @@
   }
 }
 
+@media screen and (orientation: landscape) and (min-width: 400px) {
+  .skills__circles--container {
+    width: 70%;
+    margin-top: 20%;
+  }
+
+  .skills__circles--container h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+
+  .skills__circles--container h2 {
+    font-size: 1.3rem;
+    width: fit-content;
+  }
+
+  .skills__circles--container h3 {
+    font-size: 1.1rem;
+  }
+
+  .skills__circles--container p {
+    font-size: .9rem;
+  }
+
+   .skills__circles--logo img {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media screen and (orientation: landscape) and (min-width: 480px) {
+  .skills__circles--subcontainer {
+    width: 82%;	
+  }
+
+  .skills__circles--logo::after{
+    font-size: 10px;
+  }
+}
+
 @media (min-width: 768px) {
   .skills__circles--container {
     margin: 15% 0 13% 15%;
@@ -463,6 +503,65 @@
   }
   .skills__circles--logosTools div:nth-child(5) {
     transform: rotate(270deg) translateY(-110px) rotate(-270deg);
+  }
+}
+
+@media screen and (orientation: landscape) and (min-width: 640px) {
+  .skills__circles--subcontainer {
+    width: 64%;
+  }
+}
+
+@media screen and (orientation: landscape) and (min-width: 768px) {
+  .skills__circles--container {
+    margin: 12% 0 13% 15%;
+  }
+
+  .skills__circles--container h2 {
+    font-size: 1.55rem;
+  }
+
+  .skills__circles--container p {
+    font-size: 14.5px;
+  }
+
+  .skills__circles--subcontainer {
+    width: 68%;
+  }
+  .skills__circles--wrapper {
+    margin-top: 1.5rem;
+  }
+
+  .skills__circles--logosFrontend h3,
+  .skills__circles--logosBackend h3,
+  .skills__circles--logosTools h3 {
+    font-size: 14.5px;
+  }
+
+  .skills__circles--logo {
+    &::after {
+      bottom: -28px;
+      font-size: 12px;
+    }
+  }
+
+  .skills__circles--logo img {
+    width: 45px;
+    height: 45px;
+  }
+
+  .skills__circles--logo img[alt="JavaScript"] {
+    width: 34px;
+    height: 34px;
+  }
+
+  .skills__circles--buttons {
+    width: 107%;
+    margin-top: 1.5rem;
+  }
+
+  .skills__circles--buttons img {
+    width: 60px;
   }
 }
 

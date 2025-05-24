@@ -20,16 +20,6 @@
   border-radius: 12px;
   background: #2c2f4a;
   transition: height 200ms ease;
-  /* &::after {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        width: inherit;
-        height: 10px;
-        background: #2c2f4a;
-        border-end-start-radius: 16px;
-        border-end-end-radius: 16px;
-    } */
 }
 
 .langSwitch__option {
@@ -173,6 +163,43 @@
   }
 }
 
+@media screen and (orientation: landscape) and (min-width: 400px) {
+  .langSwitch__globe {
+    width: 32px;
+    height: 32px;
+  }
+
+  .langSwitch__globe--container {
+    height: 32px;
+    width: 32px;
+  }
+
+  .langSwitch__dropDown {
+    width: 27px;
+    height: 27px;
+    top: 4px;
+    left: 2px;
+  }
+
+  .langSwitch__lang {
+    width: 23px;
+    height: 23px;
+  }
+
+  .langSwitch__current {
+    font-size: 13px;
+  }
+
+  .langSwitch__option:hover {
+    .langSwitch__dropDown {
+      height: 4.5rem;
+    }
+    .langSwitch__lang {
+      top: 1.3rem;
+    }
+  }
+}
+
 @media (min-width: 768px) {
   .langSwitch__current {
     font-size: 16px;
@@ -206,6 +233,43 @@
     }
     .langSwitch__lang {
       top: 1.7rem;
+    }
+  }
+}
+
+@media screen and (orientation: landscape) and (min-width: 768px) {
+  .langSwitch__globe {
+    width: 40px;
+    height: 40px;
+  }
+
+  .langSwitch__globe--container {
+    height: 40px;
+    width: 40px;
+  }
+
+  .langSwitch__dropDown {
+    width: 33px;
+    height: 33px;
+    top: 4px;
+    left: 4px;
+  }
+
+  .langSwitch__lang {
+    width: 28px;
+    height: 28px;
+  }
+
+  .langSwitch__current {
+    font-size: 15px;
+  }
+
+  .langSwitch__option:hover {
+    .langSwitch__dropDown {
+      height: 5rem;
+    }
+    .langSwitch__lang {
+      top: 1.4rem;
     }
   }
 }

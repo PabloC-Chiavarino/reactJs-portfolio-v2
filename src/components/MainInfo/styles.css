@@ -83,10 +83,34 @@
 
   .mainInfo h3 {
     font-size: 1.3rem;
+    margin-top: 20px;
   }
 
   .mainInfo__info p {
     font-size: 14.5px;
+  }
+}
+
+@media screen and (orientation: landscape) and (min-width: 400px) {
+  .mainInfo {
+    width: 70%;
+  }
+
+  .mainInfo h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+
+  .mainInfo h2 {
+    font-size: 1.3rem;
+  }
+
+  .mainInfo h3 {
+    font-size: 1.1rem;
+  }
+
+  .mainInfo p {
+    font-size: .9rem;
   }
 }
 
@@ -111,6 +135,32 @@
 
   .mainInfo__info p {
     font-size: 16px;
+  }
+}
+
+@media screen and (orientation: landscape) and (min-width: 768px) {
+  .mainInfo {
+    width: 62.5%;
+  }
+
+  .mainInfo__title h1 {
+    font-size: 2.3rem;
+    width: fit-content;
+  }
+
+  .mainInfo__title h2 {
+    font-size: 1.55rem;
+    margin: -15px 0 10px 0;
+    line-height: 1.7rem;
+  }
+
+  .mainInfo h3 {
+    font-size: 1.3rem;
+    margin-top: 40px;
+  }
+
+  .mainInfo__info p {
+    font-size: 14.5px;
   }
 }
 

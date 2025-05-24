@@ -114,6 +114,35 @@
   }
 }
 
+@media screen and (orientation: landscape) and (min-width: 400px) {
+  .references__container {
+    width: 70%;
+    margin: 28% 0 0 15%;
+  }
+
+  .references__container h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+
+  .references__container h2 {
+    font-size: 1.3rem;
+    width: fit-content;
+  }
+
+  .references__container h3 {
+    font-size: 1.1rem;
+  }
+
+  .references__container h4 {
+    font-size: 0.9rem;
+  }
+
+  .references__container p {
+    font-size: .9rem;
+  }
+}
+
 @media (min-width: 768px) {
   .references__container {
     margin: 25% 0 0 15%;
@@ -142,6 +171,33 @@
 
   .references__content {
     max-height: 400px;
+  }
+}
+
+@media screen and (orientation: landscape) and (min-width: 400px) {
+  .references__container {
+    margin: 17% 0 0 15%;
+  }
+
+  .references__container h2 {
+    font-size: 1.55rem;
+  }
+
+  .references__container h3 {
+    font-size: 1.3rem;
+    width: fit-content;
+  }
+
+  .references__container h4 {
+    font-size: 1.1rem;
+  }
+
+  .references__container h5 {
+    font-size: 0.9rem;
+  }
+
+  .references__container p {
+    font-size: 14.5px;
   }
 }
 
