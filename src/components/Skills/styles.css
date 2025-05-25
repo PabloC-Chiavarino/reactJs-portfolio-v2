@@ -404,9 +404,25 @@
   }
 }
 
+@media (min-width: 600px) {
+  .skills__circles--subcontainer {
+    width: 75%;
+  }
+}
+
+@media (min-width: 700px) {
+  .skills__circles--subcontainer {
+    width: 70%;
+  }
+}
+
 @media (min-width: 768px) {
   .skills__circles--container {
     margin: 15% 0 13% 15%;
+  }
+
+  .skills__circles--subcontainer {
+    width: 90%;
   }
 
   .skills__circles--container h2 {

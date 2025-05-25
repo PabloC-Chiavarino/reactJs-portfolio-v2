@@ -569,13 +569,13 @@
       transform: translate(0, 67.5rem);
     }
     to {
-      transform: translate(0, 101rem);
+      transform: translate(0, 102rem);
     }
   }
 
   @keyframes returnFromProjects {
     from {
-      transform: translate(0, 101rem);
+      transform: translate(0, 102rem);
     }
     to {
       transform: translate(0, 67.5rem);
@@ -584,25 +584,25 @@
 
   @keyframes goToSkills {
     from {
-      transform: translate(0, 101rem);
+      transform: translate(0, 102rem);
     }
     to {
-      transform: translate(-1rem, 309.5rem);
+      transform: translate(-1rem, 311rem);
     }
   }
 
   @keyframes returnFromSkills {
     from {
-      transform: translate(-1rem, 309.5rem);
+      transform: translate(-1rem, 311rem);
     }
     to {
-      transform: translate(0, 101rem);
+      transform: translate(0, 102rem);
     }
   }
 
   @keyframes goToReferences {
     from {
-      transform: translate(-1rem, 309.5rem);
+      transform: translate(-1rem, 311rem);
     }
     to {
       transform: translate(0rem, 340rem);
@@ -614,7 +614,7 @@
       transform: translate(0rem, 340rem);
     }
     to {
-      transform: translate(-1rem, 309.5rem);
+      transform: translate(-1rem, 311rem);
     }
   }
 }
@@ -697,13 +697,13 @@
       transform: translate(0, 68rem);
     }
     to {
-      transform: translate(0, 101rem);
+      transform: translate(0, 102rem);
     }
   }
 
   @keyframes returnFromProjects {
     from {
-      transform: translate(0, 101rem);
+      transform: translate(0, 102rem);
     }
     to {
       transform: translate(0, 68rem);
@@ -712,25 +712,25 @@
 
   @keyframes goToSkills {
     from {
-      transform: translate(0, 101rem);
+      transform: translate(0, 102rem);
     }
     to {
-      transform: translate(-1rem, 308.5rem);
+      transform: translate(-1rem, 310rem);
     }
   }
 
   @keyframes returnFromSkills {
     from {
-      transform: translate(-1rem, 308.5rem);
+      transform: translate(-1rem, 310rem);
     }
     to {
-      transform: translate(0, 101rem);
+      transform: translate(0, 102rem);
     }
   }
 
   @keyframes goToReferences {
     from {
-      transform: translate(-1rem, 308.5rem);
+      transform: translate(-1rem, 310rem);
     }
     to {
       transform: translate(0rem, 340rem);
@@ -742,7 +742,7 @@
       transform: translate(0rem, 340rem);
     }
     to {
-      transform: translate(-1rem, 308.5rem);
+      transform: translate(-1rem, 310rem);
     }
   }
 }
@@ -1064,20 +1064,109 @@
   }
 }
 
-@media screen and (orientation: landscape) and (min-width: 640px) {
+@media (min-width: 600px) {
+  .wgrobot__container {
+    height: 40%;
+    width: 50%;
+    top: -5%;
+  }
 
+  .chat__container {
+    top: 10%;
+  }
+
+  .answer__container {
+    right: 15%;
+  }
+
+  @keyframes goToCTA {
+    from {
+      transform: translate(0, 35rem);
+    }
+    to {
+      transform: translate(0, 66rem);
+    }
+  }
+
+  @keyframes returnFromCTA {
+    from {
+      transform: translate(0, 66rem);
+    }
+    to {
+      transform: translate(0, 35rem);
+    }
+  }
+
+  @keyframes goToProjects {
+    from {
+      transform: translate(0, 66rem);
+    }
+    to {
+      transform: translate(0, 95rem);
+    }
+  }
+
+  @keyframes returnFromProjects {
+    from {
+      transform: translate(0, 95rem);
+    }
+    to {
+      transform: translate(0, 66rem);
+    }
+  }
+
+  @keyframes goToSkills {
+    from {
+      transform: translate(0, 95rem);
+    }
+    to {
+      transform: translate(-1rem, 289rem);
+    }
+  }
+
+  @keyframes returnFromSkills {
+    from {
+      transform: translate(-1rem, 289rem);
+    }
+    to {
+      transform: translate(0, 95rem);
+    }
+  }
+
+  @keyframes goToReferences {
+    from {
+      transform: translate(-1rem, 289rem);
+    }
+    to {
+      transform: translate(0rem, 320rem);
+    }
+  }
+
+  @keyframes returnFromReferences {
+    from {
+      transform: translate(0rem, 320rem);
+    }
+    to {
+      transform: translate(-1rem, 289rem);
+    }
+  }
+}
+
+@media screen and (orientation: landscape) and (min-width: 640px) {
   .wgrobot__container {
     top: -13%;
+    width: 45%;
+    height: 100%;
   }
 
   .textarea__container {
     left: 7%;
     top: 65%;
-}
+  }
 
-.chat__container--close {
+  .chat__container--close {
     right: -6.5rem;
-}
+  }
 
   @keyframes goToTimeline {
     from {
@@ -1166,6 +1255,119 @@
     }
     to {
       transform: translate(-1rem, 295rem);
+    }
+  }
+}
+
+@media (min-width: 700px) {
+  .wgrobot__container {
+    width: 50%;
+    height: 40%;
+    top: -6.5%;
+  }
+
+  .answer__container {
+    right: 0;
+    top: 15%;
+  }
+
+  .textarea__container {
+    top: 95%;
+    right: 10%;
+    width: 90%;
+  }
+
+  .chat__container--close {
+    top: 35%;
+  }
+
+  @keyframes goToTimeline {
+    from {
+      transform: translate(0, 0);
+    }
+    to {
+      transform: translate(0, 33rem);
+    }
+  }
+
+  @keyframes returnFromTimeline {
+    from {
+      transform: translate(0, 33rem);
+    }
+    to {
+      transform: translate(0, 0);
+    }
+  }
+
+  @keyframes goToCTA {
+    from {
+      transform: translate(0, 33rem);
+    }
+    to {
+      transform: translate(0, 66rem);
+    }
+  }
+
+  @keyframes returnFromCTA {
+    from {
+      transform: translate(0, 66rem);
+    }
+    to {
+      transform: translate(0, 33rem);
+    }
+  }
+
+  @keyframes goToProjects {
+    from {
+      transform: translate(0, 66rem);
+    }
+    to {
+      transform: translate(-2rem, 95rem);
+    }
+  }
+
+  @keyframes returnFromProjects {
+    from {
+      transform: translate(-2rem, 95rem);
+    }
+    to {
+      transform: translate(0, 66rem);
+    }
+  }
+
+  @keyframes goToSkills {
+    from {
+      transform: translate(-2rem, 95rem);
+    }
+    to {
+      transform: translate(-1rem, 278rem);
+    }
+  }
+
+  @keyframes returnFromSkills {
+    from {
+      transform: translate(-1rem, 278rem);
+    }
+    to {
+      transform: translate(-2rem, 95rem);
+    }
+  }
+
+  @keyframes goToReferences {
+    from {
+      transform: translate(-1rem, 278rem);
+    }
+    to {
+      transform: translate(0rem, 308rem);
+    }
+  }
+
+  @keyframes returnFromReferences {
+    from {
+      transform: translate(0rem, 308rem);
+    }
+    to {
+      transform: translate(-1rem, 278rem);
     }
   }
 }
@@ -1325,8 +1527,7 @@
 }
 
 @media screen and (orientation: landscape) and (min-width: 720px) {
-
-   .wgrobot__container {
+  .wgrobot__container {
     top: -40px;
     width: 40%;
     height: 100%;
@@ -1352,7 +1553,7 @@
   }
 
   .textarea__container {
-    left: .5rem;
+    left: 0.5rem;
     width: 90%;
   }
 
@@ -1575,7 +1776,58 @@
   }
 }
 
-@media screen and (orientation: landscape) and (min-width: 840px) {
+@media (min-width: 800px) {
+  .wgrobot__container {
+    width: 47%;
+    height: 37%;
+  }
+
+  @keyframes goToSkills {
+    from {
+      transform: translate(-2rem, 97rem);
+    }
+    to {
+      transform: translate(0, 330rem);
+    }
+  }
+
+  @keyframes returnFromSkills {
+    from {
+      transform: translate(0, 330rem);
+    }
+    to {
+      transform: translate(-2rem, 97rem);
+    }
+  }
+
+  @keyframes goToReferences {
+    from {
+      transform: translate(0, 330rem);
+    }
+    to {
+      transform: translate(0, 365rem);
+    }
+  }
+
+  @keyframes returnFromReferences {
+    from {
+      transform: translate(0, 365rem);
+    }
+    to {
+      transform: translate(0, 330rem);
+    }
+  }
+}
+
+@media screen and (orientation: landscape) and (min-width: 800px) {
+  .wgrobot__container {
+    width: 35%;
+    height: 100%;
+  }
+
+  .wgrobot {
+    width: 100%;
+  }
 
   .chat__container--close {
     right: -10rem;
@@ -1626,13 +1878,13 @@
       transform: translate(-2rem, 97rem);
     }
     to {
-      transform: translate(0, 306rem);
+      transform: translate(0, 294rem);
     }
   }
 
   @keyframes returnFromSkills {
     from {
-      transform: translate(0, 306rem);
+      transform: translate(0, 294rem);
     }
     to {
       transform: translate(-2rem, 97rem);
@@ -1641,19 +1893,124 @@
 
   @keyframes goToReferences {
     from {
-      transform: translate(0, 306rem);
+      transform: translate(0, 294rem);
     }
     to {
-      transform: translate(0, 337rem);
+      transform: translate(0, 325rem);
     }
   }
 
   @keyframes returnFromReferences {
     from {
-      transform: translate(0, 337rem);
+      transform: translate(0, 325rem);
     }
     to {
-      transform: translate(0, 306rem);
+      transform: translate(0, 294rem);
+    }
+  }
+}
+
+@media screen and (orientation: landscape) and (min-width: 960px) {
+  .wgrobot__container {
+    width: 45%;
+    height: 95%;
+  }
+
+  .chat__container {
+    top: 6rem;
+  }
+
+  .textarea__container {
+    width: 70%;
+  }
+
+  @keyframes goToTimeline {
+    from {
+      transform: translate(0, 0);
+    }
+    to {
+      transform: translate(-2rem, 30rem);
+    }
+  }
+
+  @keyframes returnFromTimeline {
+    from {
+      transform: translate(-2rem, 30rem);
+    }
+    to {
+      transform: translate(0, 0);
+    }
+  }
+
+  @keyframes goToCTA {
+    from {
+      transform: translate(-2rem, 30rem);
+    }
+    to {
+      transform: translate(0, 70rem);
+    }
+  }
+
+  @keyframes returnFromCTA {
+    from {
+      transform: translate(0, 70rem);
+    }
+    to {
+      transform: translate(-2rem, 30rem);
+    }
+  }
+
+  @keyframes goToProjects {
+    from {
+      transform: translate(0, 70rem);
+    }
+    to {
+      transform: translate(-2rem, 93rem);
+    }
+  }
+
+  @keyframes returnFromProjects {
+    from {
+      transform: translate(-2rem, 93rem);
+    }
+    to {
+      transform: translate(0, 70rem);
+    }
+  }
+
+  @keyframes goToSkills {
+    from {
+      transform: translate(-2rem, 93rem);
+    }
+    to {
+      transform: translate(0, 283rem);
+    }
+  }
+
+  @keyframes returnFromSkills {
+    from {
+      transform: translate(0, 283rem);
+    }
+    to {
+      transform: translate(-2rem, 93rem);
+    }
+  }
+
+  @keyframes goToReferences {
+    from {
+      transform: translate(0, 283rem);
+    }
+    to {
+      transform: translate(-3rem, 316rem);
+    }
+  }
+
+  @keyframes returnFromReferences {
+    from {
+      transform: translate(-3rem, 316rem);
+    }
+    to {
+      transform: translate(0, 283rem);
     }
   }
 }
@@ -1662,8 +2019,8 @@
   .wgrobot__container {
     top: -10%;
     right: 0;
-    width: 40%;
-    height: 80%;
+    width: 45%;
+    height: 75%;
   }
 
   .chat__container {
@@ -1754,13 +2111,13 @@
       transform: translate(-1rem, 98rem);
     }
     to {
-      transform: translate(0rem, 285rem);
+      transform: translate(0rem, 263rem);
     }
   }
 
   @keyframes returnFromSkills {
     from {
-      transform: translate(0rem, 285rem);
+      transform: translate(0rem, 263rem);
     }
     to {
       transform: translate(-1rem, 98rem);
@@ -1769,28 +2126,67 @@
 
   @keyframes goToReferences {
     from {
-      transform: translate(0rem, 285rem);
+      transform: translate(0rem, 263rem);
     }
     to {
-      transform: translate(0, 320rem);
+      transform: translate(-3rem, 298rem);
     }
   }
 
   @keyframes returnFromReferences {
     from {
-      transform: translate(0, 320rem);
+      transform: translate(-3rem, 298rem);
     }
     to {
-      transform: translate(0rem, 285rem);
+      transform: translate(0rem, 263rem);
     }
   }
 }
 
-@media (min-width: 1024px) and (min-height: 1300px) {
+@media (min-width: 1024px) and (min-height: 1366px) {
   .wgrobot__container {
-    top: 5%;
+    top: 0;
+    width: 50%;
+    height: 50%;
+  }
+
+  .chat__container {
+    top: 30%;
+    right: 12rem;
+  }
+
+  .chat__container--close {
+    right: -5.5rem;
+  }
+
+  .answer__container {
+    left: 8rem;
+  }
+
+  .textarea__container {
     width: 40%;
-    height: 40%;
+    left: 10rem;
+  }
+}
+
+@media screen and (orientation: landscape) and (min-width: 1100px) {
+  .wgrobot__container {
+    height: 90%;
+  }
+
+  .chat__container {
+    top: 28%;
+    right: 10rem;
+  }
+
+  .chat__container--close {
+    right: -3.5rem;
+    scale: 1.4;
+  }
+
+  .textarea__container {
+    width: 45%;
+    left: 7rem;
   }
 }
 
@@ -1937,9 +2333,8 @@
 }
 
 @media (min-width: 1280px) {
-
   .wgrobot__container {
-    height: 100%;
+    height: 80%;
   }
 
   .chat__container {
@@ -2133,7 +2528,7 @@
       transform: translate(-4rem, 66rem);
     }
     to {
-      transform: translate(-35rem, 33rem);
+      transform: translate(-5rem, 33rem);
     }
   }
 
@@ -2189,6 +2584,26 @@
     to {
       transform: translate(-4rem, 275rem);
     }
+  }
+}
+
+@media screen and (orientation: landscape) and (min-width: 1366px) {
+  .wgrobot__container {
+    width: 50%;
+    height: 50%;
+  }
+
+  .chat__container {
+    top: 1rem;
+  }
+
+  .answer__container {
+    top: 0;
+  }
+
+  .chat__container--close {
+    right: -11rem;
+    scale: 1.4;
   }
 }
 
@@ -2373,8 +2788,8 @@
     left: 7.5rem;
     width: 58%;
   }
-  
-    @keyframes goToTimeline {
+
+  @keyframes goToTimeline {
     from {
       transform: translate(0, 0);
     }

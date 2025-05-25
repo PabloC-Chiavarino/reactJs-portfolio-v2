@@ -107,24 +107,41 @@
   }
 }
 
+@media (min-width: 600px) {
+  .ResDownBtn__container {
+    top: 94%;
+  }
+
+  .ResDownBtn__img {
+    width: 52px;
+  }
+
+  .toCorner {
+    transform: translateX(70%);
+  }
+}
+
 @media screen and (orientation: landscape) and (min-width: 640px) {
   .ResDownBtn__container {
     right: 0;
   }
-
+  
   .toCorner {
     transform: translateX(30%);
   }
 }
 
-
-@media (min-width: 768px) {
+@media (min-width: 700px) {
   .ResDownBtn__container {
-    top: 71%;
+    top: 95%;
   }
 
   .ResDownBtn__img {
-    width: 48px;
+    width: 50px;
+  }
+
+  .toCorner {
+    transform: translateX(85%);
   }
 }
 
@@ -136,6 +153,17 @@
 
   .toCorner {
     transform: translateX(3.3rem);
+  }
+}
+
+@media (min-width: 768px) {
+  .ResDownBtn__container {
+    top: 94%;
+    right: 11%;
+  }
+  
+  .toCorner {
+    transform: translateX(5rem);
   }
 }
 
@@ -153,6 +181,16 @@
 @media screen and (orientation: landscape) and (min-width: 900px) {
   .ResDownBtn__container {
     right: -4%;
+  }
+}
+
+@media (min-width: 960px) {
+  .ResDownBtn__container {
+    top: 90%;
+  }
+  
+  .toCorner {
+    transform: translateX(5rem);
   }
 }
 
@@ -195,6 +233,22 @@
 
   .toCorner {
     transform: translateX(4.5rem);
+  }
+}
+
+@media (min-width: 1120px) {
+  .ResDownBtn__container {
+    top: 92%;
+  }
+
+  .toCorner {
+    transform: translateX(6rem);
+  }
+}
+
+@media (min-width: 1024px) and (min-height: 1366px) {
+  .ResDownBtn__container {
+    top: 95%;
   }
 }
 

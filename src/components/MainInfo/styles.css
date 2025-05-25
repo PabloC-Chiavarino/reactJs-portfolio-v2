@@ -114,6 +114,16 @@
   }
 }
 
+@media (min-width: 600px) {
+  .mainInfo {
+    min-height: 48dvh;
+  }
+
+  .mainInfo__info {
+    width: 90%;
+  }
+}
+
 @media (min-width: 768px) {
   .mainInfo__info {
     max-height: 400px;
