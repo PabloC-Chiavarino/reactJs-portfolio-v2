@@ -40,18 +40,6 @@
   }
 }
 
-@media screen and (orientation: landscape) and (min-width: 400px) {
-  .downChevron {
-    width: 35px;
-  }
-}
-
-@media screen and (orientation: landscape) and (min-width: 768px) {
-  .downChevron {
-    width: 45px;
-  }
-}
-
 @media (min-width: 1366px) {
   .downChevron {
     width: 55px;

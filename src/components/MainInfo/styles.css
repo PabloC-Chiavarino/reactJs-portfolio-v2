@@ -91,26 +91,9 @@
   }
 }
 
-@media screen and (orientation: landscape) and (min-width: 400px) {
-  .mainInfo {
-    width: 70%;
-  }
-
-  .mainInfo h1 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-  }
-
-  .mainInfo h2 {
-    font-size: 1.3rem;
-  }
-
-  .mainInfo h3 {
-    font-size: 1.1rem;
-  }
-
-  .mainInfo p {
-    font-size: .9rem;
+@media (min-width: 480px) {
+  .mainInfo__title {
+    margin-bottom: 2rem;
   }
 }
 
@@ -127,6 +110,10 @@
 @media (min-width: 768px) {
   .mainInfo__info {
     max-height: 400px;
+  }
+
+  .mainInfo__title {
+    margin-bottom: 3rem;
   }
 
   .mainInfo__title h1 {
@@ -148,29 +135,9 @@
   }
 }
 
-@media screen and (orientation: landscape) and (min-width: 768px) {
+@media (min-width: 960px) {
   .mainInfo {
-    width: 62.5%;
-  }
-
-  .mainInfo__title h1 {
-    font-size: 2.3rem;
-    width: fit-content;
-  }
-
-  .mainInfo__title h2 {
-    font-size: 1.55rem;
-    margin: -15px 0 10px 0;
-    line-height: 1.7rem;
-  }
-
-  .mainInfo h3 {
-    font-size: 1.3rem;
-    margin-top: 40px;
-  }
-
-  .mainInfo__info p {
-    font-size: 14.5px;
+    width: 73%;
   }
 }
 
@@ -185,10 +152,16 @@
   }
 }
 
+@media (min-width: 1100px) {
+  .mainInfo {
+    width: 80%;
+  }
+}
+
 @media (min-width: 1280px) {
   .mainInfo {
     margin-left: 8%;
-    width: 65%;
+    width: 67%;
   }
 
   .toCorner {

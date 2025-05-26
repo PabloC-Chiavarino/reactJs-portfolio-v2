@@ -74,36 +74,13 @@
   }
 }
 
-@media screen and (orientation: landscape) and (min-width: 400px) {
+@media (min-width: 480px) {
   .ResDownBtn__container {
-    top: 86%;
-    width: 35%;
-  }
-
-  .ResDownBtn__img {
-    width: 38px;
+    top: 85%;
   }
 
   .toCorner {
-    transform: translateX(2.5rem);
-  }
-}
-
-@media screen and (orientation: landscape) and (min-width: 480px) {
-  .ResDownBtn__container {
-    top: 87%;
-    width: 26%;
-    right: 8%;
-  }
-
-  .toCorner {
-    transform: translateX(35%);
-  }
-}
-
-@media screen and (orientation: landscape) and (min-width: 560px) {
-  .ResDownBtn__container {
-    right: 4%;
+    transform: translateX(65%);
   }
 }
 
@@ -121,13 +98,17 @@
   }
 }
 
-@media screen and (orientation: landscape) and (min-width: 640px) {
+@media (min-width: 600px) and (max-height: 400px) {
   .ResDownBtn__container {
-    right: 0;
+    top: 84%;
   }
-  
+
+  .ResDownBtn__img {
+    width: 52px;
+  }
+
   .toCorner {
-    transform: translateX(30%);
+    transform: translateX(75%);
   }
 }
 
@@ -145,14 +126,17 @@
   }
 }
 
-@media screen and (orientation: landscape) and (min-width: 720px) {
+@media (min-width: 700px) and (max-height: 420px) {
   .ResDownBtn__container {
-    top: 89%;
-    right: -2%;
+    top: 86%;
+  }
+
+  .ResDownBtn__img {
+    width: 50px;
   }
 
   .toCorner {
-    transform: translateX(3.3rem);
+    transform: translateX(85%);
   }
 }
 
@@ -163,24 +147,48 @@
   }
   
   .toCorner {
-    transform: translateX(5rem);
+    transform: translateX(65%);
   }
 }
 
-@media screen and (orientation: landscape) and (min-width: 768px) {
+@media (min-width: 768px) and (max-height: 420px) {
+  .ResDownBtn__container {
+    top: 86%;
+    right: 11%;
+  }
+  
+  .toCorner {
+    transform: translateX(65%);
+  }
+}
+
+@media (min-width: 800px) and (max-height: 400px) {
+  .ResDownBtn__container {
+    top: 84%;
+  }
+  
+  .toCorner {
+    transform: translateX(65%);
+  }
+}
+
+@media (min-width: 900px) and (max-height: 420px) {
   .ResDownBtn__container {
     top: 87%;
-    right: 0%;
   }
-
+  
   .toCorner {
-    transform: translateX(4.7rem);
+    transform: translateX(75%);
   }
 }
 
-@media screen and (orientation: landscape) and (min-width: 900px) {
+@media (min-width: 920px) and (max-height: 450px) {
   .ResDownBtn__container {
-    right: -4%;
+    top: 87%;
+  }
+  
+  .toCorner {
+    transform: translateX(75%);
   }
 }
 
@@ -190,7 +198,7 @@
   }
   
   .toCorner {
-    transform: translateX(5rem);
+    transform: translateX(65%);
   }
 }
 
@@ -236,6 +244,12 @@
   }
 }
 
+@media (min-width: 1024px) and (min-height: 1366px) {
+  .ResDownBtn__container {
+    top: 94%;
+  }
+}
+
 @media (min-width: 1120px) {
   .ResDownBtn__container {
     top: 92%;
@@ -243,12 +257,6 @@
 
   .toCorner {
     transform: translateX(6rem);
-  }
-}
-
-@media (min-width: 1024px) and (min-height: 1366px) {
-  .ResDownBtn__container {
-    top: 95%;
   }
 }
 

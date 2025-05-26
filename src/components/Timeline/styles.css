@@ -136,42 +136,18 @@ h4 {
   }
 }
 
-@media screen and (orientation: landscape) and (min-width: 400px) {
-  .timeline {
-    width: 70%;
-    margin-top: 20%;
-  }
-
-  .timeline h1 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-  }
-
-  .timeline h2 {
-    font-size: 1.3rem;
-  }
-
-  .timeline h3 {
-    font-size: 1.1rem;
-  }
-
-  .timeline p {
-    font-size: .9rem;
-  }
-}
-
 @media (min-width: 600px) {
   .timeline__item::before {
     left: -11.25%;
   }
-  }
+}
 
 @media (min-width: 700px) {
   .timeline__item::before {
     left: -11.75%;
     width: 1.5px;
   }
-  }
+}
 
 @media (min-width: 768px) {
   .timeline__item::before {
@@ -209,41 +185,8 @@ h4 {
   }
 }
 
-@media screen and (orientation: landscape) and (min-width: 768px) {
-  .timeline {
-    width: 62.5%;
-    margin-top: 12%;
-  }
-
-   .timeline h2 {
-    font-size: 1.55rem;
-  }
-
-  .timeline h3 {
-    font-size: 1.3rem;
-  }
-
-  .timeline h4 {
-    font-size: 1.1rem;
-  }
-
-  .timeline h5 {
-    font-size: 0.9rem;
-  }
-
-  .timeline__dot {
-    width: 18px;
-    height: 18px;
-    right: 12%;
-  }
-
-  .timeline__item p {
-    font-size: 14.5px;
-  }
-}
-
 @media (min-width: 1024px) {
-    .timeline {
+  .timeline {
     margin: 11% 0 0 15%;
   }
 
@@ -251,7 +194,7 @@ h4 {
     height: 75%;
   }
 
-    .timeline__dot {
+  .timeline__dot {
     width: 23px;
     height: 23px;
     right: 12%;
@@ -259,7 +202,7 @@ h4 {
 }
 
 @media (min-width: 1200px) {
-    .timeline__dot {
+  .timeline__dot {
     width: 24px;
     height: 24px;
   }
@@ -271,7 +214,7 @@ h4 {
 }
 
 @media (min-width: 1280px) {
-    .timeline__dot {
+  .timeline__dot {
     right: 11.2%;
   }
 }
@@ -320,7 +263,7 @@ h4 {
     margin-top: 2rem;
   }
 
-    .timeline h2 {
+  .timeline h2 {
     font-size: 2.1rem;
   }
 
