@@ -15,7 +15,7 @@ export const projectsData = {
       {
         title: 'Notebook Depot',
         subtitle: 'Proyecto Front-End',
-        description: 'Desarrollado en ReactJS y utilizando librerías como Toastify y EmailJS, este proyecto es un mockup de una tienda en línea especializada en notebooks. Ofrece un catálogo de productos simple con un carrito de compras avanzado para gestionar los artículos seleccionados. Incluye funcionalidades como notificaciones pop-up en el carrito, loader dinámico para la carga de productos, selección de favoritos, órdenes de compra y sistema de usuarios. Cuenta con una base de datos alojada en Firebase para almacenar y gestionar los datos del sitio.',
+        description: 'Desarrollado en ReactJS, este proyecto es un mockup de una tienda en línea especializada en notebooks. Es una SPA (Single Page Application) con navegación fluida y funcionalidades como carrito de compras avanzado, sistema de autenticación y selección de favoritos. Solo los usuarios logueados pueden realizar compras y guardar favoritos. El carrito se sincroniza con el usuario en Firestore y con el carrito de invitado almacenado en local storage. Incluye notificaciones, loader dinámico, gestión de órdenes, uso de librerías externas y actualmente estoy trabajando en el diseño responsive.',
         url: 'https://notebook-depot.vercel.app/',
         image: ProjectImg2
       },
