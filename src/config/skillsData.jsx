@@ -2,10 +2,10 @@ import { html5Logo, css3Logo, jsLogo, reactjsLogo, javaLogo, sbLogo, jpaHibLogo,
 
 export const skillsData = {
   es: {
-    introduction: <p>Estas son las <span className='text-highlightA'>tecnologías y herramientas</span> que utilizo para <span className='text-highlightB'>desarrollar, organizar y documentar</span> mis proyectos en el día a día.</p>
+    introduction: <p>Estas son las <span className='text-highlightA'>tecnologías y herramientas</span> que utilizo para <span className='text-highlightB'>desarrollar, organizar y documentar</span> mis proyectos.</p>
   },
   en: {
-    introduction: <p>These are the <span className='text-highlightA'>technologies and tools</span> I use to <span className='text-highlightB'>develop, organize, and document</span> my projects on a daily basis.</p>
+    introduction: <p>These are the <span className='text-highlightA'>technologies and tools</span> I use to <span className='text-highlightB'>develop, organize, and document</span> my projects.</p>
   },
   content: [
     {

@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 
-const useSectionObserver = (sectionsRefs, initialLoad) => {
+const useSectionObserver = (sectionsRefs) => {
   const [predominantSection, setPredominantSection] = useState(null)
 
   useEffect(() => {
@@ -9,21 +9,13 @@ const useSectionObserver = (sectionsRefs, initialLoad) => {
     if (sections.some(section => !section)) return
 
     const sectionObserver = new IntersectionObserver(entries => {
-      let newPredominantSection = predominantSection
 
       entries.forEach(entry => {
-        // console.log("IntersectionObserver Entry:", entry) // debugging
         if (entry.isIntersecting) {
-          newPredominantSection = entry.target.id
-          // console.log("Intersecting section:", entry.target.id);// debugging
+          setPredominantSection(entry.target.id)
         }
       })
 
-      if (initialLoad.current) {
-        initialLoad.current = false
-      } else {
-        setPredominantSection(newPredominantSection)
-      }
     }, {
       root: null,
       rootMargin: '-50% 0px -50% 0px',
@@ -35,7 +27,7 @@ const useSectionObserver = (sectionsRefs, initialLoad) => {
     })
 
     return () => sectionObserver.disconnect()
-  }, [predominantSection])
+  }, [])
 
   return predominantSection
 }

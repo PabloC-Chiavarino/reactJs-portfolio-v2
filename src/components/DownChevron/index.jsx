@@ -1,17 +1,20 @@
 import { useState, useEffect } from 'react'
-import { useScrollDirection } from '../../hooks'
 import downChevron from '../../assets/Icons/down-chevron.png'
 import './styles.css'
 
 const DownChevron = () => {
   const [display, setDisplay] = useState(true)
-  const scrollDirection = useScrollDirection()
 
   useEffect(() => {
-    if (scrollDirection === 'down' && display) {
-      setDisplay(false)
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setDisplay(false)
+      }
     }
-  }, [scrollDirection, display])
+
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
 
   return (
     <div

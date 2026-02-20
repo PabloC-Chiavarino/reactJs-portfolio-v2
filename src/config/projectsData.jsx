@@ -13,18 +13,18 @@ export const projectsData = {
         image: ProjectImg1
       },
       {
-        title: 'Notebook Depot',
+        title: 'Admin Panel',
         subtitle: 'Proyecto Front-End',
-        description: 'Desarrollado en ReactJS, este proyecto es un mockup de una tienda en línea especializada en notebooks. Es una SPA (Single Page Application) con navegación fluida y funcionalidades como carrito de compras avanzado, sistema de autenticación y selección de favoritos. Solo los usuarios logueados pueden realizar compras y guardar favoritos. El carrito se sincroniza con el usuario en Firestore y con el carrito de invitado almacenado en local storage. Incluye notificaciones, loader dinámico, gestión de órdenes, uso de librerías externas y actualmente estoy trabajando en el diseño responsive.',
-        url: 'https://notebook-depot.vercel.app/',
-        image: ProjectImg2
-      },
-      {
-        title: 'Gadget Alley',
-        subtitle: 'Proyecto Front-End',
-        description: 'Desarrollado al estilo old school con HTML, CSS y vanilla JavaScript, este mockup de una tienda en línea de artículos tecnológicos presenta un catálogo de productos con un diseño responsivo y un carrito de compras. Una demostración de desarrollo web que destaca por su simplicidad y claridad en la presentación de productos.',
+        description: 'Desarrollado con React, TypeScript y Material UI, este panel de administración integral ofrece una gestión integral y eficiente de clientes, productos y facturas mediante tablas interactivas. También incluye mini apps integradas como un Tasker y un Calendario, ambas con funcionalidades drag-and-drop. Además, presenta métricas clave en un dashboard principal y una sección de analíticas con gráficos dinámicos. Actualmente está conectado a un mock server con JSON Server para la gestión de datos y autenticación de un usuario de prueba.',
         url: 'https://gadget-alley.vercel.app',
         image: ProjectImg3
+      },
+      {
+        title: 'Notebook Depot',
+        subtitle: 'Proyecto Front-End',
+        description: 'Construido con ReactJS y utilizando librerías como Toastify, EmailJS y Stripe, este proyecto es una maqueta de una tienda online especializada en laptops. Ofrece un catálogo de productos sencillo con un carrito de compras avanzado para gestionar los artículos seleccionados. Entre sus funcionalidades se incluyen notificaciones emergentes en el carrito, un cargador dinámico para la carga de productos, selección de favoritos, gestión de pedidos y un sistema de usuarios. Utiliza una base de datos alojada en Firebase para almacenar y administrar los datos del sitio. Actualmente me encuentro desarrollando la version mobile.',
+        url: 'https://notebook-depot.vercel.app/',
+        image: ProjectImg2
       },
       {
         title: 'Beyond Time',
@@ -49,32 +49,23 @@ export const projectsData = {
       {
         title: 'BackLab Strategies',
         subtitle: 'Front-End Project',
-        description: [
-          'Developed with ReactJS and using libraries like Toastify and EmailJS, this dynamic website follows a design provided by a UX/UI team under the pixel-perfect methodology. It integrates advanced animations created with CSS and the Intersection Observer API to deliver a precise and visually appealing experience.',
-          'Features include a contact form with options, online appointment scheduling, and language selection (EN/ES), demonstrating a user-centered approach.'
-        ],
+        description: 'Developed with ReactJS and using libraries like Toastify and EmailJS, this dynamic website follows a design provided by a UX/UI team under the pixel-perfect methodology. It integrates advanced animations created with CSS and the Intersection Observer API to deliver a precise and visually appealing experience. Features include a contact form with options, online appointment scheduling, and language selection (EN/ES), demonstrating a user-centered approach.',
         url: 'https://backlab-strategies.vercel.app',
         image: ProjectImg1
       },
       {
-        title: 'Notebook Depot',
+        title: 'Admin Panel',
         subtitle: 'Front-End Project',
-        description: [
-          'Built with ReactJS and utilizing libraries like Toastify and EmailJS, this project is a mockup of an online store specializing in laptops. It offers a simple product catalog with an advanced shopping cart to manage selected items.',
-          'Features include pop-up notifications in the cart, a dynamic loader for product loading, favorite selection, order management, and a user system. It uses a Firebase-hosted database to store and manage site data.'
-        ],
-        url: 'https://notebook-depot.vercel.app/',
-        image: ProjectImg2
-      },
-      {
-        title: 'Gadget Alley',
-        subtitle: 'Front-End Project',
-        description: [
-          'Developed in an old-school style with HTML, CSS, and vanilla JavaScript, this mockup of an online tech store features a responsive product catalog and a shopping cart.',
-          'A web development demonstration that stands out for its simplicity and clarity in product presentation.'
-        ],
+        description: 'Developed with React, TypeScript, and Material UI, this comprehensive admin panel provides efficient and centralized management of clients, products, and invoices through interactive tables. It also includes integrated mini-apps such as a Tasker and a Calendar, both featuring drag-and-drop functionality. In addition, it presents key metrics on a main dashboard and an analytics section with dynamic charts. It is currently connected to a mock server using JSON Server for data management and test user authentication.',
         url: 'https://gadget-alley.vercel.app',
         image: ProjectImg3
+      },
+      {
+        title: 'Notebook Depot',
+        subtitle: 'Front-End Project',
+        description: 'Built with ReactJS and utilizing libraries like Toastify, EmailJS and Stripe, this project is a mockup of an online store specializing in laptops. It offers a simple product catalog with an advanced shopping cart to manage selected items. Features include pop-up notifications in the cart, a dynamic loader for product loading, favorite selection, order management, and a user system. It uses a Firebase-hosted database to store and manage site data. I am currently developing the mobile version.',
+        url: 'https://notebook-depot.vercel.app/',
+        image: ProjectImg2
       },
       {
         title: 'Beyond Time',
@@ -86,10 +77,7 @@ export const projectsData = {
       {
         title: 'E-commerce API REST',
         subtitle: 'Back-End Project',
-        description: [
-          'Developed in Java with Spring Boot and JPA, this RESTful API manages Products, Orders, Invoices, and Clients, implementing CRUD operations and advanced functions such as creating invoices linked to clients and searching for products by code or brand, promoting a flexible and efficient approach.',
-          'It uses DTOs and mappers to avoid infinite loops in bidirectional relationships, generic controllers following the DRY principle, and is documented with Swagger, making testing easier and improving the development experience.'
-        ],
+        description: 'Developed in Java with Spring Boot and JPA, this RESTful API manages Products, Orders, Invoices, and Clients, implementing CRUD operations and advanced functions such as creating invoices linked to clients and searching for products by code or brand, promoting a flexible and efficient approach. It uses DTOs and mappers to avoid infinite loops in bidirectional relationships, generic controllers following the DRY principle, and is documented with Swagger, making testing easier and improving the development experience.',
         url: 'https://java-jpa-sb-ecommerceapirest-demo.onrender.com/swagger-ui/index.html',
         image: ProjectImg5
       }

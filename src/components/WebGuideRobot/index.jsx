@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from 'react'
-import PropTypes from 'prop-types'
+import React, { useState, useEffect, useRef } from 'react'
 import { useLangContext } from '../../hooks'
 import { config, messageResponses } from '../../config/ChatBotCfg'
 import { ClickRipple } from '../../components'
@@ -7,18 +6,73 @@ import Lottie from 'lottie-react'
 import animationData from '../../assets/hiRobot.json'
 import './styles.css'
 
-const WebGuideRobot = React.forwardRef(({ location, handleChatShow, chatShow, chatShowed }, ref) => {
+const WebGuideRobot = React.forwardRef(({ predominantSection, handleChatShow, chatShow, chatShowed }, ref) => {
   const { lang } = useLangContext()
+
   const [question, setQuestion] = useState('')
   const [answer, setAnswer] = useState(config[lang].initialMessage)
-  const [animationState, setAnimationState] = useState('wgrobot--initialPos')
+  
+  const [position, setPosition] = useState({
+    x: window.innerWidth + 1000,
+    y: 0
+  })
 
-  const { wgrLocation, scrollDirection, predominantSection } = location
+  const initialPosition = useRef(null)
 
-  // console.log("wgrLocation:", wgrLocation); //debugging
-  // console.log("scrollDirection:", scrollDirection); //debugging
-  // console.log(predominantSection); //debugging
-  // console.log(animationState); //debugging
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'instant' })
+  }, [])
+
+  useEffect(() => {
+    const calculatePosition = () => {
+      if (!predominantSection || !ref.current) return
+      
+      const robotHeight = ref.current.offsetHeight
+      const robotWidth = ref.current.offsetWidth
+      
+      let x
+      let y
+
+      if (predominantSection === 'mainInfo') {
+        const targetElement = document.querySelector('.mainInfo__info')
+        
+        if (!targetElement) return
+        
+        const rectTarget = targetElement.getBoundingClientRect()
+
+        y = rectTarget.top - robotHeight / 2
+        x = rectTarget.right - robotWidth / 6
+        
+        if (!initialPosition.current) {
+          initialPosition.current = { x, y }
+        }
+
+        setPosition(initialPosition.current)
+
+        return
+
+      } else {
+        y = window.innerHeight / 2 - robotHeight / 2
+        x = window.innerWidth - robotWidth + 100
+      }
+      
+      setPosition({ x, y })
+    }
+
+    const handleResize = () => {
+      initialPosition.current = null
+      calculatePosition()
+    }
+
+    calculatePosition()
+
+    window.addEventListener('resize', handleResize)
+
+    return () => {
+      window.removeEventListener('resize', handleResize)
+    }
+
+  }, [predominantSection])
 
   const handleAnswer = (question) => {
     const lowerCaseQuestion = question.toLowerCase()
@@ -56,77 +110,13 @@ const WebGuideRobot = React.forwardRef(({ location, handleChatShow, chatShow, ch
     setAnswer(config[lang].initialMessage)
   }, [lang])
 
-  useEffect(() => {
-    if (wgrLocation === 'mainInfo' && predominantSection === 'timeline') {
-      setAnimationState(
-        scrollDirection === 'down'
-          ? 'wgrobot--goToTimeline'
-          : 'wgrobot--initialPos')
-    } else if (wgrLocation === 'timeline' && predominantSection === 'cta') {
-      setAnimationState(
-        scrollDirection === 'down'
-          ? 'wgrobot--goToCTA'
-          : null
-      )
-    } else if (wgrLocation === 'timeline' && predominantSection === 'mainInfo') {
-      setAnimationState(
-        scrollDirection === 'down'
-          ? null
-          : 'wgrobot--returnFromTimeline'
-      )
-    } else if (wgrLocation === 'cta' && predominantSection === 'timeline') {
-      setAnimationState(
-        scrollDirection === 'down'
-          ? null
-          : 'wgrobot--returnFromCTA'
-      )
-    } else if (wgrLocation === 'cta' && predominantSection === 'projects') {
-      setAnimationState(
-        scrollDirection === 'down'
-          ? 'wgrobot--goToProjects'
-          : null
-      )
-    } else if (wgrLocation === 'projects' && predominantSection === 'cta') {
-      setAnimationState(
-        scrollDirection === 'down'
-          ? null
-          : 'wgrobot--returnFromProjects'
-      )
-    } else if (wgrLocation === 'projects' && predominantSection === 'skills') {
-      setAnimationState(
-        scrollDirection === 'down'
-          ? 'wgrobot--goToSkills'
-          : null
-      )
-    } else if (wgrLocation === 'skills' && predominantSection === 'projects') {
-      setAnimationState(
-        scrollDirection === 'down'
-          ? null
-          : 'wgrobot--returnFromSkills'
-      )
-    } else if (wgrLocation === 'skills' && predominantSection === 'references') {
-      setAnimationState(
-        scrollDirection === 'down'
-          ? 'wgrobot--goToReferences'
-          : null
-      )
-    } else if (wgrLocation === 'references' && predominantSection === 'skills') {
-      setAnimationState(
-        scrollDirection === 'down'
-          ? null
-          : 'wgrobot--returnFromReferences'
-      )
-    }
-  }, [predominantSection, wgrLocation, scrollDirection])
-
   return (
 
-    <div className={`wgrobot__container ${animationState}`} ref={ref}>
+    <div className={`wgrobot__container`} style={{ transform: `translate(${position.x}px, ${position.y}px)` }} ref={ref}>
       <Lottie className='wgrobot' onClick={handleChatShow} animationData={animationData} />
       <ClickRipple chatShowed={chatShowed} />
 
       <div
-        ref={ref}
         className={`chat__container ${chatShow ? 'fadeIn' : 'fadeOut'}`}
         onAnimationEnd={(e) => {
           if (!chatShow) {
@@ -166,9 +156,5 @@ const WebGuideRobot = React.forwardRef(({ location, handleChatShow, chatShow, ch
     </div>
   )
 })
-
-WebGuideRobot.propTypes = {
-  location: PropTypes.object
-}
 
 export default WebGuideRobot

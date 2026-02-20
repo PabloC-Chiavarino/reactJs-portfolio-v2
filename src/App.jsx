@@ -1,13 +1,11 @@
 import { useRef, useState } from 'react'
-import { useWgrObserver, useSectionObserver, useScrollDirection } from './hooks'
+import { useSectionObserver } from './hooks'
 import { Background, ResDownBtn, BackgroundOverlay, LangSwitch, WebGuideRobot, MainInfo, Timeline, CallToAction, DataWidget, Projects, Skills, References, Footer } from './components'
 import './App.css'
 
 function App () {
   const [chatShow, setChatShow] = useState(false)
   const [chatShowed, setChatShowed] = useState(false)
-
-  const initialLoad = useRef(true)
 
   const mainInfoRef = useRef()
   const timelineRef = useRef()
@@ -19,9 +17,7 @@ function App () {
 
   const sections = [mainInfoRef, timelineRef, callToActionRef, projectsRef, skillsRef, referencesRef]
 
-  const predominantSection = useSectionObserver(sections, initialLoad)
-  const scrollDirection = useScrollDirection()
-  const location = useWgrObserver(predominantSection, scrollDirection, wgrRef)
+  const predominantSection = useSectionObserver(sections)
 
   const handleChatShow = () => {
     setChatShow(!chatShow)
@@ -35,7 +31,7 @@ function App () {
       <BackgroundOverlay overlay={chatShow} handleChatShow={handleChatShow} />
       <DataWidget />
       <WebGuideRobot
-        location={location}
+        predominantSection={predominantSection}
         ref={wgrRef}
         handleChatShow={handleChatShow}
         chatShow={chatShow}

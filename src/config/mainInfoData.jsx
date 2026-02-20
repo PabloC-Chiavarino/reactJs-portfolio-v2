@@ -4,72 +4,58 @@ export const mainInfoData = {
     subtitle: <h2>Desarrollador <span className='text-highlightB' style={{ fontWeight: 400 }}>Full Stack</span></h2>,
     greeting: <h3>¡Hola y <span className='text-highlightB'>bienvenido!</span></h3>,
     description: [
-      <p key='es-1'>
-        Me dedico al desarrollo de soluciones tecnológicas completas, abarcando tanto la
-        <span className='text-highlightA'> creación de interfaces</span> como la
-        <span className='text-highlightA'> implementación de servicios.</span>
-      </p>,
-      <br key='es-2' />,
-      <p key='es-3'>
-        En el lado del frontend, utilizo principalmente ReactJS para
-        <span className='text-highlightA'> crear aplicaciones web interactivas y dinámicas</span>, aplicando
-        principios de diseño de interfaces como SOLID, KISS, patrones como pixel-perfect y
-        <span className='text-highlightA'> modularidad en los componentes</span>. Mi enfoque se basa en la
-        organización eficiente de estilos con CSS puro, sin uso de librerías, a menos que sea requerido.
-        También tengo experiencia en desarrollo con JavaScript 'vanilla' para
-        <span className='text-highlightA'> construir soluciones ligeras y eficientes.</span>
-      </p>,
-      <br key='es-4' />,
-      <br key='es-5' />,
-      <p key='es-6'>
-        En el backend, tengo experiencia en la construcción de APIs y servicios utilizando Spring Boot, así
-        como en JPA e Hibernate para la gestión de datos y persistencia. Utilizo Java como lenguaje principal
-        para <span className='text-highlightA'>desarrollar soluciones robustas y eficientes</span>, empleando
-        técnicas como abstracciones genéricas, mappers y DTOs para mantener un código limpio, escalable y
-        fácilmente mantenible.
-      </p>,
-      <br key='es-7' />,
-      <p key='es-8'>
-        Mi meta se centra en ofrecer software de
-        <span className='text-highlightB'> arquitectura sólida y escalable</span>, priorizando la eficiencia en el
-        rendimiento y la facilidad de mantenimiento en ambos, frontend y backend.
-      </p>
-    ]
+  <p key='es-1'>
+    Desarrollo aplicaciones web entendiendo tanto el frontend como el backend, 
+    aunque mi experiencia práctica se ha centrado principalmente en el 
+    <span className='text-highlightA'> desarrollo de interfaces</span>.
+  </p>,
+  <br key='es-2' />,
+  <p key='es-3'>
+    Trabajo con React y actualmente con TypeScript para 
+    <span className='text-highlightA'> construir aplicaciones claras, mantenibles y bien estructuradas</span>. 
+    Me enfoco en la organización del código, la modularidad de los componentes y 
+    en lograr una experiencia de usuario sólida y consistente.
+  </p>,
+  <br key='es-4' />,
+  <p key='es-5'>
+    También tengo experiencia desarrollando servicios y APIs con Java y Spring Boot, 
+    trabajando con persistencia de datos y estructuras bien definidas. 
+    Comprender el backend me permite diseñar soluciones frontend 
+    <span className='text-highlightA'> mejor integradas y pensadas de forma integral.</span>
+  </p>,
+  <br key='es-6' />,
+  <p key='es-7'>
+    Mi enfoque es aportar valor construyendo software claro, funcional y bien estructurado.
+  </p>
+]
   },
   en: {
     title: <h1>Pablo C. Chiavarino</h1>,
     subtitle: <h2><span className='text-highlightB' style={{ fontWeight: 400 }}>Full Stack</span> Developer</h2>,
     greeting: <h3>Hello and <span className='text-highlightB'>welcome!</span></h3>,
     description: [
-      <p key='en-1'>
-        I specialize in developing complete technological solutions, covering both
-        <span className='text-highlightA'> interface creation</span> and
-        <span className='text-highlightA'> service implementation.</span>
-      </p>,
-      <br key='en-2' />,
-      <p key='en-3'>
-        On the frontend side, I mainly use ReactJS to{' '}
-        <span className='text-highlightA'>build interactive and dynamic web applications</span>, applying
-        interface design principles such as SOLID, KISS, patterns like pixel-perfect, and
-        <span className='text-highlightA'> modular components</span>. My approach focuses on the efficient
-        organization of styles with pure CSS, without using libraries unless required.
-        I also have experience in vanilla JavaScript development to
-        <span className='text-highlightA'> build lightweight and efficient solutions.</span>
-      </p>,
-      <br key='en-4' />,
-      <br key='en-5' />,
-      <p key='en-6'>
-        On the backend, I have experience in building APIs and services using Spring Boot, as well as in JPA
-        and Hibernate for data management and persistence. I use Java as my main language to
-        <span className='text-highlightA'> develop robust and efficient solutions</span>, employing techniques
-        such as generic abstractions, mappers, and DTOs to maintain clean, scalable, and easily maintainable code.
-      </p>,
-      <br key='en-7' />,
-      <p key='en-8'>
-        My goal is to deliver software with
-        <span className='text-highlightB'> solid and scalable architecture</span>, prioritizing performance
-        efficiency and ease of maintenance on both frontend and backend.
-      </p>
-    ]
+  <p key='en-1'>
+    I develop web applications with an understanding of both frontend and backend, 
+    although most of my hands-on experience has been focused on 
+    <span className='text-highlightA'> frontend development</span>.
+  </p>,
+  <br key='en-2' />,
+  <p key='en-3'>
+    I work with React and currently with TypeScript to 
+    <span className='text-highlightA'> build clear, maintainable, and well-structured applications</span>. 
+    I care about code organization, component modularity, and delivering a consistent user experience.
+  </p>,
+  <br key='en-4' />,
+  <p key='en-5'>
+    I also have experience building services and APIs with Java and Spring Boot, 
+    working with data persistence and structured architectures. 
+    Understanding the backend allows me to design frontend solutions 
+    <span className='text-highlightA'> with a more complete and integrated perspective.</span>
+  </p>,
+  <br key='en-6' />,
+  <p key='en-7'>
+    My goal is to contribute by building software that is clear, functional, and thoughtfully structured.
+  </p>
+]
   }
 }
