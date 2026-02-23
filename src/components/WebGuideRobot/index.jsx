@@ -40,8 +40,8 @@ const WebGuideRobot = React.forwardRef(({ predominantSection, handleChatShow, ch
         
         const rectTarget = targetElement.getBoundingClientRect()
 
-        y = rectTarget.top - robotHeight / 2
-        x = rectTarget.right - robotWidth / 6
+        y = rectTarget.top - robotHeight / 1.5
+        x = rectTarget.right
         
         if (!initialPosition.current) {
           initialPosition.current = { x, y }
