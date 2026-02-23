@@ -49,6 +49,19 @@
   justify-content: start;
 }
 
+.projects__url2 {
+  position: relative;
+  top: 15px;
+  font-size: 16px;
+  color: #d3d3d3;
+  text-decoration: none;
+  transition: color 0.25s ease-in-out;
+}
+
+.projects__url2:hover {
+  color: #fff;
+}
+
 .projects__img {
   width: 115px;
   height: 70px;
@@ -315,8 +328,8 @@
   }
 
   .projects__img {
-    height: 11rem;
-    width: 21rem;
+    height: 170px;
+    width: 300px;
   }
 
   .projects__row {

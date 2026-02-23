@@ -21,6 +21,16 @@ const Projects = React.forwardRef((props, ref) => {
               </a>
             </div>
             <p className='projects__description'>{project.description}</p>
+            {project.url2 && (
+              <a
+                href={project.url2}
+                target="_blank"
+                rel="noreferrer"
+                className="projects__url2 text-highlightA"
+              >
+                {lang === 'es' ? 'Ver documentación' : 'View documentation'}
+              </a>
+            )}
             <hr />
           </div>
         </div>

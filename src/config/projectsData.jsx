@@ -16,7 +16,7 @@ export const projectsData = {
         title: 'Admin Panel',
         subtitle: 'Proyecto Front-End',
         description: 'Desarrollado con React, TypeScript y Material UI, este panel de administración integral ofrece una gestión integral y eficiente de clientes, productos y facturas mediante tablas interactivas. También incluye mini apps integradas como un Tasker y un Calendario, ambas con funcionalidades drag-and-drop. Además, presenta métricas clave en un dashboard principal y una sección de analíticas con gráficos dinámicos. Actualmente está conectado a un mock server con JSON Server para la gestión de datos y autenticación de un usuario de prueba.',
-        url: 'https://gadget-alley.vercel.app',
+        url: 'https://react-ts-adminpanel-webapp.vercel.app',
         image: ProjectImg3
       },
       {
@@ -37,7 +37,8 @@ export const projectsData = {
         title: 'E-commerce API REST',
         subtitle: 'Proyecto Back-End',
         description: 'Desarrollada en Java con Spring Boot y JPA, esta API RESTful gestiona Productos, Órdenes, Facturas y Clientes, implementando operaciones CRUD y funciones avanzadas como la creación de facturas asociadas a clientes y la búsqueda de productos por código o marca, promoviendo un enfoque flexible y eficiente. Utiliza DTOs y mappers para evitar ciclos infinitos en relaciones bidireccionales, controladores genéricos que siguen el principio DRY, y está documentada con Swagger, lo que facilita las pruebas y mejora la experiencia de desarrollo.',
-        url: 'https://java-jpa-sb-ecommerceapirest-demo.onrender.com/swagger-ui/index.html',
+        url2: 'https://java-jpa-sb-ecommerceapirest-demo.onrender.com/swagger-ui/index.html',
+        url: 'https://ecomm-api-showcase.vercel.app',
         image: ProjectImg5
       }
     ]
