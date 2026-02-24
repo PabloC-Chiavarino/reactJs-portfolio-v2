@@ -36,7 +36,7 @@ export const projectsData = {
       {
         title: 'E-commerce API REST',
         subtitle: 'Proyecto Back-End',
-        description: 'Desarrollada en Java con Spring Boot y JPA, esta API RESTful gestiona Productos, Órdenes, Facturas y Clientes, implementando operaciones CRUD y funciones avanzadas como la creación de facturas asociadas a clientes y la búsqueda de productos por código o marca, promoviendo un enfoque flexible y eficiente. Utiliza DTOs y mappers para evitar ciclos infinitos en relaciones bidireccionales, controladores genéricos que siguen el principio DRY, y está documentada con Swagger, lo que facilita las pruebas y mejora la experiencia de desarrollo.',
+        description: 'Desarrollada en Java con Spring Boot y JPA, esta API RESTful gestiona Productos, Órdenes, Facturas y Clientes, implementando operaciones CRUD y funciones avanzadas como la creación de facturas asociadas a clientes y la búsqueda de productos por código o marca. Utiliza DTOs y mappers para evitar ciclos infinitos en relaciones bidireccionales, controladores genéricos que siguen el principio DRY. Construí un frontend básico con ReactJS, TypeScript y MUI para demostrar sus funcionalidades principales. Además, está documentada con Swagger, para facilitar pruebas y mejorar la experiencia de desarrollo.',
         url2: 'https://java-jpa-sb-ecommerceapirest-demo.onrender.com/swagger-ui/index.html',
         url: 'https://ecomm-api-showcase.vercel.app',
         image: ProjectImg5
@@ -78,7 +78,7 @@ export const projectsData = {
       {
         title: 'E-commerce API REST',
         subtitle: 'Back-End Project',
-        description: 'Developed in Java with Spring Boot and JPA, this RESTful API manages Products, Orders, Invoices, and Clients, implementing CRUD operations and advanced functions such as creating invoices linked to clients and searching for products by code or brand, promoting a flexible and efficient approach. It uses DTOs and mappers to avoid infinite loops in bidirectional relationships, generic controllers following the DRY principle, and is documented with Swagger, making testing easier and improving the development experience.',
+        description: 'Developed in Java with Spring Boot and JPA, this RESTful API manages Products, Orders, Invoices, and Clients, implementing CRUD operations and advanced functions such as creating invoices linked to clients and searching for products by code or brand. It uses DTOs and mappers to avoid infinite loops in bidirectional relationships, generic controllers following the DRY principle. I also built a basic frontend with ReactJS, TypeScript, and MUI to demonstrate its main functionalities. Additionally, it is documented with Swagger to facilitate testing and improve the development experience.',
         url: 'https://java-jpa-sb-ecommerceapirest-demo.onrender.com/swagger-ui/index.html',
         image: ProjectImg5
       }

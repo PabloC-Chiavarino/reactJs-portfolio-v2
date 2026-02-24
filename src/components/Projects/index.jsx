@@ -28,7 +28,7 @@ const Projects = React.forwardRef((props, ref) => {
                 rel="noreferrer"
                 className="projects__url2 text-highlightA"
               >
-                {lang === 'es' ? 'Ver documentación' : 'View documentation'}
+                {lang === 'es' ? 'Ver documentación Swagger' : 'View Swagger documentation'}
               </a>
             )}
             <hr />
