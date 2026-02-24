@@ -12,8 +12,8 @@
   align-items: center;
   justify-content: center;
   position: fixed;
-  width: 700px;
-  height: 700px;
+  width: 35dvw;
+  height: 70dvh;
   transition: transform 700ms ease-in-out;
   will-change: transform;
   background: radial-gradient(
@@ -26,8 +26,8 @@
 }
 
 .wgrobot {
-  width: 28%;
-  height: 28%;
+  width: 30%;
+  height: 30%;
   display: flex;
   justify-content: center;
   z-index: 2;
