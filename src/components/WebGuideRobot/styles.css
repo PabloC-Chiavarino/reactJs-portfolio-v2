@@ -12,10 +12,9 @@
   align-items: center;
   justify-content: center;
   position: fixed;
-  width: 35dvw;
-  height: 70dvh;
-  transition: transform 700ms ease-in-out;
-  will-change: transform;
+  width: clamp(325px, 100vw, 800px);
+  height: clamp(325px, 100vw, 800px);
+  transition: transform 600ms ease-in-out;
   background: radial-gradient(
     circle at center,
     rgba(128, 0, 128, 1) -30%,
@@ -26,8 +25,8 @@
 }
 
 .wgrobot {
-  width: 30%;
-  height: 30%;
+  width: clamp(27%, 25vw, 32%);
+  height: clamp(27%, 25vh, 32%);
   display: flex;
   justify-content: center;
   z-index: 2;
@@ -40,79 +39,63 @@
 .chat__container {
   font-size: 1rem;
   font-weight: 500;
-  padding-left: 0.5rem;
   display: flex;
+  align-items: center;
+  justify-content: center;
   flex-direction: column;
   position: absolute;
-  top: 18%;
-  right: 66%;
+  top: clamp(50%, 5vh, 60%);
+  transform: translateX(-35%) translateY(-50%);
   z-index: 1;
-  width: 60%;
-  height: 70%;
+  width: 100%;
+  height: clamp(320px, 65%, 480px);
+  aspect-ratio: 1/1;
   transition: opacity 0.5s ease;
   pointer-events: all;
+  left: 0;
 }
 
 .chat__container--close {
   position: absolute;
-  right: -65%;
+  scale: clamp(1.1, 1.1, 1.5);
+  right: 10px;
   top: 15%;
-  scale: 1.1;
   cursor: pointer;
 }
 
 .answer__container {
-  display: flex !important;
-  justify-content: start;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: relative;
-  height: 100px;
-  width: 150px;
-  bottom: 2rem;
-  right: 33%;
-  color: white;
-  border-radius: 50%;
-  font-size: 16px;
-  line-height: 1.5;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  flex-direction: column;
-  background: radial-gradient(
-    ellipse at center,
-    rgba(26, 26, 26, 0.52) 67%,
-    rgb(119, 204, 158) 68%,
-    rgb(64, 4, 80) 100%
-  );
-  animation: reverseLooneyTunes 400ms ease forwards;
-  pointer-events: all;
+  width: 100%;
+  transform: translateX(-10%);
 }
 
-.answer__container::after {
-  content: "";
+.answer__blob {
+  width: clamp(190px, 70vw, 380px);
+  height: clamp(190px, 70vh, 380px);
   position: absolute;
-  right: -9%;
-  width: 0;
-  height: 0;
-  border-width: 0.7rem;
-  border-style: solid;
-  border-color: #76c79c #0000 transparent transparent;
-  transform: rotate(-60deg);
-  bottom: 16%;
+  z-index: -1;
+  animation: reverseLooneyTunes 350ms ease forwards;
 }
 
 .answer__text {
   overflow: hidden;
   overflow-y: hidden;
-  font-size: 12px;
   font-weight: 400;
   overflow-y: scroll;
-  padding: 0 5px 0 5px;
-  color: wheat;
-  position: relative;
-  left: 17px;
-  bottom: 9px;
-  width: 120px;
-  height: 48px;
+  color: #fff;
+  text-shadow: 1.5px 1.5px 1.5px #000;
+  position: absolute;
+  width: clamp(100px, 35vw, 195px);
+  height: clamp(100px, 10vh, 150px);
+  text-align: center;
+  font-size: clamp(13.25px, 2.5vw, 16px);
   scrollbar-width: none;
   -ms-overflow-style: none;
+  z-index: 1;
+  animation: reverseLooneyTunes 350ms ease forwards;
 }
 
 .answer__text::-webkit-scrollbar {
@@ -120,502 +103,99 @@
 }
 
 .answer__header {
-  font-size: 0.9rem;
+  font-size: clamp(13px, 1vw, 18px);
   font-weight: 500;
   text-shadow: #000 0px 0px 30px;
   margin-bottom: 0;
   width: fit-content;
   position: relative;
-  left: 50px;
-  bottom: 11px;
+  bottom: 15px;
 }
 
 .textarea__container {
+  width: clamp(190px, 65vw, 380px);
+  height: clamp(190px, 65vh, 380px);
   display: flex;
-  flex-direction: column;
+  align-items: flex-end;
   font-size: Montserrat, sans-serif;
-  gap: 1rem;
-  top: 80%;
-  right: 0;
   position: absolute;
-  width: 110%;
-  border-radius: 5px;
+  bottom: -10%;
+  transform: translateX(-10%);
   pointer-events: all;
+  gap: 1rem;
 }
 
-.textarea__line {
-  background-color: #111220db;
-  border: 1px solid #d7d7d7;
-  border-radius: 5px;
-  color: wheat;
-  font-weight: 600;
-  font-size: 14px;
-  font-family: Montserrat;
-  letter-spacing: 0.95px;
-  padding: 0 0.5rem 0 0.5rem;
+.textarea__input {
   width: 100%;
-  border-color: #d7d7d78e;
-  height: auto;
-  min-height: 1rem;
-  max-height: 5rem;
+  min-height: 1.4rem;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  line-height: 1.4rem;
+  max-height: calc(1.3rem * 2.5);
   overflow-y: auto;
+  scrollbar-width: none;
+  background-color: #b9c7d2;
+  border-radius: 999px;
+  border: none;
+  color: black;
+  font-weight: 700;
+  font-size: clamp(13.25px, 2.5vw, 14px);
+  font-family: Montserrat;
+  letter-spacing: 0.1px;
   word-wrap: break-word;
   white-space: pre-wrap;
-  align-self: end;
-
+  padding-inline: 12px;
+  transition:
+    border-radius 0.25s ease,
+    height 0.25s ease;
+  resize: none;
   &:focus {
     outline: none;
   }
 }
 
+.textarea--expanded {
+  border-radius: 18px;
+}
+
+.textarea__line::-webkit-scrollbar {
+  display: none;
+}
+
 .textarea__container button {
-  align-self: end;
-  position: relative;
-  font-size: 14px;
-  cursor: pointer;
-  height: 1.5rem;
-  width: 5.25rem;
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+  display: flex;
+  align-self: flex-end;
   padding: 0;
-  border-radius: 5px;
-  border: 1px solid #d7d7d7;
-  background-color: #111220db;
-}
-
-@media (min-width: 360px) {
-  .chat__container {
-    top: -5%;
-    right: 57%;
-    height: 100%;
-  }
-
-  .chat__container--close {
-    right: -50%;
-    top: 31%;
-  }
-
-  .answer__container {
-    height: 115px;
-    width: 160px;
-    top: 10%;
-    right: 40%;
-    &::after {
-      right: -13px;
-      transform: rotate(-60deg);
-      bottom: 19px;
-    }
-  }
-
-  .answer__header {
-    left: 57px;
-  }
-
-  .answer__text {
-    height: 60px;
-  }
-
-  .textarea__container {
-    top: 78%;
-  }
-
-  .textarea__line {
-    min-height: 1.5rem;
-  }
-
-  .textarea__container button {
-    height: 1.8rem;
-    width: 5.25rem;
-  }
-}
-
-@media (min-width: 400px) {
-  .chat__container {
-    top: 5%;
-  }
-
-  .chat__container--close {
-    right: -60%;
-    top: 30%;
-  }
-
-  .answer__container {
-    height: 125px;
-    width: 180px;
-    top: 2rem;
-    &::after {
-      right: -16px;
-      transform: rotate(-70deg);
-      bottom: 30px;
-    }
-  }
-
-  .answer__header {
-    font-size: 14px;
-    left: 65px;
-  }
-
-  .answer__text {
-    font-size: 13px;
-    left: 14px;
-    bottom: 6px;
-    width: 149px;
-    height: 63px;
-  }
-
-  .textarea__container {
-    width: 100%;
-    top: 70%;
-    right: 1.5rem;
-  }
-
-  .textarea__container button {
-    height: 2rem;
-  }
-}
-
-@media (min-width: 600px) {
-  .chat__container {
-    top: 5%;
-  }
-
-  .answer__container {
-    right: 20%;
-  }
-
-  .textarea__container {
-    width: 85%;
-  }
-}
-
-@media (min-width: 700px) {
-
-  .answer__container {
-    right: 1rem;
-    top: 15%;
-  }
-
-  .textarea__container {
-    top: 60%;
-    right: 15%;
-    width: 80%;
-  }
-
-  .chat__container {
-    top: 1rem;
-  }
-
-  .chat__container--close {
-    top: 35%;
-  }
-}
-
-@media (min-width: 768px) {
-  .chat__container {
-    top: -1rem;
-    right: 15rem;
-    width: 65%;
-    height: 70%;
-  }
-
-  .textarea__container {
-    top: 21rem;
-    left: 1.5rem;
-    width: 90%;
-  }
-
-  .textarea__line {
-    min-height: 2rem;
-    font-size: 1rem;
-  }
-
-  .textarea__container button {
-    height: 2.5rem;
-    width: 7rem;
-    font-size: 1rem;
-  }
-
-  .answer__container {
-    height: 9rem;
-    width: 14rem;
-    left: 0rem;
-    top: 5.5rem;
-    &::after {
-      right: -30px;
-      transform: rotate(-70deg);
-      bottom: 30px;
-      border-width: 1.2rem;
-    }
-  }
-
-  .answer__header {
-    font-size: 15px;
-    left: 90px;
-  }
-
-  .answer__text {
-    font-size: 14px;
-    left: 26px;
-    bottom: 10px;
-    width: 173spx;
-    height: 85px;
-  }
-
-  .chat__container--close {
-    right: -11rem;
-    top: 10rem;
-  }
-}
-
-@media (min-width: 800px) {
-  .chat__container {
-    top: 2rem;
-  }
-
-  .chat__container--close {
-    right: -10rem;
-    top: 10.5rem;
-  }
-
-  .textarea__container {
-    top: 20rem;
-    left: 2rem;
-    width: 80%;
-  }
-}
-
-@media (min-width: 900px) {
-  .textarea__container {
-    width: 95%;
-    left: 2rem;
-  }
-}
-
-@media (min-width: 960px) {
-  .chat__container {
-    top: 4rem;
-  }
-
-  .chat__container--close {
-    right: -9rem;
-    top: 8rem;
-    scale: 1.4;
-  }
-
-  .textarea__container {
-    width: 80%;
-    left: 1rem;
+  background-color: rgb(94, 0, 94);
+  border: none;
+  color: #b9c7d2;
+  align-items: center;
+  justify-content: center;
+  width: clamp(2.15rem, 5vh, 3rem);
+  font-size: clamp(16px, 1.75vh, 20px);
+  transition: background-color 0.25s ease;
+  &:hover {
+    cursor: pointer;
+    background-color: #7a007a;
   }
 }
 
 @media (min-width: 1024px) {
-  .chat__container {
-    right: 12rem;
-    top: 20%;
-    width: 100%;
-    height: 100%;
-  }
-  .chat__container--close {
-    top: 4rem;
-    right: -6.5rem;
-    scale: 1.4;
+  .wgrobot__container {
+    width: clamp(500px, 65vw, 900px);
+    height: clamp(500px, 65vw, 900px);
   }
 
-  .answer__container {
-    left: 6rem;
-    top: 0;
-    &::after {
-      right: -27px;
-      transform: rotate(-65deg);
-      bottom: 25px;
-      border-width: 1.2rem;
-    }
-  }
-
+  .answer__blob,
   .textarea__container {
-    top: 17rem;
-    left: 8rem;
-    width: 45%;
-  }
-}
-
-@media (min-width: 1024px) and (min-height: 768px) {
-  .chat__container {
-    top: 9rem;
-  }
-
-  .chat__container--close {
-    right: -5rem;
-  }
-
-  .answer__container {
-    left: 7rem;
-  }
-
-  .textarea__container {
-    left: 9rem;
-  }
-}
-
-@media (min-width: 1024px) and (min-height: 1366px) {
-  .chat__container {
-    top: 30%;
-    right: 12rem;
-  }
-
-  .chat__container--close {
-    right: -5.5rem;
-  }
-
-  .answer__container {
-    left: 8rem;
-  }
-
-  .textarea__container {
-    width: 40%;
-    left: 10rem;
-  }
-}
-
-@media (min-width: 1100px) {
-  .answer__container {
-    left: 7rem;
-  }
-
-  .textarea__container {
-    width: 50%;
-    left: 8rem;
-    top: 18rem;
-  }
-}
-
-@media (min-width: 1280px) {
-
-  .chat__container {
-    top: 6rem;
-  }
-
-  .chat__container--close {
-    right: -3rem;
-    scale: 1.3;
-  }
-
-  .answer__container {
-    left: 10rem;
-  }
-
-  .textarea__container {
-    width: 40%;
-    left: 12rem;
-    top: 19rem;
-  }
-}
-
-@media (min-width: 1280px) and (min-height: 800px) {
-  .chat__container {
-    top: 9rem;
-  }
-}
-
-@media (min-width: 1366px) {
-  .chat__container {
-    top: 0;
-    right: 24rem;
-    width: 60%;
-    height: 100%;
-  }
-
-  .chat__container--close {
-    right: -12.5rem;
-    top: 10rem;
-    scale: 1.4;
-  }
-
-  .answer__container {
-    height: 187px;
-    width: 255px;
-    top: 5rem;
-    left: 6rem;
-  }
-
-  .answer__container::after {
-    right: -26px;
-    bottom: 32px;
-    transform: rotate(-63deg);
-    border-width: 1.3rem;
+    width: clamp(250px, 60vw, 480px);
+    height: clamp(250px, 60vh, 480px);
   }
 
   .answer__text {
-    font-size: 0.9rem;
-    top: 4px;
-    height: 92px;
-    left: 20px;
-    bottom: 6px;
-    width: 222px;
-  }
-
-  .answer__header {
-    left: 100px;
-    top: -5px;
-  }
-
-  .textarea__container {
-    top: 24rem;
-    left: 9rem;
-    width: 60%;
-  }
-
-  .textarea__container button {
-    font-size: 15px;
-    height: 2.5rem;
-    width: 6.5rem;
-  }
-}
-
-@media (min-width: 1366px) and (min-height: 1024px) {
-  .chat__container {
-    top: 0rem;
-    right: 24rem;
-    width: 60%;
-    height: 100%;
-  }
-}
-
-@media (min-width: 1440px) {
-  .chat__container {
-    top: -1.5rem;
-  }
-}
-
-@media (min-width: 1600px) {
-  .textarea__container {
-    top: 28rem;
-    left: 7rem;
-    width: 60%;
-  }
-
-  .chat__container--close {
-    top: 11rem;
-    right: -10rem;
-  }
-}
-
-@media (min-width: 1920px) {
-  .chat__container {
-    top: 6rem;
-    right: 23rem;
-  }
-
-  .answer__container {
-    left: 5rem;
-    bottom: 5rem;
-  }
-
-  .chat__container--close {
-    right: -10rem;
-    top: 10rem;
-  }
-
-  .textarea__container {
-    left: 7.5rem;
-    width: 58%;
+    width: clamp(190px, 65vw, 195px);
+    height: clamp(160px, 20vh, 220px);
   }
 }

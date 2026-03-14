@@ -3,7 +3,7 @@
     transform: translateY(0);
   }
   50% {
-    transform: translateY(10px);
+    transform: translateY(clamp(8px, 1vw, 14px));
   }
   100% {
     transform: translateY(0);
@@ -18,43 +18,15 @@
   display: flex;
   justify-content: center;
   width: 100%;
+  z-index: 2;
 }
 
 .downChevron {
-  opacity: 0.8;
+  opacity: 0.7;
+  width: clamp(40px, 2.5rem + 3vw, 110px);
   animation: upDownBounce 3000ms ease-in-out 500ms infinite;
 }
 
 .fadeOut {
   animation: fadeOut 300ms ease !important;
-}
-
-@media (min-width: 360px) {
-  .downChevron {
-    width: 40px;
-  }
-}
-
-@media (min-width: 400px) {
-  .downChevron {
-    width: 50px;
-  }
-}
-
-@media (min-width: 1366px) {
-  .downChevron {
-    width: 55px;
-  }
-}
-
-@media (min-width: 1440px) {
-    .downChevron {
-    width: 60px;
-  }
-}
-
-@media (min-width: 1920px) {
-  .downChevron {
-    width: 85px;
-  }
 }

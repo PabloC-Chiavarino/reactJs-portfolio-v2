@@ -1,190 +1,68 @@
 .callToAction {
   position: relative;
-  margin: 15% 0 0 15%;
   z-index: 1;
-  width: 71%;
+  width: 60vw;
+  margin: 0 0 15% 15%;
 }
 
 .callToAction h2 {
-  font-size: 1.3rem;
-  margin: 0 0 10px 0;
+  font-size: clamp(1.5rem, 5.5vw, 3rem);
+  margin: 0 0 clamp(10px, 2vw, 5%) 0;
 }
 
 .callToAction p {
-  font-size: 13px;
+  font-size: clamp(13px, 0.5rem + 2vw, 17.5px);
 }
 
 .callToAction__options {
-  margin-top: 15%;
-  margin-right: 30px;
   display: flex;
   justify-content: center;
-  gap: 2rem;
+  margin-top: clamp(10%, 8vw, 15%);
+  gap: clamp(1rem, 5vw, 4rem);
 }
 
 .callToAction__button {
   display: flex;
   justify-content: center;
-  position: relative;
   align-items: center;
+  position: relative;
   overflow: hidden;
-  width: 4.8rem;
-  height: 2rem;
-  font-size: 13px;
+  width: clamp(10rem, 17vw, 12rem);
+  height: clamp(2rem, 8vw, 3.1rem);
+  font-size: clamp(13px, 3vw, 17.5px);
   text-align: center;
   color: #e0e0e0cc;
   border: 1px solid #0fc1d8;
   background-color: #e0e0e042;
-  border-radius: 0.1rem 1rem;
-  transition: 350ms ease-in-out;
-  font-family: Roboto Mono, sans-serif;
+  border-radius: 30px;
+  box-shadow: 0 0 clamp(10px, 1vw, 15px) #8c37ac;
+  transition: all 0.1s ease;
+  font-family:
+    Roboto Mono,
+    sans-serif;
   cursor: pointer;
-
   &::before {
     content: "";
     position: absolute;
     left: -10dvh;
     width: 0;
-    height: 50px;
+    height: clamp(2rem, 8vw, 4rem);
     background-color: #c0c0c0;
-    transition: 400ms ease-in-out;
+    transition: 0.2s ease-out;
     z-index: -1;
   }
 
   &:hover {
     color: #242424;
     border: 1px solid transparent;
-
     &::before {
       width: 200%;
     }
   }
 }
 
-@media (min-width: 360px) {
-  .callToAction {
-    margin: 17% 0 0 15%;
-  }
-
-  .callToAction h2 {
-    font-size: 1.4rem;
-  }
-
-  .callToAction p {
-    font-size: 13.5px;
-  }
-
-  .callToAction__options {
-    margin-top: 11%;
-  }
-
-  .callToAction__button {
-    width: 5.2rem;
-    height: 2.2rem;
-    font-size: 13.5px;
-  }
-}
-
-@media (min-width: 400px) {
-  .callToAction h2 {
-    font-size: 1.7rem;
-  }
-
-  .callToAction p {
-    font-size: 16px;
-  }
-
-  .callToAction__options {
-    margin-top: 11%;
-  }
-
-  .callToAction__button {
-    width: 5.5rem;
-    height: 2.5rem;
-    font-size: 14px;
-  }
-}
-
-@media (min-width: 768px) {
-  .callToAction__button {
-    width: 7.5rem;
-    height: 2.7rem;
-    font-size: 16px;
-  }
-}
-
 @media (min-width: 1024px) {
   .callToAction {
-    margin-top: 5%;
-  }
-
-  .callToAction__options {
-    gap: 3rem;
-  }
-
-  .callToAction__button {
-    width: 6.5rem;
-    height: 2.4rem;
-  }
-}
-
-@media (min-width: 1200px) {
-  .callToAction {
-    margin-top: 10%;
-  }
-
-  .callToAction__options {
-    gap: 4rem;
-  }
-
-  .callToAction__button {
-    width: 8rem;
-    height: 3rem;
-  }
-}
-
-@media (min-width: 1280px) {
-  .callToAction {
-    margin-top: 5%;
-  }
-}
-
-@media (min-width: 1366px) {
-  .callToAction {
-    width: 70%;
-    margin-top: 3%;
-  }
-
-  .callToAction h2 {
-    margin-bottom: 5%;
-  }
-
-  .callToAction__button {
-    width: 10rem;
-    height: 3rem;
-  }
-}
-
-@media (min-width: 1920px) {
-  .callToAction {
-    width: 60%;
-    margin-top: 7rem;
-  }
-
-  .callToAction h2 {
-    font-size: 2.1rem;
-  }
-
-  .callToAction p {
-    font-size: 18px;
-  }
-
-  .callToAction__button {
-    width: 11rem;
-    height: 3.5rem;
-    font-size: 17px;
-    &::before {
-      height: 60px;
-    }
+    width: 55vw;
   }
 }

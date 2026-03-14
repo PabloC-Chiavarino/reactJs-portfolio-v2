@@ -1,15 +1,15 @@
 .dataWidget {
   position: fixed;
-  top: 60%;
-  right: 7px;
   z-index: 3;
+  top: clamp(35%, 50vh, 50%);
+  right: clamp(0.5rem, 1vw, 7px);
 }
 
 .dataWidget__container {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
   align-items: center;
+  gap: clamp(0.5rem, 1vw, 1rem);
 }
 
 .dataWidget__button {
@@ -17,108 +17,18 @@
 }
 
 .dataWidget__button img {
-  width: 2rem;
-  height: 2rem;
-  opacity: 0.8;
-  transition: ease-in-out 300ms;
+  width: clamp(38px, 10vw, 65px);
+  height: clamp(38px, 10vw, 65px);
+  opacity: 0.65;
+  transition: all ease-in-out 200ms;
+}
 
-  &:hover {
-    opacity: 1;
-  }
+.dataWidget__button img:hover {
+  transform: scale(1.1);
+  opacity: 1;
 }
 
 .dataWidget__container a:nth-child(2) img {
-  width: 1.4rem;
-  height: 1.4rem;
-}
-
-@media (min-width: 360px) {
-  .dataWidget__button img {
-    width: 38px;
-    height: 38px;
-  }
-
-  .dataWidget__container a:nth-child(2) img {
-    width: 25px;
-    height: 25px;
-  }
-}
-
-@media (min-width: 400px) {
-  .dataWidget__button img {
-    width: 45px;
-    height: 45px;
-  }
-
-  .dataWidget__container a:nth-child(2) img {
-    width: 31px;
-    height: 31px;
-  }
-}
-
-@media (min-width: 480px) {
-  .dataWidget {
-    top: 35%;
-  }
-}
-
-@media (min-width: 768px) {
-  .dataWidget__button img {
-    width: 50px;
-    height: 50px;
-  }
-
-  .dataWidget__container a:nth-child(2) img {
-    width: 36px;
-    height: 36px;
-  }
-}
-
-@media (min-width: 1024px) {
-  .dataWidget {
-    right: 0.5rem;
-    top: 50%;
-  }
-
-  .dataWidget__button img {
-    width: 45px;
-    height: 45px;
-  }
-
-  .dataWidget__container a:nth-child(2) img {
-    width: 31px;
-    height: 31px;
-  }
-}
-
-@media (min-width: 1366px) {
-  .dataWidget__button img {
-    width: 3.5rem;
-    height: 3.5rem;
-    &:hover {
-      opacity: 1;
-      scale: 1.1;
-    }
-  }
-
-  .dataWidget__container a:nth-child(2) img {
-    width: 2.6rem;
-    height: 2.6rem;
-  }
-}
-
-@media (min-width: 1920px) {
-  .dataWidget__button img {
-    width: 4rem;
-    height: 4rem;
-    &:hover {
-      opacity: 1;
-      scale: 1.1;
-    }
-  }
-
-  .dataWidget__container a:nth-child(2) img {
-    width: 2.9rem;
-    height: 2.9rem;
-  }
+  width: clamp(23px, 7vw, 45px);
+  height: clamp(23px, 7vw, 45px);
 }

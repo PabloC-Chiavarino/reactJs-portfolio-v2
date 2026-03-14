@@ -1,10 +1,10 @@
 @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes fadeOut {
@@ -17,12 +17,14 @@
 }
 
 .App {
-    animation: fadeIn 800ms;
+  animation: fadeIn 800ms;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-family: Montserrat, sans-serif;
-  color: #E0E0E0;
+  color: #e0e0e0;
 }
 
 h2 {
@@ -34,12 +36,16 @@ h3 {
 }
 
 p {
-  font-family: Roboto Mono, monospace;
+  font-family:
+    Roboto Mono,
+    monospace;
   color: #c0c0c0;
   margin: 0;
+  line-height: 1.65;
 }
 
-.text-highlightB, .text-highlightA {
+.text-highlightB,
+.text-highlightA {
   font-weight: 475;
 }
 
@@ -55,7 +61,6 @@ p {
   animation: fadeIn 500ms ease;
 }
 
-
 .fadeOut {
   animation: fadeOut 300ms ease;
 }
@@ -67,6 +72,11 @@ p {
 hr {
   border: 0;
   height: 1px;
-  background-image: linear-gradient(to right, rgba(224, 224, 224, 0), rgba(224, 224, 224, 0.75), rgba(224, 224, 224, 0));
+  background-image: linear-gradient(
+    to right,
+    rgba(224, 224, 224, 0),
+    rgba(224, 224, 224, 0.75),
+    rgba(224, 224, 224, 0)
+  );
   margin-top: 10%;
 }

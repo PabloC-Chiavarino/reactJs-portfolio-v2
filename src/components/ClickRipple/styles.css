@@ -14,7 +14,7 @@
 }
 
 .clickRipple__container {
-  width: 80%;
+  width: 70%;
   height: 70%;
   position: absolute;
   display: flex;
@@ -38,40 +38,4 @@
 
 .ripple__second {
   animation: rippleEffect 3s ease forwards;
-}
-
-@media (min-width: 1366px) {
-  .clickRipple__container {
-    width: 70%;
-    height: 80%;
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1;
-  }
-
-  .ripple__first,
-  .ripple__second {
-    width: inherit;
-    height: inherit;
-    position: absolute;
-    border-radius: 50%;
-    background: rgba(0, 0, 0, 0.2);
-  }
-
-  .ripple__first {
-    animation: rippleEffect 1.5s ease forwards;
-  }
-
-  .ripple__second {
-    animation: rippleEffect 3s ease forwards;
-  }
-}
-
-@media (min-width: 1920px) {
-  .ripple__first,
-  .ripple__second {
-    height: 60%;
-  }
-}
+}  

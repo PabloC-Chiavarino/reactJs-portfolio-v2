@@ -1,249 +1,40 @@
 .ResDownBtn__container {
   position: fixed;
+  bottom: 0;
+  right: clamp(0.5rem, 1vw, 7px);
   display: flex;
   justify-content: end;
-  padding-right: 15px;
-  top: 93%;
   z-index: 3;
   cursor: pointer;
   opacity: 0;
   animation: fadeIn 1150ms ease-in forwards;
   transition: 350ms ease;
+}
 
-  &::before {
-    content: attr(data-tooltip);
-    position: relative;
-    bottom: 5px;
-    right: 10px;
-    font-size: 12px;
-    color: #e0e0e0;
-    opacity: 0;
-    z-index: -1;
-    transition: opacity 0.5s ease;
-  }
-  &:hover::before {
-    opacity: 1;
-  }
+.ResDownBtn__container::before {
+  content: attr(data-tooltip);
+  position: relative;
+  bottom: 10px;
+  right: 10px;
+  display: flex;
+  align-items: end;
+  font-size: clamp(12px, 1.5vw, 16px);
+  color: #e0e0e0;
+  opacity: 0;
+  transition: opacity 200ms ease;
+}
+
+.ResDownBtn__container:hover::before {
+  opacity: 1;
 }
 
 .ResDownBtn__img {
-  width: 29px;
+  width: clamp(35px, 12vw, 80px);
   opacity: 0.7;
-  transition: opacity 0.5s ease;
-  &:hover {
-    opacity: 1;
-  }
+  transition: all 200ms ease;
 }
 
-@media (min-width: 360px) {
-  .ResDownBtn__container {
-    top: 93.5%;
-  }
-
-  .ResDownBtn__img {
-    width: 36px;
-  }
-}
-
-@media (min-width: 360px) and (min-height: 800px) {
-  .ResDownBtn__container {
-    top: 94.5%;
-  }
-}
-
-@media (min-width: 400px) {
-  .ResDownBtn__container {
-    top: 93%;
-  }
-
-  .ResDownBtn__img {
-    width: 43px;
-  }
-}
-
-@media (min-width: 400px) and (min-height: 800px) {
-  .ResDownBtn__container {
-    right: 16%;
-    top: 94%;
-  }
-}
-
-@media (min-width: 480px) {
-  .ResDownBtn__container {
-    top: 85%;
-  }
-}
-
-@media (min-width: 600px) {
-  .ResDownBtn__container {
-    top: 94%;
-  }
-
-  .ResDownBtn__img {
-    width: 52px;
-  }
-}
-
-@media (min-width: 600px) and (max-height: 400px) {
-  .ResDownBtn__container {
-    top: 84%;
-  }
-
-  .ResDownBtn__img {
-    width: 52px;
-  }
-} 
-
-@media (min-width: 700px) {
-  .ResDownBtn__container {
-    top: 95%;
-  }
-
-  .ResDownBtn__img {
-    width: 50px;
-  }
-}
-
-@media (min-width: 700px) and (max-height: 420px) {
-  .ResDownBtn__container {
-    top: 86%;
-  }
-
-  .ResDownBtn__img {
-    width: 50px;
-  }
-}
-
-@media (min-width: 768px) {
-  .ResDownBtn__container {
-    top: 94%;
-    right: 11%;
-  }
-}
-
-@media (min-width: 768px) and (max-height: 420px) {
-  .ResDownBtn__container {
-    top: 86%;
-    right: 11%;
-  }
-}
-
-@media (min-width: 800px) and (max-height: 400px) {
-  .ResDownBtn__container {
-    top: 84%;
-  }
-}
-
-@media (min-width: 900px) and (max-height: 420px) {
-  .ResDownBtn__container {
-    top: 87%;
-  }
-}
-
-@media (min-width: 920px) and (max-height: 450px) {
-  .ResDownBtn__container {
-    top: 87%;
-  }
-}
-
-@media (min-width: 960px) {
-  .ResDownBtn__container {
-    top: 90%;
-  }
-}
-
-@media (min-width: 1024px) {
-  .ResDownBtn__container {
-    position: fixed;
-    top: 91%;
-    width: 21%;
-    right: 0;
-    z-index: 3;
-    cursor: pointer;
-    opacity: 0;
-    animation: fadeIn 1150ms ease-in forwards;
-    transition: 350ms ease;
-
-    &::before {
-      content: attr(data-tooltip);
-      position: relative;
-      bottom: 15px;
-      right: 12px;
-      font-size: 14px;
-      color: #e0e0e0;
-      opacity: 0;
-      z-index: -1;
-      transition: opacity 0.5s ease;
-    }
-    &:hover::before {
-      opacity: 1;
-    }
-  }
-
-  .ResDownBtn__img {
-    width: 50px;
-    opacity: 0.7;
-    transition: opacity 0.5s ease;
-    &:hover {
-      opacity: 1;
-    }
-  }
-}
-
-@media (min-width: 1024px) and (min-height: 1366px) {
-  .ResDownBtn__container {
-    top: 94%;
-  }
-}
-
-@media (min-width: 1120px) {
-  .ResDownBtn__container {
-    top: 92%;
-  }
-}
-
-@media (min-width: 1200px) {
-  .ResDownBtn__container {
-    width: 18%;
-  }
-}
-
-@media (min-width: 1280px) {
-  .ResDownBtn__container {
-    width: 18%;
-  }
-}
-
-@media (min-width: 1366px) {
-  .ResDownBtn__container {
-    top: 90%;
-  }
-
-  .ResDownBtn__img {
-    width: 55px;
-  }
-}
-
-@media (min-width: 1440px) {
-  .ResDownBtn__container {
-    top: 91%;
-    width: 17%;
-  }
-}
-
-@media (min-width: 1600px) {
-  .ResDownBtn__img {
-    width: 67px;
-  }
-}
-
-@media (min-width: 1920px) {
-  .ResDownBtn__container {
-    top: 91%;
-    width: 15%;
-  }
-
-  .ResDownBtn__img {
-    width: 75px;
-  }
+.ResDownBtn__img:hover {
+  transform: scale(1.1);
+  opacity: 1;
 }

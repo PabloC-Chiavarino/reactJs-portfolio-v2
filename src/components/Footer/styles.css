@@ -1,79 +1,41 @@
 .footer__container {
-    position: absolute;
-    margin-top: 6rem;
-    z-index: 1;
-    width: 100%;
-    height: 20dvh;
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 20dvh;
+  margin-top: clamp(6rem, 10vw, 20rem);
 }
 
 .footer__subcontainer {
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-    align-items: center;
-    height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  height: clamp(80%, 85%, 100%);
 }
 
 .footer__line {
-    border: 0;
-    height: 2px;
-    width: 90%;
-    background-image: linear-gradient(to right, 
-        rgba(224, 224, 224, 0), 
-        rgba(224, 224, 224, 0.75), 
-        rgba(224, 224, 224, 0));
-    border-radius: 50%;
-    position: relative;
-    box-shadow: 0 0px 10px 5px #470355;
+  border: 0;
+  position: relative;
+  height: 2px;
+  width: clamp(85%, 88vw, 90%);
+  border-radius: 50%;
+  background-image: linear-gradient(
+    to right,
+    rgba(224, 224, 224, 0),
+    rgba(224, 224, 224, 0.75),
+    rgba(224, 224, 224, 0)
+  );
+  box-shadow: 0 0 clamp(8px, 1vw, 15px) clamp(3px, 0.6vw, 6px) #470355;
 }
 
 .footer__text {
-    font-size: .8rem;
-    font-family: Montserrat, sans-serif;
-    font-weight: 500;
-    margin-bottom: 1rem;
+  font-size: clamp(0.6rem, 4vw, 1rem);
+  font-family: Montserrat, sans-serif;
+  font-weight: 500;
+  margin-bottom: clamp(0.8rem, 1vw, 1.2rem);
 }
 
 .footer__text--emoji {
-    padding-left: 5px;
-}
-
-@media (min-width: 360px) {
-    .footer__text {
-        font-size: .9rem;
-    }
-}
-
-@media (min-width: 400px) {
-    .footer__subcontainer {
-        height: 80%;
-    }
-}
-
-@media (min-width: 1024px) {
-    .footer__container {
-        margin-top: 12rem;
-    }
-}
-
-@media (min-width: 1200px) {
-    .footer__container {
-        margin-top: 15rem;
-    }
-}
-
-@media (min-width: 1366px) {
-    .footer__container {
-        margin-top: 17rem;
-    }
-}
-
-@media (min-width: 1920px) {
-    .footer__container {
-        margin-top: 20rem;
-    }
-
-    .footer__text {
-        font-size: 1rem;
-    }
+  padding-left: 5px;
 }

@@ -10,16 +10,16 @@ const LangSwitch = () => {
       <div className='langSwitch__option'>
         <div className='langSwitch__globe--container'>
           <img className='langSwitch__globe' src={globeLang} alt='' />
+          <div className='langSwitch__dropDown'>
+            <img
+              className='langSwitch__lang'
+              src={lang === 'es' ? englishFlag : spainFlag}
+              alt=''
+              onClick={handleLangChange}
+            />
+          </div>
         </div>
         <span className='langSwitch__current'>{lang.toUpperCase()}</span>
-        <div className='langSwitch__dropDown'>
-          <img
-            className='langSwitch__lang'
-            src={lang === 'es' ? englishFlag : spainFlag}
-            alt=''
-            onClick={handleLangChange}
-          />
-        </div>
       </div>
     </div>
   )
