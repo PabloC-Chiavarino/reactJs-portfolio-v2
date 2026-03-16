@@ -2,14 +2,14 @@
   position: relative;
   margin-top: clamp(5%, 5vh, 15%);
   z-index: 1;
-  width: clamp(55%, 60vw, 65%);
+  width: 70%;
   margin-left: clamp(5%, 10vw, 15%);
   min-height: 100vh;
 }
 
 .mainInfo__info {
-  height: clamp(30vh, 65vh, 80vh);
-  width: clamp(70%, 80vw, 90%);
+  height: 70vh;
+  width: 80%;
   overflow-y: scroll;
   scrollbar-width: none;
   -ms-overflow-style: none;
@@ -25,15 +25,15 @@
 
 .mainInfo__title h1 {
   font-weight: 600;
-  font-size: clamp(1.75rem, 5vw, 4.3rem);
+  font-size: clamp(2.2rem, 5vw, 4.3rem);
   margin-bottom: -1rem;
 }
 
 .mainInfo__title h2 {
   font-weight: 400;
-  font-size: clamp(1.3rem, 0.5rem + 2.8vw, 2.8rem);
+  font-size: clamp(1.5rem, 0.5rem + 2.8vw, 2.8rem);
   width: max-content;
-  margin-bottom: clamp(0.5rem, 3vw, 3rem);
+  margin-bottom: clamp(2.5rem, 5vw, 3rem);
 }
 
 .mainInfo h3 {
@@ -45,19 +45,19 @@
 
 @media (min-width: 320px) {
   .mainInfo__info {
-    height: clamp(40vh, 50vh, 50vh);
+    height: 40vh;
   }
 }
 
 @media (min-width: 360px) {
   .mainInfo__info {
-    height: clamp(50vh, 50vh, 70vh);
+    height: 50vh;
   }
 }
 
 @media (min-width: 1024px) {
   .mainInfo__info {
-    height: clamp(30vh, 40vh, 50vh);
+    height: 40vh;
   }
 
   .mainInfo__title h1 {

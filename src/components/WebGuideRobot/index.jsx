@@ -57,12 +57,12 @@ const WebGuideRobot = React.forwardRef(
             ? rectTarget.top - robotHeight * 0.6
             : rectTarget.top - robotHeight * 1.2;
 
-          const visibleRatio = isDesktop ? 0.9 : 0.7;
+          const visibleRatio = isDesktop ? 0.8 : 0.7;
 
           const maxX = window.innerWidth - robotWidth * visibleRatio;
+          const maxY = window.innerHeight - robotHeight / visibleRatio;
 
-          const maxY = window.innerHeight - robotHeight * visibleRatio;
-          const minY = isDesktop ? -robotHeight * 0.5 : 0;
+          const minY = isDesktop ? -robotHeight * 0.25 : 0;
 
           y = Math.max(minY, Math.min(baseY, maxY));
           x = Math.max(0, Math.min(baseX, maxX));
@@ -75,10 +75,10 @@ const WebGuideRobot = React.forwardRef(
 
           return;
         } else {
-          setScale(0.8);
+          setScale(isDesktop ? 0.7 : 0.8);
 
           const offSets = isDesktop
-            ? { x: 0.715, y: 0.85 }
+            ? { x: 0.715, y: 0.8 }
             : { x: 0.625, y: 0.95 };
 
           y = window.innerHeight - robotHeight * offSets.y;

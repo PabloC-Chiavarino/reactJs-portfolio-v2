@@ -1,12 +1,12 @@
 .projects__container {
   position: relative;
   z-index: 1;
-  width: clamp(60%, 70vw, 70%);
-  margin: 0 0 15% 15%;
+  width: 65vw;
+  margin: 0 0 17% 15%;
 }
 
 .projects__container h2 {
-  margin-bottom: clamp(10px, 2vw, 5%);
+  margin-bottom: 10%;
   font-size: clamp(1.5rem, 5.5vw, 3rem);
 }
 
@@ -21,6 +21,14 @@
   width: 100%;
   margin-top: clamp(2.5rem, 10vw, 7rem);
   transition: all 0.3s ease;
+}
+
+.projects__row--header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  width: fit-content;
+  gap: 10px;
 }
 
 .projects__image--container {
@@ -60,8 +68,8 @@
 
 .projects__title {
   font-size: clamp(1rem, 3.5vw, 1.6rem);
-  width: 100%;
   margin: 0;
+  white-space: nowrap;
 }
 
 .projects__subtitle {

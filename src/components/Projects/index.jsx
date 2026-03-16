@@ -13,10 +13,12 @@ const Projects = React.forwardRef((props, ref) => {
       {projectsData[lang].projects.map((project) => (
         <div key={project.title} className="projects__row">
           <div>
-            <h3 className="projects__title">{project.title}</h3>
-            <h4 className="text-highlightB projects__subtitle">
-              {project.subtitle}
-            </h4>
+            <div className="projects__row--header">
+              <h3 className="projects__title">{project.title}</h3>-
+              <h4 className="text-highlightB projects__subtitle">
+                {project.subtitle}
+              </h4>
+            </div>
             <a
               href={project.url}
               target="_blank"

@@ -1,13 +1,13 @@
 .callToAction {
   position: relative;
   z-index: 1;
-  width: 60vw;
-  margin: 0 0 15% 15%;
+  width: 65vw;
+  margin: 0 0 17% 15%;
 }
 
 .callToAction h2 {
   font-size: clamp(1.5rem, 5.5vw, 3rem);
-  margin: 0 0 clamp(10px, 2vw, 5%) 0;
+  margin-bottom: 10%;
 }
 
 .callToAction p {

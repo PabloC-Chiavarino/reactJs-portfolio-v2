@@ -7,14 +7,14 @@ h4 {
 
 .timeline {
   position: relative;
-  margin: 0 0 15% 15%;
+  margin: 0 0 17% 15%;
   z-index: 1;
-  width: 60vw;
+  width: 65vw;
 }
 
 .timeline h2 {
-  font-size: clamp(1.5rem, 5.5vw, 3rem);
-  margin-bottom: 5%;
+  font-size: clamp(2rem, 0.5rem + 2.8vw, 2.8rem);
+  margin-bottom: 10%;
 }
 
 .timeline h3 {
@@ -25,8 +25,9 @@ h4 {
 .timeline__item--header {
   display: flex;
   align-items: center;
-  gap: 10px;
   margin-bottom: 15px;
+  width: fit-content;
+  gap: 10px;
 }
 
 .timeline h4 {

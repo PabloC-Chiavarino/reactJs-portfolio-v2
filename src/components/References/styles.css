@@ -1,6 +1,6 @@
 .references__container {
   position: relative;
-  margin: 0 0 10% 15%;
+  margin: 0 0 12% 15%;
   width: clamp(60%, 60vw, 70%);
   z-index: 1;
 }

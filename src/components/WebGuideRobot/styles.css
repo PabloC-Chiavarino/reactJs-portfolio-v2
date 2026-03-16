@@ -25,8 +25,8 @@
 }
 
 .wgrobot {
-  width: clamp(27%, 25vw, 32%);
-  height: clamp(27%, 25vh, 32%);
+  width: 30%;
+  height: 30%;
   display: flex;
   justify-content: center;
   z-index: 2;
@@ -44,12 +44,10 @@
   justify-content: center;
   flex-direction: column;
   position: absolute;
-  top: clamp(50%, 5vh, 60%);
-  transform: translateX(-35%) translateY(-50%);
+  transform: translateX(-35%) translateY(-20%);
   z-index: 1;
   width: 100%;
-  height: clamp(320px, 65%, 480px);
-  aspect-ratio: 1/1;
+  height: clamp(320px, 75%, 480px);
   transition: opacity 0.5s ease;
   pointer-events: all;
   left: 0;
@@ -58,8 +56,8 @@
 .chat__container--close {
   position: absolute;
   scale: clamp(1.1, 1.1, 1.5);
-  right: 10px;
-  top: 15%;
+  right: 0;
+  top: 35%;
   cursor: pointer;
 }
 
@@ -73,8 +71,8 @@
 }
 
 .answer__blob {
-  width: clamp(190px, 70vw, 380px);
-  height: clamp(190px, 70vh, 380px);
+  aspect-ratio: 1/1;
+  width: clamp(220px, 65vw, 400px);
   position: absolute;
   z-index: -1;
   animation: reverseLooneyTunes 350ms ease forwards;
@@ -89,7 +87,7 @@
   text-shadow: 1.5px 1.5px 1.5px #000;
   position: absolute;
   width: clamp(100px, 35vw, 195px);
-  height: clamp(100px, 10vh, 150px);
+  height: clamp(100px, 15vh, 170px);
   text-align: center;
   font-size: clamp(13.25px, 2.5vw, 16px);
   scrollbar-width: none;
@@ -102,36 +100,26 @@
   display: none;
 }
 
-.answer__header {
-  font-size: clamp(13px, 1vw, 18px);
-  font-weight: 500;
-  text-shadow: #000 0px 0px 30px;
-  margin-bottom: 0;
-  width: fit-content;
-  position: relative;
-  bottom: 15px;
-}
-
 .textarea__container {
-  width: clamp(190px, 65vw, 380px);
-  height: clamp(190px, 65vh, 380px);
+  width: clamp(200px, 65vw, 400px);
+  transform: translateX(-5%) translateY(25%);
+  height: fit-content;
   display: flex;
   align-items: flex-end;
   font-size: Montserrat, sans-serif;
   position: absolute;
-  bottom: -10%;
-  transform: translateX(-10%);
+  bottom: 0;
   pointer-events: all;
   gap: 1rem;
 }
 
 .textarea__input {
   width: 100%;
-  min-height: 1.4rem;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  line-height: 1.4rem;
-  max-height: calc(1.3rem * 2.5);
+  min-height: 0.8rem;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  line-height: 0.8rem;
+  max-height: calc(0.8rem * 4);
   overflow-y: auto;
   scrollbar-width: none;
   background-color: #b9c7d2;
@@ -182,17 +170,29 @@
   }
 }
 
+@media (min-width: 600px) {
+  .textarea__container {
+    transform: translateX(-10%);
+  }
+}
+
 @media (min-width: 1024px) {
   .wgrobot__container {
     width: clamp(500px, 65vw, 900px);
     height: clamp(500px, 65vw, 900px);
   }
 
-  .answer__blob,
-  .textarea__container {
-    width: clamp(250px, 60vw, 480px);
-    height: clamp(250px, 60vh, 480px);
+  .answer__blob {
+    width: clamp(250px, 60vh, 480px);
   }
+
+  .textarea__container {
+    transform: translateX(-15%) translateY(100%);
+  }
+
+  /* .textarea__container {
+    width: clamp(250px, 60vw, 480px);
+  } */
 
   .answer__text {
     width: clamp(190px, 65vw, 195px);
