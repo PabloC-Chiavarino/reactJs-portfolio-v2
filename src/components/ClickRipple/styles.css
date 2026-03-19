@@ -13,6 +13,18 @@
   }
 }
 
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
 .clickRipple__container {
   width: 70%;
   height: 70%;
@@ -21,6 +33,25 @@
   justify-content: center;
   align-items: center;
   z-index: 1;
+}
+
+.askme {
+  position: absolute;
+  bottom: 60%;
+  letter-spacing: 1px;
+  filter: drop-shadow(0 0 6px rgba(64, 131, 255, 0.8))
+    drop-shadow(0 0 14px rgba(120, 180, 255, 0.4));
+  animation: float 3s ease-in-out infinite;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.askme--visible {
+  opacity: 1;
+}
+
+.askme text {
+  font-size: clamp(14px, 2vw, 20px);
 }
 
 .ripple__first,
@@ -38,4 +69,4 @@
 
 .ripple__second {
   animation: rippleEffect 3s ease forwards;
-}  
+}
