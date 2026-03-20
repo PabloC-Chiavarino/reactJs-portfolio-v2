@@ -17,7 +17,7 @@
 .callToAction__options {
   display: flex;
   justify-content: center;
-  margin-top: clamp(10%, 8vw, 15%);
+  margin-top: 20%;
   gap: clamp(1rem, 5vw, 4rem);
 }
 
@@ -64,5 +64,11 @@
 @media (min-width: 1024px) {
   .callToAction {
     width: 55vw;
+  }
+}
+
+@media (min-width: 1280px) {
+  .callToAction__options {
+    margin-top: 15%;
   }
 }
