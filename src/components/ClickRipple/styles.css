@@ -37,7 +37,7 @@
 
 .askme {
   position: absolute;
-  bottom: 60%;
+  bottom: 50%;
   letter-spacing: 1px;
   filter: drop-shadow(0 0 6px rgba(64, 131, 255, 0.8))
     drop-shadow(0 0 14px rgba(120, 180, 255, 0.4));
@@ -51,7 +51,7 @@
 }
 
 .askme text {
-  font-size: clamp(14px, 2vw, 20px);
+  font-size: clamp(13px, 4vw, 20px);
 }
 
 .ripple__first,
@@ -69,4 +69,10 @@
 
 .ripple__second {
   animation: rippleEffect 3s ease forwards;
+}
+
+@media (min-width: 600px) {
+  .askme {
+    bottom: 65%;
+  }
 }

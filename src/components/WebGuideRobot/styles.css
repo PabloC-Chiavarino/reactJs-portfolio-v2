@@ -190,10 +190,6 @@
     transform: translateX(-15%) translateY(100%);
   }
 
-  /* .textarea__container {
-    width: clamp(250px, 60vw, 480px);
-  } */
-
   .answer__text {
     width: clamp(190px, 65vw, 195px);
     height: clamp(160px, 20vh, 220px);

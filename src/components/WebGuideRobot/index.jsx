@@ -55,12 +55,12 @@ const WebGuideRobot = React.forwardRef(
 
           const baseY = isDesktop
             ? rectTarget.top - robotHeight * 0.6
-            : rectTarget.top - robotHeight * 1.2;
+            : rectTarget.top - robotHeight / 2;
 
           const visibleRatio = isDesktop ? 0.8 : 0.7;
 
           const maxX = window.innerWidth - robotWidth * visibleRatio;
-          const maxY = window.innerHeight - robotHeight / visibleRatio;
+          const maxY = window.innerHeight - robotHeight;
 
           const minY = isDesktop ? -robotHeight * 0.25 : 0;
 
