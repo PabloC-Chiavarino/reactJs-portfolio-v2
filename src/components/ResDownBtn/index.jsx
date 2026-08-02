@@ -5,10 +5,12 @@ import { downBtn } from '../../assets/Icons'
 const ResDownBtn = () => {
   const { lang } = useLangContext()
 
+  const langRefDownload = lang === 'es' ? './chiavarinoESP.pdf' : './chiavarinoENG.pdf'
+
   return (
     <div data-tooltip={lang === 'es' ? 'Descargar CV' : 'Donwload Res.'} className='ResDownBtn__container'>
       <a
-        href='./Chiavarino CV.pdf'
+        href={langRefDownload}
         download='Chiavarino CV.pdf'
         className='ResDownBtn'
       >

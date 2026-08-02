@@ -71,11 +71,10 @@ const messageResponses = {
     languages: 'Pablo speaks Spanish as his native language and has an advanced level of English, especially for technical topics.',
 
     default: 'Sorry, a specific answer was not found for that question. Please try asking in another way.',
-    info: `I was created to answer questions about Pablo and his professional and personal background. What would you like to know?`,
+    info: 'I was created to answer questions about Pablo and his professional and personal background. What would you like to know?',
     contact: 'You can contact Pablo through his email, Github, LinkedIn or WhatsApp.'
   }
 }
-
 
 const config = {
   botName,

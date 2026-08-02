@@ -1,11 +1,11 @@
 export const timelineData = {
   es: {
-    title: "Experiencia",
+    title: 'Experiencia',
     content: [
       {
-        date: "Dic 2023 - Mar 2024",
-        type: "Frontend",
-        company: "BackLab Strategies",
+        date: 'Dic 2023 - Mar 2024',
+        type: 'Frontend',
+        company: 'BackLab Strategies',
         description: (
           <>
             <p>
@@ -31,17 +31,17 @@ export const timelineData = {
               conocer las opiniones y experiencias de quienes confiaron en mí.
             </p>
           </>
-        ),
-      },
-    ],
+        )
+      }
+    ]
   },
   en: {
-    title: "Experience",
+    title: 'Experience',
     content: [
       {
-        date: "Dic 2023 - Mar 2024",
-        type: "Frontend",
-        company: "BackLab Strategies",
+        date: 'Dic 2023 - Mar 2024',
+        type: 'Frontend',
+        company: 'BackLab Strategies',
         description: (
           <>
             <p>
@@ -67,8 +67,8 @@ export const timelineData = {
               opinions and experiences of those who trusted my work.
             </p>
           </>
-        ),
-      },
-    ],
-  },
-};
+        )
+      }
+    ]
+  }
+}

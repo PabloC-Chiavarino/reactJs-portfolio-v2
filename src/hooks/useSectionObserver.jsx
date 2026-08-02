@@ -9,13 +9,11 @@ const useSectionObserver = (sectionsRefs) => {
     if (sections.some(section => !section)) return
 
     const sectionObserver = new IntersectionObserver(entries => {
-
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           setPredominantSection(entry.target.id)
         }
       })
-
     }, {
       root: null,
       rootMargin: '-50% 0px -50% 0px',

@@ -27,7 +27,6 @@
   display: flex;
   align-items: center;
   margin-bottom: clamp(1px, 1vw, 15px);
-  width: fit-content;
   gap: 10px;
 }
 
