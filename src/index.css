@@ -67,3 +67,19 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+@media (orientation: landscape) and (max-height: 500px) {
+  .mainInfo,
+  .timeline,
+  .callToAction,
+  .projects__container,
+  .skills__circles--container,
+  .references__container,
+  .footer__container {
+    zoom: 0.85;
+  }
+
+  .langSwitch__container {
+    zoom: 0.85;
+  }
+}

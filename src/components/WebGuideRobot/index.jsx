@@ -31,6 +31,7 @@ const WebGuideRobot = React.forwardRef(
     useLayoutEffect(() => {
       const calculatePosition = () => {
         const isDesktop = window.innerWidth >= 1024
+        const isLandscape = !isDesktop && window.innerHeight < window.innerWidth
 
         if (!predominantSection || !ref.current) return
 
@@ -44,7 +45,7 @@ const WebGuideRobot = React.forwardRef(
           const targetElement = document.querySelector('.mainInfo__info')
 
           if (!targetElement) return
-          setScale(1)
+          setScale(isLandscape ? 1.2 : 1)
 
           const rectTarget = targetElement.getBoundingClientRect()
           const freeSpaceRight = window.innerWidth - rectTarget.right
@@ -55,14 +56,20 @@ const WebGuideRobot = React.forwardRef(
 
           const baseY = isDesktop
             ? rectTarget.top - robotHeight * 0.6
-            : rectTarget.top - robotHeight / 2
+            : isLandscape
+              ? rectTarget.top - robotHeight * 0.75
+              : rectTarget.top - robotHeight / 2
 
-          const visibleRatio = isDesktop ? 0.8 : 0.7
+          const visibleRatio = isDesktop ? 0.8 : isLandscape ? 0.9 : 0.7
 
           const maxX = window.innerWidth - robotWidth * visibleRatio
           const maxY = window.innerHeight - robotHeight
 
-          const minY = isDesktop ? -robotHeight * 0.25 : 0
+          const minY = isDesktop
+            ? -robotHeight * 0.25
+            : isLandscape
+              ? -robotHeight * 0.3
+              : 0
 
           y = Math.max(minY, Math.min(baseY, maxY))
           x = Math.max(0, Math.min(baseX, maxX))
@@ -75,11 +82,13 @@ const WebGuideRobot = React.forwardRef(
 
           return
         } else {
-          setScale(isDesktop ? 0.7 : 0.8)
+          setScale(isDesktop ? 0.7 : isLandscape ? 0.9 : 0.8)
 
           const offSets = isDesktop
             ? { x: 0.715, y: 0.8 }
-            : { x: 0.625, y: 0.95 }
+            : isLandscape
+              ? { x: 0.8, y: 0.75 }
+              : { x: 0.625, y: 0.95 }
 
           y = window.innerHeight - robotHeight * offSets.y
           x = window.innerWidth - robotWidth * offSets.x

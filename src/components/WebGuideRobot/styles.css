@@ -12,8 +12,8 @@
   align-items: center;
   justify-content: center;
   position: fixed;
-  width: clamp(325px, 100vw, 800px);
-  height: clamp(325px, 100vw, 800px);
+  width: clamp(325px, min(100vw, 100dvh), 800px);
+  height: clamp(325px, min(100vw, 100dvh), 800px);
   transition: transform 600ms ease-in-out;
   background: radial-gradient(
     circle at center,
@@ -178,8 +178,8 @@
 
 @media (min-width: 1024px) {
   .wgrobot__container {
-    width: clamp(500px, 65vw, 900px);
-    height: clamp(500px, 65vw, 900px);
+    width: clamp(500px, min(65vw, 100dvh), 900px);
+    height: clamp(500px, min(65vw, 100dvh), 900px);
   }
 
   .answer__blob {

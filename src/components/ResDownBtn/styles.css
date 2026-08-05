@@ -29,7 +29,7 @@
 }
 
 .ResDownBtn__img {
-  width: clamp(35px, 12vw, 80px);
+  width: clamp(35px, min(12vw, 10vh), 80px);
   opacity: 0.7;
   transition: all 200ms ease;
 }
